@@ -1,4 +1,3 @@
-#pragma once
 #include <iostream>
 #include "Table.h"
 #include "Tools.h"
@@ -21,6 +20,7 @@ public:
 	inline void set_keys(int n) { keys = n; }
 	void set_equipment(std::map<std::string, Equipment&>&);
 	void set_potion(Potion*);
+	Hero();
 
 
 	inline Weapon& get_weapon() { return *weapon; }

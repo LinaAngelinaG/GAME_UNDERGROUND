@@ -38,11 +38,11 @@ public:
 	void close_door(point&);
 };
 
-class smth {
+typedef struct smth {
 	Tool* t;
 	Box* b;
 };
-class point {
+typedef struct point {
 	int x;
 	int y;
 };
