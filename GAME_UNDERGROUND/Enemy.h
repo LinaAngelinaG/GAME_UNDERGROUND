@@ -29,5 +29,5 @@ public:
 	inline int get_health() { return health; }
 	inline int get_experince() { return experience; }
 	inline std::string get_name() { return name; }
-	inline Tool* get_tool() { return tool; }
+	inline Tool& get_tool() { return *tool; }
 };
