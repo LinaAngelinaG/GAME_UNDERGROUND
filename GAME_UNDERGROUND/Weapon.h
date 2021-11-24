@@ -1,5 +1,7 @@
-#include <iostream>
 #include "Tools.h"
+#pragma once
+
+static std::string WEAPON_NAMES[3] = { "Sword","Axe", "Baton" };
 
 class Weapon : virtual public Tool {
 protected:

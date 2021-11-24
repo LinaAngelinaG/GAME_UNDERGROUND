@@ -1,5 +1,9 @@
 #include <iostream>
 #include "Tools.h"
+#pragma once
+
+static std::string EQUIPMENT_NAMES[3] = { "Helmet","Gloves", "Ring" };
+static std::string TYPE_EQ[3] = { "Head", "Hands", "Finger" };
 
 class Equipment : virtual public Tool {
 protected:
@@ -11,5 +15,5 @@ public:
 	Equipment(int n, std::string name) :Tool(name), save(n + 3), type(TYPE_EQ[n]) {};
 
 	inline bool isArtefact() { return false; }
-	int use(std::string); //возвращает величину защиты
+	inline int use(std::string) { return save; }; //возвращает величину защиты
 };

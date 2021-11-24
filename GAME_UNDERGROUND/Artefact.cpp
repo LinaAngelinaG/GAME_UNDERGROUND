@@ -1,6 +1,4 @@
 #include "Artefact.h"
-#include <map>
-#include <iostream>
 
 void Artefact::becomeUpToPower(int n) {
 	//changed_values.count("Power") == 0 ? changed_values.insert({ "Power",n }) : changed_values.at({ "Power",n });

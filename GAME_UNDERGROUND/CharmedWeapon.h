@@ -1,6 +1,7 @@
 #include "Tools.h"
 #include "Weapon.h"
 #include "Enemy.h"
+#pragma once
 
 class CharmedWeapon : public Weapon {
 protected:

@@ -1,17 +1,18 @@
 #include "Tools.h"
+#include <map>
 #include <iostream>
+#pragma once
 
-class Artefact : virtual public Tool {
+class Artefact : virtual public Tool { //абстрактный класс
 protected:
 	std::map<std::string, int> changed_values;  //name of the characteristic and the value that it changes
-
+	
 public:
-
 	void becomeUpToPower(int);
 	void becomeUpToResistance(int);
 	void becomeUpToAgility(int);
 
-	inline bool isArtefact(int) { return true; }
+	inline bool isArtefact() { return true; }
 	inline std::map<std::string, int>& get_map() { return changed_values; }
 
 	Artefact() :Tool("DEFALT_NAME_FOR_ARTEFACT") {};

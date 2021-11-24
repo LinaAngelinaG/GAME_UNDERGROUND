@@ -1,6 +1,8 @@
 #include "Tools.h"
 #include "Artefact.h"
 #include "Weapon.h"
+#pragma once
+
 
 class ArtefactedWeapon : public Weapon, public Artefact {
 public:

@@ -1,7 +1,9 @@
 #include "Tools.h"
 #include <random>
 #include "Table.h"
-int PROBABILITY[] = {90,75,45,35,25};
+#pragma once
+
+static int PROBABILITY[] = {90,75,45,35,25};
 
 class Box
 {

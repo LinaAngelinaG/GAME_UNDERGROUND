@@ -1,9 +1,6 @@
 #include <iostream>
 #include <map>
-
-std::string WEAPON_NAMES[3] = { "Sword","Axe", "Baton" };
-std::string EQUIPMENT_NAMES[3] = { "Helmet","Gloves", "Ring" };
-std::string TYPE_EQ[3] = { "Head", "Hands", "Finger" };
+#pragma once
 
 class Tool {
 protected:

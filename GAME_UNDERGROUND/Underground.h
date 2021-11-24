@@ -3,9 +3,20 @@
 #include "Box.h"
 #include "Hero.h"
 #include "Enemy.h"
+#pragma once
+
 //0 - пол, 1 - открытая дверь, 2 - закрытая дверь
 //3 - лестница вверх, 4 - лестница вниз
 //5 - предмет, 6 - сундук
+
+typedef struct smth {
+	Tool* t;
+	Box* b;
+};
+typedef struct point {
+	int x;
+	int y;
+};
 
 class Underground
 {
@@ -16,7 +27,7 @@ private:
 	int length;
 	int width;
 
-	point& coor_hero;
+	point & coor_hero;
 	std::map<point, Enemy*> enemies;
 
 	std::map<point, smth> cells; // разрешенная матрица хранения сундуков и предметов
@@ -36,13 +47,4 @@ public:
 
 	void open_door(point&);
 	void close_door(point&);
-};
-
-typedef struct smth {
-	Tool* t;
-	Box* b;
-};
-typedef struct point {
-	int x;
-	int y;
 };

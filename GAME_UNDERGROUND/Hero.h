@@ -5,13 +5,14 @@
 #include "Equipment.h"
 #include "Potion.h"
 #include "Weapon.h"
+#pragma once
 
 class Hero {
 private:
 	int experience;
 	Table* parameters;
 	Weapon* weapon;
-	std::map<std::string, Equipment&> equipment;
+	std::map<std::string, Equipment*> equipment;
 	Potion* potions;
 	int max_potion;
 	int keys;
@@ -23,7 +24,7 @@ public:
 	inline void set_max_potion(int n) { max_potion = n; }
 	inline void set_keys(int n) { keys = n; }
 
-	void set_equipment(std::map<std::string, Equipment&>&);
+	void set_equipment(std::map<std::string, Equipment*>&);
 	void set_potion(Potion*);
 	
 	Hero();
@@ -34,7 +35,7 @@ public:
 	inline int get_experince() { return experience; }
 	inline int get_max_potion() { return max_potion; }
 	inline int get_keys() { return keys; }
-	inline std::map<std::string, Equipment&>& get_equipment() { return equipment; }
+	inline std::map<std::string, Equipment*>& get_equipment() { return equipment; }
 	inline Potion& get_potion() { return *potions; }
 
 	void take_tool(Tool*); //взять предмет
