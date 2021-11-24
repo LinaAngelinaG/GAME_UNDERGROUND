@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Tools.h"
+
 std::string ENEMY_NAMES[4] = { "Humanlikely", "Witch", "Demon", "Slug" };
 int CHAR[4][3] = { {1,10,1}, {2, 12,2} , {5, 15,4}, {1,18,1} };
 class Enemy

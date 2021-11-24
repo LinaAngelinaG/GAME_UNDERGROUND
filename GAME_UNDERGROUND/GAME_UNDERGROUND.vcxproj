@@ -140,20 +140,38 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Artefact.cpp" />
+    <ClCompile Include="ArtefactedCharmedWeapon.cpp" />
+    <ClCompile Include="ArtefactedEquipment.cpp" />
+    <ClCompile Include="ArtefactedWeapon.cpp" />
     <ClCompile Include="Box.cpp" />
+    <ClCompile Include="CharmedWeapon.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Equipment.cpp" />
     <ClCompile Include="Hero.cpp" />
+    <ClCompile Include="Keys.cpp" />
+    <ClCompile Include="Potion.cpp" />
     <ClCompile Include="Table.cpp" />
     <ClCompile Include="Tools.cpp" />
     <ClCompile Include="Underground.cpp" />
+    <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Artefact.h" />
+    <ClInclude Include="ArtefactedCharmedWeapon.h" />
+    <ClInclude Include="ArtefactedEquipment.h" />
+    <ClInclude Include="ArtefactedWeapon.h" />
     <ClInclude Include="Box.h" />
+    <ClInclude Include="CharmedWeapon.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Equipment.h" />
     <ClInclude Include="Hero.h" />
+    <ClInclude Include="Keys.h" />
+    <ClInclude Include="Potion.h" />
     <ClInclude Include="Table.h" />
     <ClInclude Include="Tools.h" />
     <ClInclude Include="Underground.h" />
+    <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

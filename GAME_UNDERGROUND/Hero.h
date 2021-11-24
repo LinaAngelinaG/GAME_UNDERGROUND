@@ -1,6 +1,10 @@
 #include <iostream>
 #include "Table.h"
 #include "Tools.h"
+#include "Artefact.h"
+#include "Equipment.h"
+#include "Potion.h"
+#include "Weapon.h"
 
 class Hero {
 private:
@@ -18,8 +22,10 @@ public:
 	inline void set_experince(int n) { experience = n; }
 	inline void set_max_potion(int n) { max_potion = n; }
 	inline void set_keys(int n) { keys = n; }
+
 	void set_equipment(std::map<std::string, Equipment&>&);
 	void set_potion(Potion*);
+	
 	Hero();
 
 
