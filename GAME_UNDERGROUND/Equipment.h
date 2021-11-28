@@ -1,19 +1,26 @@
 #include <iostream>
 #include "Tools.h"
+#include "Enemy.h"
 #pragma once
 
-static std::string EQUIPMENT_NAMES[3] = { "Helmet","Gloves", "Ring" };
-static std::string TYPE_EQ[3] = { "Head", "Hands", "Finger" };
-
+enum TYPE {
+	Head = 1,
+	Hands,
+	Finger
+};
+enum EQUIPMENT {
+	Helmet = Head,
+	Gloves = Hands,
+	Ring = Finger
+};
 class Equipment : virtual public Tool {
 protected:
-	int save;
-	std::string type;
+	EQUIPMENT equip;
 
 public:
-	Equipment(int n) :Tool(EQUIPMENT_NAMES[n - 1]), save(n + 3), type(TYPE_EQ[n]) {};
-	Equipment(int n, std::string name) :Tool(name), save(n + 3), type(TYPE_EQ[n]) {};
-
+	Equipment(EQUIPMENT eq) : equip(eq) {};
+	~Equipment() = default;
 	inline bool isArtefact() { return false; }
-	inline int use(std::string) { return save; }; //возвращает величину защиты
+	inline int use(ENEMY en) { return equip; }; //возвращает величину защиты
+	virtual std::string getname();
 };

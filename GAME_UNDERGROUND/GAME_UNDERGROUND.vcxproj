@@ -147,6 +147,7 @@
     <ClCompile Include="Box.cpp" />
     <ClCompile Include="CharmedWeapon.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="ENUMS.cpp" />
     <ClCompile Include="Equipment.cpp" />
     <ClCompile Include="Hero.cpp" />
     <ClCompile Include="Keys.cpp" />
@@ -164,6 +165,7 @@
     <ClInclude Include="Box.h" />
     <ClInclude Include="CharmedWeapon.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="ENUMS.h" />
     <ClInclude Include="Equipment.h" />
     <ClInclude Include="Hero.h" />
     <ClInclude Include="Keys.h" />

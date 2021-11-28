@@ -9,11 +9,11 @@
 //3 - лестница вверх, 4 - лестница вниз
 //5 - предмет, 6 - сундук
 
-typedef struct smth {
+struct smth {
 	Tool* t;
 	Box* b;
 };
-typedef struct point {
+struct point {
 	int x;
 	int y;
 };

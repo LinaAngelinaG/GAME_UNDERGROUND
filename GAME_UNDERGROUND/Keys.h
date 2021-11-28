@@ -1,18 +1,18 @@
 #include "Tools.h"
+#include "Enemy.h"
+#include <string>
 #pragma once
 
 class Keys : public Tool {
 private:
 	int number_of_keys;
 public:
-	Keys(int n, std::string str) :number_of_keys(n), Tool(str) {};
-	Keys(int n) :number_of_keys(n), Tool("DEFALT_NAME_FOR_KEYS") {};
-	Keys() :number_of_keys(1), Tool("DEFALT_NAME_FOR_KEYS") {};
-
+	Keys(int n) :number_of_keys(n) {};
+	
 	int get_num_of_keys() { return number_of_keys; }
 	void set_num_of_keys(int n) { number_of_keys = n; }
 
-	int use(std::string); //уменьшить кол-во ключей на 1 - ломаетс€ или остаетс€
-
+	int use(ENEMY); //уменьшить кол-во ключей на 1 - ломаетс€ или остаетс€
+	std::string getname() { return std::to_string(number_of_keys) + " keys"; }
 	inline bool isArtefact() { return false; }
 };

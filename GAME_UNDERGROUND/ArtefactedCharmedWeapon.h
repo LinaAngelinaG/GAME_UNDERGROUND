@@ -3,10 +3,11 @@
 #include "CharmedWeapon.h"
 #pragma once
 
-
 class ArtefactedCharmedWeapon : public CharmedWeapon, public Artefact {
 public:
-	inline bool isArtefact() { return true; }
-	ArtefactedCharmedWeapon(int n) :CharmedWeapon(n), Artefact(WEAPON_NAMES[n - 1]) {};
-	ArtefactedCharmedWeapon(int n, std::string name) :CharmedWeapon(n, name), Artefact(name) {};
+	inline bool isArtefact() { return true;}
+	ArtefactedCharmedWeapon(WEAPON_NAME Name1, CHARM Name2, ARTEFACTED Name3, int val) :CharmedWeapon(Name1, Name2), Artefact(Name3, val) {};
+	//ArtefactedCharmedWeapon() :CharmedWeapon() { /*name = Name;*/ };
+	inline virtual std::string getname() { return get_feature() + " " + CharmedWeapon::getname(); }
+	inline virtual int use(ENEMY enemy) { return CharmedWeapon::use(enemy); }
 };

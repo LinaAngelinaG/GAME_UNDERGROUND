@@ -9,7 +9,6 @@ class Box
 {
 private:
 	int level;
-	//type of the Tool: using template
 	Tool* tool;
 public:
 	Box(Tool& t) :level(1), tool(&t) {};

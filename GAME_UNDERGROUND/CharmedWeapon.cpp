@@ -1,18 +1,46 @@
 #include "CharmedWeapon.h"
 
-int CharmedWeapon::use(std::string name) {
-	int base = damage;
-	if (name.compare(ENEMY_NAMES[0])==0 && get_charm(0)) {
-		base += 1;
-	}
-	else if (name.compare(ENEMY_NAMES[1]) == 0 && get_charm(1)) {
-		base += 1;
-	}
-	else if (name.compare(ENEMY_NAMES[2]) == 0 && get_charm(2)) {
-		base += 2;
-	}
-	else if (name.compare(ENEMY_NAMES[3]) == 0 && get_charm(3)) {
-		base += 1;
+int CharmedWeapon::use(ENEMY name) {
+	int base = Weapon::use(name);
+
+	switch (charm) {
+	case(Damned):
+		if (name == Humanlikely) {
+			return base + 1;
+		}
+		break;
+	case(Burning):
+		if (name == Witch) {
+			return base + 1;
+		}
+		break;
+	case(Blessed):
+		if (name == Demon) {
+			return base + 2;
+		}
+		break;
+	case(Drying):
+		if (name == Slug) {
+			return base + 1;
+		}
+		break;
 	}
 	return base;
+}
+
+std::string CharmedWeapon::get_charm() {
+	switch (charm) {
+	case(Damned):
+		return "Damned";
+		break;
+	case(Burning):
+		return "Burning";
+		break;
+	case(Blessed):
+		return "Blessed";
+		break;
+	case(Drying):
+		return "Drying";
+		break;
+	}
 }

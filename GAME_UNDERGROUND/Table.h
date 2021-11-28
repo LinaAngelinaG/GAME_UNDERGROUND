@@ -2,7 +2,7 @@
 #include <map>
 #pragma once
 
-typedef struct info {
+struct info {
 	std::string longname;
 	int value;
 };

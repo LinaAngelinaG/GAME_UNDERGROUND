@@ -3,20 +3,30 @@
 #include <iostream>
 #pragma once
 
+enum ARTEFACTED {
+	POWERUP,
+	RESISTANCEUP,
+	AGILITYUP,
+	NONE
+};
+
 class Artefact : virtual public Tool { //абстрактный класс
 protected:
-	std::map<std::string, int> changed_values;  //name of the characteristic and the value that it changes
 	
+    //name of the characteristic and the value that it changes
+	ARTEFACTED artefact = NONE;
+	int value = 0;
 public:
-	void becomeUpToPower(int);
-	void becomeUpToResistance(int);
-	void becomeUpToAgility(int);
+	inline void becomeUpToPower(int n) { artefact = POWERUP; value = n; }
+	inline void becomeUpToResistance(int n) { artefact = RESISTANCEUP; value = n; }
+	inline void becomeUpToAgility(int n) { artefact = AGILITYUP; value = n; }
 
 	inline bool isArtefact() { return true; }
-	inline std::map<std::string, int>& get_map() { return changed_values; }
 
-	Artefact() :Tool("DEFALT_NAME_FOR_ARTEFACT") {};
-	Artefact(std::string name) : Tool(name) {};
+	std::string get_feature();
+	int get_feature_val() { return value; }
+
+	Artefact(ARTEFACTED art, int n):artefact(art), value(n) { };
 
 	//как повышать за счет артефактов первичные характеристики?
 	//зачарованное оружие сразу даст скорректированный урон

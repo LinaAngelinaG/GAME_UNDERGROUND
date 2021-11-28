@@ -10,20 +10,10 @@
       <Field Name="tool" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Enemy">
-    <Position X="12.25" Y="5.75" Width="2.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAgAAAEEAhBACADAAACAAAAMEAACAABBACIAAAAk=</HashCode>
-      <FileName>Enemy.h</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="tool" />
-    </ShowAsAssociation>
-  </Class>
   <Class Name="Tool">
     <Position X="17.5" Y="9" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAkAAAABAAACIAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA=</HashCode>
       <FileName>Tools.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -41,12 +31,12 @@
   <Class Name="Hero">
     <Position X="5.5" Y="16.75" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Hero.cpp</FileName>
+      <HashCode>BAKBARAABEEIAIDAAAAAACAoKBIEAAAABABAAACAAAA=</HashCode>
+      <FileName>Hero.h</FileName>
+      <NewMemberFileName>Hero.cpp</NewMemberFileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="parameters" />
-      <Field Name="weapon" />
       <Field Name="equipment" />
       <Field Name="potions" />
     </ShowAsAssociation>
@@ -93,32 +83,39 @@
       <FileName>Equipment.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Weapon">
-    <Position X="28" Y="12.5" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAgAAgABAAAAAAAAAA=</HashCode>
-      <FileName>Weapon.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ArtefactedWeapon">
-    <Position X="23" Y="16.75" Width="2.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ArtefactedWeapon.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ArtefactedCharmedWeapon">
-    <Position X="23.25" Y="20.25" Width="3.25" />
-    <TypeIdentifier>
-      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ArtefactedCharmedWeapon.h</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="ArtefactedEquipment">
     <Position X="15" Y="16.5" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ArtefactedEquipment.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CharmedWeapon">
+    <Position X="26.5" Y="18.5" Width="3" />
+    <NestedTypes>
+      <Enum Name="CharmedWeapon::CHARM" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CharmedWeapon.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>QBAAAAQAAAEAAAAAAACAAAAAAAAAgAAABIAAAAAAAAI=</HashCode>
+      <FileName>CharmedWeapon.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArtefactedCharmedWeapon">
+    <Position X="23.25" Y="19" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ArtefactedCharmedWeapon.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArtefactedWeapon" Collapsed="true">
+    <Position X="23.5" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ArtefactedWeapon.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

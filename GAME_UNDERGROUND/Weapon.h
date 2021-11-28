@@ -1,16 +1,18 @@
 #include "Tools.h"
+#include "ENUMS.h"
 #pragma once
-
-static std::string WEAPON_NAMES[3] = { "Sword","Axe", "Baton" };
 
 class Weapon : virtual public Tool {
 protected:
-	int damage;
+
+	WEAPON_NAME name;
+
 public:
-	inline int use(std::string) { return damage; }   //возвращает величину урона
+	inline virtual int use(ENEMY Name) { return name; }   //возвращает величину урона
 
-	Weapon(int n) :Tool(WEAPON_NAMES[n - 1]), damage(n + 7) {};
-	Weapon(int n, std::string name) :Tool(name), damage(n + 7) {};
+	Weapon(WEAPON_NAME Name) : name(Name) { };
+	~Weapon() = default;
 
+	virtual std::string getname();
 	inline bool isArtefact() { return false; }
 };

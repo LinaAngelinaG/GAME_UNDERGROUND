@@ -1,14 +1,19 @@
 #include "Artefact.h"
+#include <iostream>
 
-void Artefact::becomeUpToPower(int n) {
-	//changed_values.count("Power") == 0 ? changed_values.insert({ "Power",n }) : changed_values.at({ "Power",n });
-	changed_values.insert({ "Power", n });
-}
-
-void Artefact::becomeUpToResistance(int n) {
-	changed_values.insert({ "Resistance", n });
-}
-
-void Artefact::becomeUpToAgility(int n) {
-	changed_values.insert({ "Agility", n });
+std::string Artefact:: get_feature() {
+	switch (artefact) {
+	case(POWERUP):
+		return "POWERUP";
+		break;
+	case(RESISTANCEUP):
+		return "RESISTANCEUP";
+		break;
+	case(AGILITYUP):
+		return "AGILITYUP";
+		break;
+	case(NONE):
+		return "NONEUP";
+		break;
+	}
 }

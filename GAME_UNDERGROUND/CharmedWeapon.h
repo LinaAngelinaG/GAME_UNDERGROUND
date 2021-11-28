@@ -1,21 +1,25 @@
 #include "Tools.h"
 #include "Weapon.h"
-#include "Enemy.h"
+#include "ENUMS.h"
 #pragma once
+
 
 class CharmedWeapon : public Weapon {
 protected:
-	bool charmes[4] = { false, false, false, false };
+	CHARM charm;
 public:
-	inline bool get_charm(int n) { return charmes[n % 4]; }
+	std::string get_charm();
 	
-	inline void becomeDamned() { charmes[0] = true; }
-	inline void becomeBurning() { charmes[1] = true; } //ведьм у нас сжигают
-	inline void becomeBlessed() { charmes[2] = true; }
-	inline void becomeDrying() { charmes[3] = true; }
+	inline void becomeDamned() { charm = Damned; }
+	inline void becomeBurning() { charm = Burning; }    //ведьм у нас сжигают)
+	inline void becomeBlessed() { charm = Blessed; }
+	inline void becomeDrying() { charm = Drying; }
 
-	CharmedWeapon(int n) :Weapon(n) {};
-	CharmedWeapon(int n, std::string name) :Weapon(n, name) {};
+	//CharmedWeapon(WEAPON_NAME Name) :Weapon(Name) {  };
 
-	int use(std::string); //возвращает величину урона, использует массив charmes
+	CharmedWeapon(WEAPON_NAME Name, CHARM Charm) :Weapon(Name),charm(Charm) {};
+
+	virtual int use(ENEMY); //возвращает величину урона, использует charmes
+	
+	inline virtual std::string getname() { return get_charm() + " " + Weapon::getname();}
 };

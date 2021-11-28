@@ -8,6 +8,6 @@ class ArtefactedWeapon : public Weapon, public Artefact {
 public:
 	inline bool isArtefact() { return true; }
 	//использует use, определенный в Weapon
-	ArtefactedWeapon(int n) :Weapon(n), Artefact(WEAPON_NAMES[n - 1]) {};
-	ArtefactedWeapon(int n, std::string name) :Weapon(n, name), Artefact(name) {};
+	ArtefactedWeapon(WEAPON_NAME Name1, ARTEFACTED Name2,int val) :Weapon(Name1), Artefact(Name2, val) {};
+	std::string getname() { return Artefact::get_feature() + " " + Weapon::getname(); }
 };
