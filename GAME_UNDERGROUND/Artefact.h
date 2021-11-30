@@ -6,7 +6,6 @@
 
 class Artefact : virtual public Tool { //абстрактный класс
 protected:
-	
     //name of the characteristic and the value that it changes
 	ARTEFACTED artefact = NONE;
 	int value = 0;

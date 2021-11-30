@@ -24,6 +24,10 @@ TEST(TestEquipment, Testall) {
 	ASSERT_EQ(eq2.getname().compare("Gloves"), 0);
 	ASSERT_EQ(eq3.getname().compare("Ring"), 0);
 
+	ASSERT_EQ(eq1.get_type(), Head);
+	ASSERT_EQ(eq2.get_type(), Hands);
+	ASSERT_EQ(eq3.get_type(), Finger);
+
 	EXPECT_FALSE(eq1.isArtefact());
 	EXPECT_FALSE(eq2.isArtefact());
 	EXPECT_FALSE(eq3.isArtefact());
@@ -106,7 +110,6 @@ TEST(TestPotion, Testall) {
 TEST(TestWeapon, Testall) {
 	Weapon eq1(Sword);
 	Weapon eq2(Axe);
-	Weapon eq(Axe);
 	Weapon eq3(Baton);
 
 	ASSERT_EQ(eq1.getname().compare("Sword"), 0);
@@ -202,5 +205,16 @@ TEST(TestArtefactedEquipment, Testall) {
 
 TEST(TestHero, Testall) {
 	Hero hero1;
-	Weapon w;
+	Weapon weapon(Axe);
+	Equipment equip(Helmet);
+	Hero hero2(weapon);
+
+	ASSERT_EQ(hero1.get_keys(),0);
+	ASSERT_EQ(hero1.get_experince(), 0);
+	ASSERT_EQ(hero1.get_max_potion(), 3);
+	ASSERT_EQ(hero1.get_keys(), 0);
+
+	ASSERT_EQ(&hero2.get_weapon(), &weapon);
+
+
 }

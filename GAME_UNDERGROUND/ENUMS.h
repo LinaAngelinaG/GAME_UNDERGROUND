@@ -27,3 +27,30 @@ enum ARTEFACTED {
 	AGILITYUP,
 	NONE
 };
+
+enum TYPE {
+	Head = 1,
+	Hands,
+	Finger
+};
+enum EQUIPMENT {
+	Helmet = Head,
+	Gloves = Hands,
+	Ring = Finger
+};
+
+enum CHARACTERS {   //short name of characteristics
+	Power,
+	Resistance,
+	Agility,
+	Health,
+	Cur_health
+};
+
+enum CHARACTERISTICS { //long name of characteristics
+	POWER,
+	RESISTANCE,
+	AGILITY,
+	HEALTH,
+	CURRENT_HEALTH
+};
