@@ -1,14 +1,8 @@
 #include "Tools.h"
 #include <map>
 #include <iostream>
+#include "ENUMS.h"
 #pragma once
-
-enum ARTEFACTED {
-	POWERUP,
-	RESISTANCEUP,
-	AGILITYUP,
-	NONE
-};
 
 class Artefact : virtual public Tool { //абстрактный класс
 protected:

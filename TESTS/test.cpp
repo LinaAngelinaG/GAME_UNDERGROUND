@@ -106,6 +106,7 @@ TEST(TestPotion, Testall) {
 TEST(TestWeapon, Testall) {
 	Weapon eq1(Sword);
 	Weapon eq2(Axe);
+	Weapon eq(Axe);
 	Weapon eq3(Baton);
 
 	ASSERT_EQ(eq1.getname().compare("Sword"), 0);
@@ -199,9 +200,7 @@ TEST(TestArtefactedEquipment, Testall) {
 	ASSERT_EQ(ww.use(Witch), 3);
 }
 
-/*
 TEST(TestHero, Testall) {
-	EXPECT_EQ(1, 1);
-	EXPECT_TRUE(true);
+	Hero hero1;
+	Weapon w;
 }
-*/

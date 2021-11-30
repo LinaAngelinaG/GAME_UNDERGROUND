@@ -1,7 +1,6 @@
 #include <iostream>
 #include "Table.h"
 #include "Tools.h"
-#include "Artefact.h"
 #include "Equipment.h"
 #include "Potion.h"
 #include "Weapon.h"
@@ -9,13 +8,14 @@
 
 class Hero {
 private:
-	int experience;
+	int experience = 0;
+	Weapon* weapon = nullptr;
+	std::map <TYPE, EQUIPMENT*> equipment;
+	Potion** potions = nullptr;
+	int max_potion = 3;
+	int keys = 0;
+
 	Table* parameters;
-	Weapon* weapon;
-	std::map<std::string, Equipment*> equipment;
-	Potion* potions;
-	int max_potion;
-	int keys;
 
 public:
 	inline void set_weapon(Weapon* w) { weapon = w; }
@@ -28,16 +28,17 @@ public:
 	void set_potion(Potion*);
 	
 	Hero();
-
+	Hero(Weapon* w) :weapon(w);
+	Hero(Equipment* eq) { set_equipment(eq); }
 
 	inline Weapon& get_weapon() { return *weapon; }
 	inline Table& get_table() { return *parameters; }
 	inline int get_experince() { return experience; }
 	inline int get_max_potion() { return max_potion; }
 	inline int get_keys() { return keys; }
-	inline std::map<std::string, Equipment*>& get_equipment() { return equipment; }
-	inline Potion& get_potion() { return *potions; }
+	inline Potion& get_potion(int n) { return **(potions+n); }
 
+	Equipment& get_equipment(TYPE);
 	void take_tool(Tool*); //взять предмет
 	void drink_potion(int); //выпить зелье под номером
 	int generate_damage();  //сгенерировать урон на основании всей экип-ки и бонусов

@@ -20,3 +20,10 @@ enum  WEAPON_NAME //константный параметр - это и есть величина урона
 	Axe,
 	Baton
 };
+
+enum ARTEFACTED {
+	POWERUP,
+	RESISTANCEUP,
+	AGILITYUP,
+	NONE
+};
