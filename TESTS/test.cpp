@@ -61,6 +61,9 @@ TEST(TestEnemy, Testall) {
 	Enemy e3(Demon);
 	Enemy e4(Slug);
 
+	ASSERT_EQ(e1.get_type_enemy(), Humanlikely);
+
+
 	ASSERT_EQ(e1.attack(), 1);
 	ASSERT_EQ(e2.attack(), 2);
 	ASSERT_EQ(e3.attack(), 4);
@@ -97,14 +100,14 @@ TEST(TestKeys, Testall) {
 }
 
 TEST(TestPotion, Testall) {
-	Potion p(POWERUP, 2);
+	Potion p(Power, 2);
 	ASSERT_EQ(p.getname().compare("POWERUP potion"), 0);
 	ASSERT_TRUE(p.isArtefact());
 	ASSERT_EQ(p.get_feature().compare("POWERUP"),0);
-	ASSERT_EQ(p.get_feature_val(), 2);
+	ASSERT_EQ(p.get_feature_val(Power), 2);
 	p.becomeUpToAgility(4);
-	ASSERT_EQ(p.get_feature().compare("AGILITYUP"), 0);
-	ASSERT_EQ(p.get_feature_val(), 4);
+	ASSERT_EQ(p.get_feature().compare("POWERUP AGILITYUP"), 0);
+	ASSERT_EQ(p.get_feature_val(Agility), 4);
 }
 
 TEST(TestWeapon, Testall) {
@@ -128,77 +131,77 @@ TEST(TestWeapon, Testall) {
 TEST(TestCharmedWeapon, Testall) {
 	CharmedWeapon w(Axe, Drying);
 	ASSERT_EQ(w.getname().compare("Drying Axe"), 0);
-	w.becomeBlessed();
-	ASSERT_EQ(w.getname().compare("Blessed Axe"), 0);
-	ASSERT_EQ(w.get_charm().compare("Blessed"), 0);
+	w.becomeBlessed(2);
+	ASSERT_EQ(w.getname().compare("Blessed Drying Axe"), 0);
+	ASSERT_EQ(w.get_charm().compare("Blessed Drying"), 0);
 	EXPECT_FALSE(w.isArtefact());
 	ASSERT_EQ(w.use(Witch), 5);
 	ASSERT_EQ(w.use(Demon), 7);
 }
 
 TEST(TestArtefactedCharmedWeapon, Testall) {
-	ArtefactedCharmedWeapon w(Baton, Burning, RESISTANCEUP,1);
-	ASSERT_EQ(w.get_feature().compare("RESISTANCEUP"), 0);
-	ASSERT_EQ(w.get_feature_val(), 1);
+	ArtefactedCharmedWeapon w(Baton, Burning, Resistance,2);
+	ASSERT_EQ(w.get_feature().compare("RESISUP"), 0);
+	ASSERT_EQ(w.get_feature_val(Resistance), 2);
 	ASSERT_EQ(w.get_charm().compare("Burning"), 0);
-	ASSERT_EQ(w.getname().compare("RESISTANCEUP Burning Baton"),0);
+	ASSERT_EQ(w.getname().compare("RESISUP Burning Baton"),0);
 	ASSERT_TRUE(w.isArtefact());
 	ASSERT_EQ(w.use(Witch), 7);
 	ASSERT_EQ(w.use(Demon), 6);
 
-	w.becomeBlessed();
+	w.becomeBlessed(5);
 	w.becomeUpToPower(3);
 
-	ASSERT_EQ(w.getname().compare("POWERUP Blessed Baton"), 0);
-	ASSERT_EQ(w.get_feature_val(), 3);
-	ASSERT_EQ(w.get_charm().compare("Blessed"), 0);
+	ASSERT_EQ(w.getname().compare("POWERUP RESISUP Burning Blessed Baton"), 0);
+	ASSERT_EQ(w.get_feature_val(Power), 3);
+	ASSERT_EQ(w.get_charm().compare("Burning Blessed"), 0);
 	ASSERT_TRUE(w.isArtefact());
-	ASSERT_EQ(w.use(Witch), 6);
+	ASSERT_EQ(w.use(Witch), 7);
 	ASSERT_EQ(w.use(Demon), 8);
 }
 
 TEST(TestArtefactedWeapon, Testall) {
-	ArtefactedWeapon w(Baton, RESISTANCEUP, 1);
-	ASSERT_EQ(w.get_feature().compare("RESISTANCEUP"), 0);
-	ASSERT_EQ(w.get_feature_val(), 1);
-	ASSERT_EQ(w.getname().compare("RESISTANCEUP Baton"), 0);
+	ArtefactedWeapon w(Baton, Resistance, 1);
+	ASSERT_EQ(w.get_feature().compare("RESISUP"), 0);
+	ASSERT_EQ(w.get_feature_val(Resistance), 1);
+	ASSERT_EQ(w.getname().compare("RESISUP Baton"), 0);
 	ASSERT_TRUE(w.isArtefact());
 	ASSERT_EQ(w.use(Demon), 6);
 
 	w.becomeUpToPower(3);
 
-	ASSERT_EQ(w.getname().compare("POWERUP Baton"), 0);
-	ASSERT_EQ(w.get_feature_val(), 3);
+	ASSERT_EQ(w.getname().compare("POWERUP RESISUP Baton"), 0);
+	ASSERT_EQ(w.get_feature_val(Power), 3);
 	ASSERT_TRUE(w.isArtefact());
 	ASSERT_EQ(w.use(Witch), 6);
 }
 
 TEST(TestArtefactedEquipment, Testall) {
-	ArtefactedEquipment w(Helmet, RESISTANCEUP, 1);
-	ASSERT_EQ(w.get_feature().compare("RESISTANCEUP"), 0);
-	ASSERT_EQ(w.get_feature_val(), 1);
-	ASSERT_EQ(w.getname().compare("RESISTANCEUP Helmet"), 0);
+	ArtefactedEquipment w(Helmet, Resistance, 1);
+	ASSERT_EQ(w.get_feature().compare("RESISUP"), 0);
+	//ASSERT_EQ(w.get_feature_val(), 1);
+	ASSERT_EQ(w.getname().compare("RESISUP Helmet"), 0);
 	ASSERT_TRUE(w.isArtefact());
 	ASSERT_EQ(w.use(Demon), 1);
 
 	w.becomeUpToPower(3);
 
-	ASSERT_EQ(w.getname().compare("POWERUP Helmet"), 0);
-	ASSERT_EQ(w.get_feature_val(), 3);
+	ASSERT_EQ(w.getname().compare("POWERUP RESISUP Helmet"), 0);
+	//ASSERT_EQ(w.get_feature_val(), 3);
 	ASSERT_TRUE(w.isArtefact());
 	ASSERT_EQ(w.use(Witch), 1);
 
-	ArtefactedEquipment ww(Ring, RESISTANCEUP, 1);
-	ASSERT_EQ(ww.get_feature().compare("RESISTANCEUP"), 0);
-	ASSERT_EQ(ww.get_feature_val(), 1);
-	ASSERT_EQ(ww.getname().compare("RESISTANCEUP Ring"), 0);
+	ArtefactedEquipment ww(Ring, Resistance, 1);
+	ASSERT_EQ(ww.get_feature().compare("RESISUP"), 0);
+	ASSERT_EQ(ww.get_feature_val(Resistance), 1);
+	ASSERT_EQ(ww.getname().compare("RESISUP Ring"), 0);
 	ASSERT_TRUE(ww.isArtefact());
 	ASSERT_EQ(ww.use(Demon), 3);
 
 	ww.becomeUpToPower(3);
 
-	ASSERT_EQ(ww.getname().compare("POWERUP Ring"), 0);
-	ASSERT_EQ(ww.get_feature_val(), 3);
+	ASSERT_EQ(ww.getname().compare("POWERUP RESISUP Ring"), 0);
+	ASSERT_EQ(ww.get_feature_val(Power), 3);
 	ASSERT_TRUE(ww.isArtefact());
 	ASSERT_EQ(ww.use(Witch), 3);
 }
@@ -216,5 +219,36 @@ TEST(TestHero, Testall) {
 
 	ASSERT_EQ(&hero2.get_weapon(), &weapon);
 
+	Potion p1(Power, 2), p2(Power,3);
+	hero1.set_potion(p1);
+	hero1.set_potion(p2);
+
+	ASSERT_EQ(hero1.get_potion(1), &p1);
+	ASSERT_EQ(hero1.get_potion(2), &p2);
+
+	Equipment e(Helmet);
+	Hero hero3(e);
+
+	ASSERT_EQ(hero3.get_equipment(Head), &e);
+	ASSERT_EQ(hero3.get_equipment(Hands), nullptr);
+
+	hero3.set_weapon(weapon);
+
+	ASSERT_EQ(&hero3.get_weapon(), &weapon);
+
+	hero3.set_experince(3);
+	hero3.set_max_potion(10);
+	hero3.set_keys(5);
+	hero2.set_equipment(e);
+
+	ASSERT_EQ(hero3.get_experince(), 3);
+	ASSERT_EQ(hero3.get_max_potion(), 10);
+	ASSERT_EQ(hero3.get_keys(), 5);
+	ASSERT_EQ(hero2.get_equipment(Head), &e);
+
+	ASSERT_EQ(hero2.generate_damage(Witch), 5);
+	hero2.gain_damage(1);
+	Potion p3(Power,6);
+	Tool& tool = p3;
 
 }

@@ -32,4 +32,5 @@ public:
 	inline int get_outcomes() { return outcomes; }
 	std::string get_name();
 	inline Tool& get_tool() { return *tool; }
+	inline ENEMY get_type_enemy() { return name; }
 };

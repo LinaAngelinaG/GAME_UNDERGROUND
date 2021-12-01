@@ -1,5 +1,6 @@
 #include <iostream>
 #include <map>
+#include "ENUMS.h"
 #pragma once
 
 struct info {
@@ -11,7 +12,7 @@ class Table
 {
 protected:
 	int n=0;
-	std::map<CHARACTERS, info> table;
+	std::map<CHARACTERS, info&> table;
 public:
 	Table(); //будут инициал-ны сила, ловкость, выносливость, максимальное здоровье, текущее здоровье
 	~Table();

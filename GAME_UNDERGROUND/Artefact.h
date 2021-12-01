@@ -8,18 +8,21 @@ class Artefact : virtual public Tool { //абстрактный класс
 protected:
     //name of the characteristic and the value that it changes
 	ARTEFACTED artefact = NONE;
+	std::map<CHARACTERS, int> modification;
 	int value = 0;
 public:
-	inline void becomeUpToPower(int n) { artefact = POWERUP; value = n; }
-	inline void becomeUpToResistance(int n) { artefact = RESISTANCEUP; value = n; }
-	inline void becomeUpToAgility(int n) { artefact = AGILITYUP; value = n; }
+	inline void becomeUpToPower(int n) { modification.insert({ Power,n }); }
+	inline void becomeUpToResistance(int n) { modification.insert({ Resistance,n }); }
+	inline void becomeUpToAgility(int n) { modification.insert({ Agility,n }); }
 
 	inline bool isArtefact() { return true; }
+	inline std::map<CHARACTERS, int> get_modif() const { return modification; }
+	std::string get_feature() const;
+	int get_feature_val(CHARACTERS) const;
 
-	std::string get_feature();
-	int get_feature_val() { return value; }
 
-	Artefact(ARTEFACTED art, int n):artefact(art), value(n) { };
+	Artefact(CHARACTERS art, int n) { modification.insert({ art,n }); };
+	//можно добавить создание по неограниченному кол-ву параметров
 
 	//как повышать за счет артефактов первичные характеристики?
 	//зачарованное оружие сразу даст скорректированный урон

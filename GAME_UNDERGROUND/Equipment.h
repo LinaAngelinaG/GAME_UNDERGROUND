@@ -6,6 +6,7 @@
 class Equipment : virtual public Tool {
 protected:
 	EQUIPMENT equip;
+	std::string type_of_obj = "equipment";
 
 public:
 	Equipment(EQUIPMENT eq) : equip(eq) {};

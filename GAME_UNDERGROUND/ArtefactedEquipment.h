@@ -7,6 +7,6 @@
 class ArtefactedEquipment : public Equipment, public Artefact {
 public:
 	inline bool isArtefact() { return true; }
-	ArtefactedEquipment(EQUIPMENT Name1, ARTEFACTED Name2, int val) :Equipment(Name1), Artefact(Name2, val) {};
+	ArtefactedEquipment(EQUIPMENT Name1, CHARACTERS Name2, int val) :Equipment(Name1), Artefact(Name2, val) {};
 	virtual std::string getname() { return get_feature() + " " + Equipment::getname(); }
 };

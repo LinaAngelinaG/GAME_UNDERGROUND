@@ -4,7 +4,7 @@
 
 class Weapon : virtual public Tool {
 protected:
-
+	std::string type_of_obj = "weapon";
 	WEAPON_NAME name;
 
 public:

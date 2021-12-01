@@ -8,7 +8,7 @@ void Hero::set_potion(Potion& potion) {
 }
 
 const Potion* Hero::get_potion(int n) { 
-	if (n < potion_val) 
+	if (n <= potion_val) 
 		return &potions.at(n);
 	return nullptr;
 }
@@ -17,7 +17,7 @@ const Equipment* Hero::get_equipment(TYPE type) {
 	try {
 		return equipment.at(type);
 	}
-	catch (_exception ex) {
+	catch (std::exception ex) {
 		return nullptr;
 	}
 }
@@ -35,8 +35,14 @@ void Hero::gain_damage(int damage) {
 
 void Hero::drink_potion(int number) {
 	if (potion_val >= number) {
+		const Potion* needed_potion = get_potion(number);
 		//potions.at(n). // должно получать характеристику изменяемую (а вообще мапу характеристик)
 		//потом ее нужно вставить в parameters->set_val_of_param(param, val_of_param)
+		for (std::map<CHARACTERS, int>::const_iterator iter = (*needed_potion).get_modif().cbegin(); iter != (*needed_potion).get_modif().cend(); ++iter) {
+			int cur = parameters->get_val_of_param((*iter).first);
+			info inf = { CHARACTERISTICS((*iter).first),cur + (*iter).second };
+			parameters->set_val_of_param((*iter).first, inf);
+		}
 		potions.erase(number); //erase used potion
 		--potion_val;
 	}
@@ -84,5 +90,18 @@ void Hero::upgrate_param(CHARACTERS charact) {
 			experience -= 2;
 		}
 		break;
+	}
+}
+
+void Hero::take_tool(Tool& tool) {
+	std::string name = tool.get_type_of_obj();
+	if (name == "potion") {
+		set_potion(*dynamic_cast<Potion*>(&tool));
+	}
+	else if (name == "equipment") {
+		set_equipment(*dynamic_cast<Equipment*>(&tool));
+	}
+	else if (name == "weapon") {
+		set_weapon(*dynamic_cast<Weapon*>(&tool));
 	}
 }
