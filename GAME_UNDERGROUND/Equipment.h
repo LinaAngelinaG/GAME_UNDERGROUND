@@ -6,10 +6,8 @@
 class Equipment : virtual public Tool {
 protected:
 	EQUIPMENT equip;
-	std::string type_of_obj = "equipment";
-
 public:
-	Equipment(EQUIPMENT eq) : equip(eq) {};
+	Equipment(EQUIPMENT eq) : equip(eq) { Tool::type_of_obj = "equipment"; };
 	~Equipment() = default;
 	inline bool isArtefact() { return false; }
 	inline int use(ENEMY en) { return equip; }; //возвращает величину защиты

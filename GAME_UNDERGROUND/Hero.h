@@ -11,7 +11,7 @@ private:
 	int experience = 0;
 	Weapon* weapon = nullptr;
 	std::map <TYPE, Equipment*> equipment;
-	std::map <int, Potion&> potions;
+	std::map <int, Potion&> potions;          // todo:: make as a list
 	int potion_val = 0;
 	int max_potion = 3;
 	int keys = 0;
@@ -32,20 +32,21 @@ public:
 	Hero(Weapon& w, Table& tab) :weapon(&w), parameters(&tab) {};
 	Hero(Equipment& eq, Table& tab):parameters(&tab) { set_equipment(eq); }
 
-	inline Weapon& get_weapon() { return *weapon; }
-	inline Table& get_table() { return *parameters; } 
-	inline int get_experince() { return experience; }
-	inline int get_max_potion() { return max_potion; }
-	inline int get_keys() { return keys; }
+	inline const Weapon& get_weapon() const { return *weapon; }
+	inline const Table& get_table() const{ return *parameters; } 
+	inline int get_experince() const { return experience; }
+	inline int get_max_potion() const { return max_potion; }
+	inline int get_keys() const { return keys; }
+	inline int get_potion_val() const { return potion_val; }
 
-	const Potion* get_potion(int);
+	const Potion* get_potion(int) const;
 	
-	const Equipment* get_equipment(TYPE);
+	const Equipment* get_equipment(TYPE) const;
 
-	inline int generate_damage(ENEMY enemy) { return weapon->use(enemy); }  //сгенерировать урон на основании всей экип-ки и бонусов
-	void gain_damage(int); //получить урон с учетом защиты //---
+	inline int generate_damage(ENEMY enemy) const { return weapon->use(enemy); }  //сгенерировать урон на основании всей экип-ки и бонусов
+	void gain_damage(int); //получить урон с учетом защиты 
 	void drink_potion(int); //выпить зелье под номером //---
-	void upgrate_param(CHARACTERS); //---
+	void upgrate_param(CHARACTERS);
 
-	void take_tool(Tool&); //взять предмет //---
+	void take_tool(Tool&); //взять предмет
 };

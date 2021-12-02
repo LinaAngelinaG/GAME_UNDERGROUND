@@ -16,8 +16,7 @@ protected:
 public:
 	Table(); //будут инициал-ны сила, ловкость, выносливость, максимальное здоровье, текущее здоровье
 	~Table();
-
-	inline int get_col_param() { return n; }
-	inline int get_val_of_param(CHARACTERS param) { return table.at(param).value; }
-	inline void set_val_of_param(CHARACTERS param, info& value) { table.insert({ param, value }); }
+	inline int get_col_param() const { return n; }
+	inline int get_val_of_param(CHARACTERS param) const { return table.at(param).value; }
+	void set_val_of_param(CHARACTERS param, int value);
 };

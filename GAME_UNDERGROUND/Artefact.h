@@ -6,17 +6,15 @@
 
 class Artefact : virtual public Tool { //абстрактный класс
 protected:
+	typedef std::map<CHARACTERS, int> modificate;
     //name of the characteristic and the value that it changes
-	ARTEFACTED artefact = NONE;
-	std::map<CHARACTERS, int> modification;
+	modificate modification;
 	int value = 0;
 public:
-	inline void becomeUpToPower(int n) { modification.insert({ Power,n }); }
-	inline void becomeUpToResistance(int n) { modification.insert({ Resistance,n }); }
-	inline void becomeUpToAgility(int n) { modification.insert({ Agility,n }); }
+	inline void becomeUpTo(CHARACTERS character, int n) { modification.insert({ character ,n }); }
 
 	inline bool isArtefact() { return true; }
-	inline std::map<CHARACTERS, int> get_modif() const { return modification; }
+	inline const modificate & get_modif() const { return modification; }
 	std::string get_feature() const;
 	int get_feature_val(CHARACTERS) const;
 

@@ -105,7 +105,7 @@ TEST(TestPotion, Testall) {
 	ASSERT_TRUE(p.isArtefact());
 	ASSERT_EQ(p.get_feature().compare("POWERUP"),0);
 	ASSERT_EQ(p.get_feature_val(Power), 2);
-	p.becomeUpToAgility(4);
+	p.becomeUpTo(Agility, 4);
 	ASSERT_EQ(p.get_feature().compare("POWERUP AGILITYUP"), 0);
 	ASSERT_EQ(p.get_feature_val(Agility), 4);
 }
@@ -150,7 +150,7 @@ TEST(TestArtefactedCharmedWeapon, Testall) {
 	ASSERT_EQ(w.use(Demon), 6);
 
 	w.becomeBlessed(5);
-	w.becomeUpToPower(3);
+	w.becomeUpTo(Power, 3);
 
 	ASSERT_EQ(w.getname().compare("POWERUP RESISUP Burning Blessed Baton"), 0);
 	ASSERT_EQ(w.get_feature_val(Power), 3);
@@ -168,7 +168,7 @@ TEST(TestArtefactedWeapon, Testall) {
 	ASSERT_TRUE(w.isArtefact());
 	ASSERT_EQ(w.use(Demon), 6);
 
-	w.becomeUpToPower(3);
+	w.becomeUpTo(Power,3);
 
 	ASSERT_EQ(w.getname().compare("POWERUP RESISUP Baton"), 0);
 	ASSERT_EQ(w.get_feature_val(Power), 3);
@@ -184,7 +184,7 @@ TEST(TestArtefactedEquipment, Testall) {
 	ASSERT_TRUE(w.isArtefact());
 	ASSERT_EQ(w.use(Demon), 1);
 
-	w.becomeUpToPower(3);
+	w.becomeUpTo(Power, 3);
 
 	ASSERT_EQ(w.getname().compare("POWERUP RESISUP Helmet"), 0);
 	//ASSERT_EQ(w.get_feature_val(), 3);
@@ -198,7 +198,7 @@ TEST(TestArtefactedEquipment, Testall) {
 	ASSERT_TRUE(ww.isArtefact());
 	ASSERT_EQ(ww.use(Demon), 3);
 
-	ww.becomeUpToPower(3);
+	ww.becomeUpTo(Power, 3);
 
 	ASSERT_EQ(ww.getname().compare("POWERUP RESISUP Ring"), 0);
 	ASSERT_EQ(ww.get_feature_val(Power), 3);
@@ -207,10 +207,11 @@ TEST(TestArtefactedEquipment, Testall) {
 }
 
 TEST(TestHero, Testall) {
-	Hero hero1;
+	Table t;
+	Hero hero1(t);
 	Weapon weapon(Axe);
 	Equipment equip(Helmet);
-	Hero hero2(weapon);
+	Hero hero2(weapon,t);
 
 	ASSERT_EQ(hero1.get_keys(),0);
 	ASSERT_EQ(hero1.get_experince(), 0);
@@ -220,6 +221,7 @@ TEST(TestHero, Testall) {
 	ASSERT_EQ(&hero2.get_weapon(), &weapon);
 
 	Potion p1(Power, 2), p2(Power,3);
+	p1.becomeUpTo(Agility, 3);
 	hero1.set_potion(p1);
 	hero1.set_potion(p2);
 
@@ -227,7 +229,7 @@ TEST(TestHero, Testall) {
 	ASSERT_EQ(hero1.get_potion(2), &p2);
 
 	Equipment e(Helmet);
-	Hero hero3(e);
+	Hero hero3(e,t);
 
 	ASSERT_EQ(hero3.get_equipment(Head), &e);
 	ASSERT_EQ(hero3.get_equipment(Hands), nullptr);
@@ -245,10 +247,28 @@ TEST(TestHero, Testall) {
 	ASSERT_EQ(hero3.get_max_potion(), 10);
 	ASSERT_EQ(hero3.get_keys(), 5);
 	ASSERT_EQ(hero2.get_equipment(Head), &e);
-
 	ASSERT_EQ(hero2.generate_damage(Witch), 5);
-	hero2.gain_damage(1);
+	ASSERT_EQ(hero2.get_table().get_val_of_param(Cur_health), 10);
+
 	Potion p3(Power,6);
 	Tool& tool = p3;
+	hero1.take_tool(tool);
+	hero1.take_tool(weapon);
+	Enemy enemy(Witch), enemy2(Slug);
+	hero2.gain_damage(enemy.attack());
 
+	ASSERT_EQ(hero2.get_table().get_val_of_param(Cur_health), 9);
+	ASSERT_EQ(hero1.get_potion_val(), 3);
+	ASSERT_EQ(&hero1.get_weapon(), &weapon);
+
+	hero1.drink_potion(1);
+
+	ASSERT_EQ(hero1.get_potion_val(), 2);
+	ASSERT_EQ(hero1.get_table().get_val_of_param(Power), 3);
+
+	hero1.set_experince(3);
+	hero1.upgrate_param(Power);
+
+	ASSERT_EQ(hero1.get_table().get_val_of_param(Power), 4);
+	ASSERT_EQ(hero1.get_table().get_val_of_param(Agility), 4);
 }

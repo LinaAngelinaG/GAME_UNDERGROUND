@@ -4,7 +4,7 @@
 #pragma once
 
 class Tool {
-private:
+protected:
 	std::string type_of_obj;
 public:
 	virtual int use(ENEMY) = 0;

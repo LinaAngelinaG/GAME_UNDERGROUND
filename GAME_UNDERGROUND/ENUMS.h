@@ -1,13 +1,13 @@
 #pragma once
 
-enum ENEMY {  //contains health // power and experience are equal and = health-9
+enum ENEMY {  //name of the enemy: contains health, power and experience are equal and = health-9
 	Humanlikely = 10,
 	Witch,
 	Slug,
 	Demon
 };
 
-enum CHARM {
+enum CHARM { ////typename of the charm
 	Damned,
 	Burning,
 	Blessed,
@@ -15,25 +15,18 @@ enum CHARM {
 };
 
 enum  WEAPON_NAME //константный параметр - это и есть величина урона
-{
+{ //typename of the weapon
 	Sword = 4,
 	Axe,
 	Baton
 };
 
-enum ARTEFACTED {
-	POWERUP,
-	RESISTANCEUP,
-	AGILITYUP,
-	NONE
-};
-
-enum TYPE {
+enum TYPE { //the part of the body that uses this equipment
 	Head = 1,
 	Hands,
 	Finger
 };
-enum EQUIPMENT {
+enum EQUIPMENT { //typename of the equipment
 	Helmet = Head,
 	Gloves = Hands,
 	Ring = Finger
