@@ -2,7 +2,7 @@
 #include "Tools.h"
 
 struct Node {
-    TYPE type;
+    TYPE key;
     int value;
 
     Node* left;
@@ -11,7 +11,7 @@ struct Node {
     Node(TYPE t,int val){
         left = nullptr;
         right = nullptr;
-        type = t;
+        key = t;
         value = val;
     }
 };
@@ -26,9 +26,9 @@ private:
 public:
     Container(TYPE,int);
     ~Container();
+
     void print();
     bool find(TYPE);
     void insert(TYPE, int);
-    void erase(TYPE);
-    int getSize();
+    inline int getSize() { return size; };
 };
