@@ -20,8 +20,8 @@ class Container : virtual public Tool {
 private:
     Node* root;
     int size;
-    void printTree(tree_elem*);
-    void deleteTree(tree_elem*);
+    void printTree(Node*);
+    void deleteTree(Node*);
 
 public:
     Container(TYPE,int);
@@ -31,4 +31,8 @@ public:
     bool find(TYPE);
     void insert(TYPE, int);
     inline int getSize() { return size; };
+
+    virtual int use(ENEMY) { return 0; };
+    virtual bool isArtefact() { return true; };
+    virtual std::string getname() { return "ww"; };
 };

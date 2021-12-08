@@ -1,18 +1,16 @@
 #pragma once
 #include "pch.h"
-#include "Artefact.h"
 #include "ArtefactedCharmedWeapon.h"
 #include "ArtefactedEquipment.h"
 #include "ArtefactedWeapon.h"
 #include "Box.h"
 #include "CharmedWeapon.h"
 #include "Enemy.h"
-#include "Equipment.h"
 #include "Hero.h"
 #include "Keys.h"
 #include "Potion.h"
 #include "Table.h"
-#include "Weapon.h"
+#include "Container.h"
 
 TEST(TestEquipment, Testall) {
 
@@ -271,4 +269,20 @@ TEST(TestHero, Testall) {
 
 	ASSERT_EQ(hero1.get_table().get_val_of_param(Power), 4);
 	ASSERT_EQ(hero1.get_table().get_val_of_param(Agility), 4);
+}
+
+TEST(TestUnderground, Testall) {
+}
+
+TEST(TestContainer, Testall) {
+	Container container(Head,2);
+	container.print();
+
+	container.insert(Head, 3);
+	container.insert(Finger, 4);
+	container.insert(Hands, 1);
+
+	std::cout<< container.find(Head) << std::endl;
+	container.print();
+	std::cout << container.getSize() << std::endl;
 }

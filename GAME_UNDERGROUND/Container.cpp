@@ -27,8 +27,8 @@ void Container::print() {
 void Container::printTree(Node* curr) {
     if (curr){
         printTree(curr->left);
-        cout << curr->key << " " << curr->value;
-        print_tree(curr->right);
+        std::cout << curr->key << " " << curr->value;
+        printTree(curr->right);
     }
 }
 
@@ -47,7 +47,7 @@ bool Container::find(TYPE keyToFind){
 void Container::insert(TYPE keyToInsert, int val) {
     Node* curr = root;
     while (curr && curr->key != keyToInsert) {
-        if (curr->key > keyToInsert && curr->m_left == nullptr) {
+        if (curr->key > keyToInsert && curr->left == nullptr) {
             curr->left = new Node(keyToInsert, val);
             ++size;
             return;
