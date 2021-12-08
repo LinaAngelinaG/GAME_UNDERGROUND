@@ -152,6 +152,7 @@
     <ClCompile Include="Equipment.cpp" />
     <ClCompile Include="Hero.cpp" />
     <ClCompile Include="Keys.cpp" />
+    <ClCompile Include="Object.cpp" />
     <ClCompile Include="Potion.cpp" />
     <ClCompile Include="Table.cpp" />
     <ClCompile Include="Tools.cpp" />
@@ -171,6 +172,7 @@
     <ClInclude Include="Equipment.h" />
     <ClInclude Include="Hero.h" />
     <ClInclude Include="Keys.h" />
+    <ClInclude Include="Object.h" />
     <ClInclude Include="Potion.h" />
     <ClInclude Include="Table.h" />
     <ClInclude Include="Tools.h" />

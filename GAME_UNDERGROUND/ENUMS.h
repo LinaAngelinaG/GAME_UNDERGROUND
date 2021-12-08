@@ -47,3 +47,25 @@ enum CHARACTERISTICS { //long name of characteristics
 	HEALTH,
 	CURRENT_HEALTH
 };
+
+enum FIELD {
+	//0 - пол, 1 - открытая дверь, 2 - закрытая дверь
+	//3 - лестница вверх, 4 - лестница вниз
+	//5 - предмет, 6 - сундук
+	Floor,
+	OpenedDoor,
+	ClosedDoor,
+	UpStairs,
+	DownStairs
+};
+
+struct point {
+	int x;
+	int y;
+};
+
+enum objectType {
+	enemy,
+	box,
+	tool
+};

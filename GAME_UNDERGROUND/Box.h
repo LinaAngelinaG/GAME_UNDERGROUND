@@ -5,8 +5,7 @@
 
 static int PROBABILITY[] = {90,75,45,35,25};
 
-class Box
-{
+class Box: public Object{
 private:
 	int level;
 	Tool* tool;
@@ -18,6 +17,7 @@ public:
 	inline Tool& get_tool() { return *tool; }
 	inline void set_tool(Tool& t) { tool = &t; }
 	inline void set_level(int n) { level = n; }
+	inline objectType getObjectType() override { return box; };
 
 	bool open(int);
 };

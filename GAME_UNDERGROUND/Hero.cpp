@@ -90,6 +90,7 @@ void Hero::upgrate_param(CHARACTERS charact) {
 
 void Hero::take_tool(Tool& tool) {
 	std::string name = tool.get_type_of_obj();
+
 	if (name == "potion") {
 		set_potion(*dynamic_cast<Potion*>(&tool));
 	}

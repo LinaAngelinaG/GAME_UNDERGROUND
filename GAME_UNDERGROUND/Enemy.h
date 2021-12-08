@@ -3,8 +3,7 @@
 #include "Tools.h"
 #pragma once
 
-class Enemy
-{
+class Enemy: public Object{
 private:
 	ENEMY name;
 	int power;
@@ -33,4 +32,5 @@ public:
 	std::string get_name();
 	inline Tool& get_tool() { return *tool; }
 	inline ENEMY get_type_enemy() { return name; }
+	inline objectType getObjectType() override { return enemy; };
 };

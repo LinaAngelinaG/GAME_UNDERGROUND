@@ -5,17 +5,14 @@
 #include "Enemy.h"
 #pragma once
 
-//0 - пол, 1 - открытая дверь, 2 - закрытая дверь
-//3 - лестница вверх, 4 - лестница вниз
-//5 - предмет, 6 - сундук
-
 struct smth {
 	Tool* t;
 	Box* b;
 };
-struct point {
-	int x;
-	int y;
+
+struct Cell {
+	FIELD typeOfField;
+	Object* objectOnCell;
 };
 
 class Underground
@@ -27,24 +24,31 @@ private:
 	int length;
 	int width;
 
-	point & coor_hero;
-	std::map<point, Enemy*> enemies;
+	std::map <point, Cell&> field;
 
-	std::map<point, smth> cells; // разрешенная матрица хранения сундуков и предметов
-	std::map<point, int> field;  //разреженная матрица поля
-	int check_stairs(); // проверить, что лестница вверх совпадает с лестницей вниз
+	//point & coor_hero;
+	/*std::map<point, Enemy*> enemies;
+	std::map<point, smth> cells; // разреженная матрица хранения сундуков и предметов
+	std::map<point, FIELD> field;  //разреженная матрица поля*/
+	//inline void setSize(int l, int w) { length = l; width = w; }
+	int checkPoint(point&);
+	int checkStairsAndCorrect(); // проверить, что лестница вверх совпадает с лестницей вниз
 public:	
-	inline void set_size(int l, int w) { length = l; width = w; }
-	inline void set_field(std::map<point, int>* c) { field = *c; }
-	inline void set_coor_hero(point& p) { coor_hero = p; }
-	inline point& get_coor_hero() { return coor_hero; }
-	inline std::map<point, int> & get_field() { return field; }
+	Underground(Hero*);
 
-	void set_cell(point&, smth&);
-	void set_enemy(point&, Enemy*);
-	std::string get_enemy(point&); //возвращает имя врага, стоящего на клетке
-	smth& get_cell(point&);
+	//inline void setField(std::map<point, Cell&>* c) { field = *c; }
+	//inline void set_coor_hero(point& p) { coor_hero = p; }
+	//inline point& get_coor_hero() { return coor_hero; }
+	inline std::map<point, Cell&> & getField() { return field; }
 
-	void open_door(point&);
-	void close_door(point&);
+	void setCell(point&, Cell&);
+	//void set_enemy(point&, Enemy*);
+	//std::string get_enemy(point&); //возвращает имя врага, стоящего на клетке
+	Cell& getCell(point&);
+
+	void openDoor(point&);
+	void closeDoor(point&);
+
+	void uploadUnderground(std::string filename);
+	void saveUnderground(std::string filename);
 };
