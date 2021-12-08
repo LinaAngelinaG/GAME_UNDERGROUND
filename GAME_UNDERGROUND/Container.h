@@ -1,14 +1,15 @@
 #pragma once
 #include "Tools.h"
 
+template <typename T>
 struct Node {
-    TYPE key;
+    T key;
     int value;
 
     Node* left;
     Node* right;
 
-    Node(TYPE t,int val){
+    Node(T t,int val){
         left = nullptr;
         right = nullptr;
         key = t;
@@ -16,20 +17,21 @@ struct Node {
     }
 };
 
+template <typename T>
 class Container : virtual public Tool {
 private:
-    Node* root;
+    Node<T> * root;
     int size;
-    void printTree(Node*);
-    void deleteTree(Node*);
+    void printTree(Node<T> *);
+    void deleteTree(Node<T> *);
 
 public:
-    Container(TYPE,int);
+    Container(T,int);
     ~Container();
 
     void print();
-    bool find(TYPE);
-    void insert(TYPE, int);
+    bool find(T);
+    void insert(T, int);
     inline int getSize() { return size; };
 
     virtual int use(ENEMY) { return 0; };

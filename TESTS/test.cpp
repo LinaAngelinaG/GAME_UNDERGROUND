@@ -275,14 +275,14 @@ TEST(TestUnderground, Testall) {
 }
 
 TEST(TestContainer, Testall) {
-	Container container(Head,2);
+	Container<CHARM> container(Blessed,2);
 	container.print();
 
-	container.insert(Head, 3);
-	container.insert(Finger, 4);
-	container.insert(Hands, 1);
+	container.insert(Blessed, 3);
+	container.insert(Burning, 4);
+	container.insert(Drying, 1);
 
-	std::cout<< container.find(Head) << std::endl;
+	std::cout<< container.find(Blessed) << std::endl;
 	container.print();
 	std::cout << container.getSize() << std::endl;
 }

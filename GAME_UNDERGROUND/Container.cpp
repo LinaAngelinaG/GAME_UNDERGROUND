@@ -1,17 +1,20 @@
 #include "Container.h"
 
-Container::Container(TYPE key,int value)
+template <typename T>
+Container<T>::Container(T key,int value)
 {
-    root = new Node(key, value);
+    root = new Node<T>(key, value);
     size = 1;
 }
 
-Container::~Container()
+template <typename T>
+Container<T>::~Container()
 {
     deleteTree(root);
 }
 
-void Container::deleteTree(Node* curr){
+template <typename T>
+void Container<T>::deleteTree(Node<T>* curr){
     if (curr){
         deleteTree(curr->left);
         deleteTree(curr->right);
@@ -19,21 +22,24 @@ void Container::deleteTree(Node* curr){
     }
 }
 
-void Container::print() {
+template <typename T>
+void Container<T>::print() {
     printTree(root);
     std::cout << std::endl;
 }
 
-void Container::printTree(Node* curr) {
+template <typename T>
+void Container<T>::printTree(Node<T>* curr) {
     if (curr){
         printTree(curr->left);
-        std::cout << curr->key << " " << curr->value;
+        std::cout << curr->key << " " << curr->value << "   ";
         printTree(curr->right);
     }
 }
 
-bool Container::find(TYPE keyToFind){
-    Node* curr = root;
+template <typename T>
+bool Container<T>::find(T keyToFind){
+    Node<T>* curr = root;
     while (curr && curr->key != keyToFind)
     {
         if (curr->key > keyToFind)
@@ -44,16 +50,17 @@ bool Container::find(TYPE keyToFind){
     return curr != nullptr;
 }
 
-void Container::insert(TYPE keyToInsert, int val) {
-    Node* curr = root;
+template <typename T>
+void Container<T>::insert(T keyToInsert, int val) {
+    Node<T>* curr = root;
     while (curr && curr->key != keyToInsert) {
         if (curr->key > keyToInsert && curr->left == nullptr) {
-            curr->left = new Node(keyToInsert, val);
+            curr->left = new Node<T>(keyToInsert, val);
             ++size;
             return;
         }
         if (curr->key < keyToInsert && curr->right == nullptr) {
-            curr->right = new Node(keyToInsert, val);
+            curr->right = new Node<T>(keyToInsert, val);
             ++size;
             return;
         }
@@ -62,4 +69,21 @@ void Container::insert(TYPE keyToInsert, int val) {
         else
             curr = curr->right;
     }
+    if (curr!= nullptr && curr->key == keyToInsert)
+        curr->value = val;
+}
+
+void TemplateTree() {
+    Container<CHARACTERS> container1(Power, 1);
+    container1.insert(Power, 3);
+    container1.find(Power);
+    container1.print();
+    Node<CHARACTERS> node1(Power, 1); 
+
+    Container<CHARM> container2(Blessed, 1);
+    container2.insert(Blessed, 3);
+    container2.find(Blessed);
+    container2.print();
+    Node<CHARM> node2(Blessed, 1);
+    
 }

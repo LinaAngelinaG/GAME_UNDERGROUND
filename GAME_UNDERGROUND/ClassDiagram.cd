@@ -131,10 +131,10 @@
       <FileName>Weapon.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Container" Collapsed="true">
+  <Class Name="Container&lt;T&gt;" Collapsed="true">
     <Position X="27.25" Y="10.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAQAAIBAAAAGAIAgAAAAAAAgAAAADAAIAAAABAA=</HashCode>
       <FileName>Container.h</FileName>
     </TypeIdentifier>
   </Class>
