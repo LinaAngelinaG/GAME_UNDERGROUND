@@ -8,6 +8,28 @@ Container<T>::Container(T key,int value)
 }
 
 template <typename T>
+Container<T>::Iterator Container<T>::begin() {
+    Node<T> cur = root;
+    Node<T> pr = nullptr;
+    while (cur->left != nullptr) {
+        pr = cur;
+        cur = cur.left;
+    }
+    Container<T>::Iterator this.
+    return cur;
+}
+
+template <typename T>
+Container<T>::Iterator Container<T>::end() {
+    Node<T> cur = root;
+
+    while (cur->right != nullptr) {
+        cur = cur.right;
+    }
+    return cur;
+}
+
+template <typename T>
 Container<T>::~Container()
 {
     deleteTree(root);
@@ -51,6 +73,19 @@ bool Container<T>::find(T keyToFind){
 }
 
 template <typename T>
+int Container<T>::at(T keyToFind) {
+    Node<T>* curr = root;
+    while (curr && curr->key != keyToFind)
+    {
+        if (curr->key > keyToFind)
+            curr = curr->left;
+        else
+            curr = curr->right;
+    }
+    return (curr!=nullptr && curr->key == keyToFind) ? curr->value : 0;
+}
+
+template <typename T>
 void Container<T>::insert(T keyToInsert, int val) {
     Node<T>* curr = root;
     while (curr && curr->key != keyToInsert) {
@@ -73,7 +108,7 @@ void Container<T>::insert(T keyToInsert, int val) {
         curr->value = val;
 }
 
-void TemplateTree() {
+void TemplateMap() {
     Container<CHARACTERS> container1(Power, 1);
     container1.insert(Power, 3);
     container1.find(Power);

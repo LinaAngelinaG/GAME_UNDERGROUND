@@ -272,6 +272,7 @@ TEST(TestHero, Testall) {
 }
 
 TEST(TestUnderground, Testall) {
+	
 }
 
 TEST(TestContainer, Testall) {
@@ -285,4 +286,8 @@ TEST(TestContainer, Testall) {
 	std::cout<< container.find(Blessed) << std::endl;
 	container.print();
 	std::cout << container.getSize() << std::endl;
+
+	for (Container<CHARM>::Iterator it = container.begin(); it != container.end(); ++it) {
+		
+	}
 }
