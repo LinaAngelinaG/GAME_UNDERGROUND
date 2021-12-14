@@ -8,17 +8,17 @@ enum ENEMY {  //name of the enemy: contains health, power and experience are equ
 };
 
 enum CHARM { ////typename of the charm
-	Damned,
 	Burning,
 	Blessed,
+	Damned,
 	Drying
 };
 
 enum  WEAPON_NAME //константный параметр - это и есть величина урона
 { //typename of the weapon
-	Sword = 4,
-	Axe,
-	Baton
+	Axe = 5,
+	Baton = 6,
+	Sword = 4
 };
 
 enum TYPE { //the part of the body that uses this equipment

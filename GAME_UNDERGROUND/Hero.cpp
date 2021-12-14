@@ -38,11 +38,17 @@ void Hero::drink_potion(int number) {
 		//potions.at(n). // должно получать характеристику изменяемую (а вообще мапу характеристик)
 		//потом ее нужно вставить в parameters->set_val_of_param(param, val_of_param)
 		
+		/*/
 		for (std::map<CHARACTERS, int>::const_iterator it = needed_potion.get_modif().cbegin(); it != needed_potion.get_modif().cend(); ++it) {
 			int cur = parameters->get_val_of_param((*it).first);
 			parameters->set_val_of_param((*it).first, cur + (*it).second);
-		}
+		}*/
 		
+		for (Container<CHARACTERS>::ConstIterator it = needed_potion.get_modif().cbegin(); it != needed_potion.get_modif().cend(); ++it) {
+			int cur = parameters->get_val_of_param((*it).key);
+			parameters->set_val_of_param((*it).key, cur + (*it).value);
+		}
+
 		potions.erase(number); //erase used potion
 		--potion_val;
 	}

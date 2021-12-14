@@ -99,11 +99,14 @@ TEST(TestKeys, Testall) {
 
 TEST(TestPotion, Testall) {
 	Potion p(Power, 2);
+
 	ASSERT_EQ(p.getname().compare("POWERUP potion"), 0);
 	ASSERT_TRUE(p.isArtefact());
 	ASSERT_EQ(p.get_feature().compare("POWERUP"),0);
 	ASSERT_EQ(p.get_feature_val(Power), 2);
+
 	p.becomeUpTo(Agility, 4);
+
 	ASSERT_EQ(p.get_feature().compare("POWERUP AGILITYUP"), 0);
 	ASSERT_EQ(p.get_feature_val(Agility), 4);
 }
@@ -129,7 +132,7 @@ TEST(TestWeapon, Testall) {
 TEST(TestCharmedWeapon, Testall) {
 	CharmedWeapon w(Axe, Drying);
 	ASSERT_EQ(w.getname().compare("Drying Axe"), 0);
-	w.becomeBlessed(2);
+	w.becomeCharmed(Blessed,2);
 	ASSERT_EQ(w.getname().compare("Blessed Drying Axe"), 0);
 	ASSERT_EQ(w.get_charm().compare("Blessed Drying"), 0);
 	EXPECT_FALSE(w.isArtefact());
@@ -147,7 +150,7 @@ TEST(TestArtefactedCharmedWeapon, Testall) {
 	ASSERT_EQ(w.use(Witch), 7);
 	ASSERT_EQ(w.use(Demon), 6);
 
-	w.becomeBlessed(5);
+	w.becomeCharmed(Blessed, 5);
 	w.becomeUpTo(Power, 3);
 
 	ASSERT_EQ(w.getname().compare("POWERUP RESISUP Burning Blessed Baton"), 0);
@@ -282,12 +285,25 @@ TEST(TestContainer, Testall) {
 	container.insert(Blessed, 3);
 	container.insert(Burning, 4);
 	container.insert(Drying, 1);
+	container.insert(Damned, 1);
 
 	std::cout<< container.find(Blessed) << std::endl;
 	container.print();
 	std::cout << container.getSize() << std::endl;
 
 	for (Container<CHARM>::Iterator it = container.begin(); it != container.end(); ++it) {
-		
+		switch ((*it).key) {
+		case(Burning):
+			std::cout << "Burning" << std::endl;
+			break;
+		case(Blessed):
+			std::cout << "Blessed" << std::endl;
+			break;
+		case(Damned):
+			std::cout << "Damned" << std::endl;
+			break;
+		case(Drying):
+			std::cout << "Drying" << std::endl;
+		}
 	}
 }
