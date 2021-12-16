@@ -1,0 +1,22 @@
+\hypertarget{_artefacted_charmed_weapon_8h_source}{}\doxysection{Artefacted\+Charmed\+Weapon.\+h}
+\mbox{\hyperlink{_artefacted_charmed_weapon_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}Tools.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}Artefact.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_charmed_weapon_8h}{CharmedWeapon.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_e_n_u_m_s_8h}{ENUMS.h}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{class_artefacted_charmed_weapon}{ArtefactedCharmedWeapon}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_charmed_weapon}{CharmedWeapon}}, \textcolor{keyword}{public} \mbox{\hyperlink{class_artefact}{Artefact}} \{}
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_artefacted_charmed_weapon_a0fa33fc1382b18dd05dbe901d4ae8054}{ArtefactedCharmedWeapon}}(\mbox{\hyperlink{_e_n_u_m_s_8h_a4e3ca0f068d443c5df241c6f00628f0d}{WEAPON\_NAME}} Name1, \mbox{\hyperlink{_e_n_u_m_s_8h_a3e255efe4af6e9f9c21890db0aa4b709}{CHARM}} Name2, \mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}} Name3, \textcolor{keywordtype}{int} val) :\mbox{\hyperlink{class_charmed_weapon}{CharmedWeapon}}(Name1, Name2), \mbox{\hyperlink{class_artefact}{Artefact}}(Name3, val) \{\};}
+\DoxyCodeLine{27     }
+\DoxyCodeLine{31     \mbox{\hyperlink{class_artefacted_charmed_weapon_af9f8d204637334ae0a8265b419a5db90}{ArtefactedCharmedWeapon}}(\mbox{\hyperlink{_e_n_u_m_s_8h_a4e3ca0f068d443c5df241c6f00628f0d}{WEAPON\_NAME}} Name1, \mbox{\hyperlink{_e_n_u_m_s_8h_a3e255efe4af6e9f9c21890db0aa4b709}{CHARM}} Name2, \textcolor{keywordtype}{int} val1, \mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}} Name3, \textcolor{keywordtype}{int} val2) :\mbox{\hyperlink{class_charmed_weapon}{CharmedWeapon}}(Name1, Name2, val1), \mbox{\hyperlink{class_artefact}{Artefact}}(Name3, val2) \{\};}
+\DoxyCodeLine{32     }
+\DoxyCodeLine{39     \textcolor{keyword}{inline} \textcolor{keyword}{virtual} std::string \mbox{\hyperlink{class_artefacted_charmed_weapon_a4cdb3b426742ed25d87a66de3d7a5e57}{getname}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_artefact_ab360fd23f5555aed17608390109428ff}{get\_feature}}() + \textcolor{stringliteral}{"{} "{}} + \mbox{\hyperlink{class_charmed_weapon_aadd214cf88344d421f439a6bde2f9412}{CharmedWeapon::getname}}(); \}}
+\DoxyCodeLine{40     }
+\DoxyCodeLine{47     \textcolor{keyword}{inline} \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_artefacted_charmed_weapon_a567ac9896867aee11ddf730dd9b3a71f}{use}}(\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}} enemy) \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_charmed_weapon_ac768cfbdb67d270726fc002da188f230}{CharmedWeapon::use}}(enemy); \}}
+\DoxyCodeLine{48 \};}
+
+\end{DoxyCode}

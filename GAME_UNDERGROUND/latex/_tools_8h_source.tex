@@ -1,0 +1,26 @@
+\hypertarget{_tools_8h_source}{}\doxysection{Tools.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_e_n_u_m_s_8h}{ENUMS.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_object_8h}{Object.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{class_tool}{Tool}}: \textcolor{keyword}{virtual} \textcolor{keyword}{public} \mbox{\hyperlink{class_object}{Object}} \{}
+\DoxyCodeLine{20 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{21     std::string type\_of\_obj = \textcolor{stringliteral}{"{}object"{}};}
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_tool_a33dabf2428a98104084741a0f024a033}{Tool}}() \{\};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{32     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tool_a27d34885d35accd44ee4a1fd5984a850}{use}}(\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}}) = 0;}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{39     \textcolor{keyword}{virtual} std::string \mbox{\hyperlink{class_tool_a6d119d3e1d4301f97c32b82949aec3eb}{getname}}() = 0;}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{46     \textcolor{keyword}{inline} \mbox{\hyperlink{_e_n_u_m_s_8h_a2a3cae49e6781726af07e98e7d9f2e30}{objectType}} \mbox{\hyperlink{class_tool_a22b0b2b141afcc69d6165c55a7a17666}{getObjectType}}()\textcolor{keyword}{ override }\{ \textcolor{keywordflow}{return} tool; \};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{53     \textcolor{keyword}{inline} std::string \mbox{\hyperlink{class_tool_ab5a8d394f7788117961d5efb59df8292}{get\_type\_of\_obj}}() \{ \textcolor{keywordflow}{return} type\_of\_obj; \}}
+\DoxyCodeLine{54 \};}
+
+\end{DoxyCode}

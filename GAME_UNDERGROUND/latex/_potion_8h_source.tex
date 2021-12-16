@@ -1,0 +1,20 @@
+\hypertarget{_potion_8h_source}{}\doxysection{Potion.\+h}
+\mbox{\hyperlink{_potion_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Artefact.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_enemy_8h}{Enemy.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_potion}{Potion}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_artefact}{Artefact}} \{}
+\DoxyCodeLine{18 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{25     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_potion_a926d66cf5ca1dc713bb3c16eb5f591d2}{use}}(\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}} e) \{ \textcolor{keywordflow}{return} 0; \}}
+\DoxyCodeLine{26 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{30     \mbox{\hyperlink{class_potion_a4cb0fbcf1f378f4d71a91a9e04ae737c}{Potion}}(\mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}} art, \textcolor{keywordtype}{int} val) :\mbox{\hyperlink{class_artefact}{Artefact}}(art, val) \{ Tool::type\_of\_obj = \textcolor{stringliteral}{"{}potion"{}};\};}
+\DoxyCodeLine{31     }
+\DoxyCodeLine{37     \textcolor{keyword}{inline} std::string \mbox{\hyperlink{class_potion_a3946357965157fff99f5e6ba5937a066}{getname}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_artefact_ab360fd23f5555aed17608390109428ff}{get\_feature}}() + \textcolor{stringliteral}{"{} potion"{}}; \}}
+\DoxyCodeLine{38 \};}
+
+\end{DoxyCode}

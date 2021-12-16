@@ -1,5 +1,12 @@
+/**
+\file Table.cpp
+\brief File with some methods of the table.
+*/
 #include "Table.h"
 
+/**
+	Constructor of the Table: sets some basic values of parameters.
+	*/
 Table::Table() {
 	n = 5;
 
@@ -19,12 +26,20 @@ Table::Table() {
 	table.insert({ Resistance, *resistance });
 }
 
+/**
+	Destructor of the Table: delete the parameters from the table.
+	*/
 Table::~Table() {
 	for (std::map<CHARACTERS, info&>::iterator it = table.begin(); it != table.end(); ++it) {
 		delete[] &(*it).second;
 	}
 }
 
+/**
+	Lets to set the value for the exact characteristics of the hero.
+	\param Enum CHARACTERS characteristic and its Integer value.
+	\return Nothing.
+	*/
 void Table::set_val_of_param(CHARACTERS charact, int val) {
 	for (std::map<CHARACTERS, info&>::iterator it = table.begin(); it != table.end(); ++it) {
 		if ((*it).first == charact) {

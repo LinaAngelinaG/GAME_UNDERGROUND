@@ -1,0 +1,26 @@
+\hypertarget{_keys_8h_source}{}\doxysection{Keys.\+h}
+\mbox{\hyperlink{_keys_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Tools.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_enemy_8h}{Enemy.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_keys}{Keys}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_tool}{Tool}} \{}
+\DoxyCodeLine{19 \textcolor{keyword}{private}:}
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} number\_of\_keys;}
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{25     \mbox{\hyperlink{class_keys_a15c6c8098e0540f63a537b47c0103609}{Keys}}(\textcolor{keywordtype}{int} n) :number\_of\_keys(n) \{\};}
+\DoxyCodeLine{26     }
+\DoxyCodeLine{32     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_keys_ace4bbf6cc802b397c6ca3fb51c278fc6}{get\_num\_of\_keys}}() \{ \textcolor{keywordflow}{return} number\_of\_keys; \}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{39     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_keys_a0dfbc0a1ac589607e77690fe89fe072b}{set\_num\_of\_keys}}(\textcolor{keywordtype}{int} n) \{ number\_of\_keys = n; \}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_keys_afd142402876346707984d8127e94c072}{use}}(\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}}); \textcolor{comment}{//уменьшить кол-\/во ключей на 1 -\/ ломаетс€ или остаетс€}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{48     \textcolor{keyword}{inline} std::string \mbox{\hyperlink{class_keys_a6f0de37d58ef11759169faaa7f226796}{getname}}() \{ \textcolor{keywordflow}{return} std::to\_string(number\_of\_keys) + \textcolor{stringliteral}{"{} keys"{}}; \}}
+\DoxyCodeLine{49 \};}
+
+\end{DoxyCode}

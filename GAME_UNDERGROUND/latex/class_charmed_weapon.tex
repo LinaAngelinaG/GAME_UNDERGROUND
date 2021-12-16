@@ -1,0 +1,169 @@
+\hypertarget{class_charmed_weapon}{}\doxysection{Charmed\+Weapon Class Reference}
+\label{class_charmed_weapon}\index{CharmedWeapon@{CharmedWeapon}}
+
+
+Class that desribes charmed weapon that describes the weapon with the specific characteristics.  
+
+
+
+
+{\ttfamily \#include $<$Charmed\+Weapon.\+h$>$}
+
+Inheritance diagram for Charmed\+Weapon\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_charmed_weapon}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_charmed_weapon_ae5200dbaa80457a2168fb4125b69aa02}{get\+\_\+charm}} () const
+\item 
+void \mbox{\hyperlink{class_charmed_weapon_a4343c883f90fb594e85c280c059fc332}{become\+Charmed}} (\mbox{\hyperlink{_e_n_u_m_s_8h_a3e255efe4af6e9f9c21890db0aa4b709}{CHARM}} charm, int value)
+\item 
+\mbox{\hyperlink{class_charmed_weapon_a0f30cbd109b9d895e2f25931cfc619e9}{Charmed\+Weapon}} (\mbox{\hyperlink{_e_n_u_m_s_8h_a4e3ca0f068d443c5df241c6f00628f0d}{WEAPON\+\_\+\+NAME}} Name, \mbox{\hyperlink{_e_n_u_m_s_8h_a3e255efe4af6e9f9c21890db0aa4b709}{CHARM}} Charm, int n)
+\item 
+\mbox{\hyperlink{class_charmed_weapon_a5e6ce2bd799c91523053766ba66e6cb3}{Charmed\+Weapon}} (\mbox{\hyperlink{_e_n_u_m_s_8h_a4e3ca0f068d443c5df241c6f00628f0d}{WEAPON\+\_\+\+NAME}} Name, \mbox{\hyperlink{_e_n_u_m_s_8h_a3e255efe4af6e9f9c21890db0aa4b709}{CHARM}} Charm)
+\item 
+virtual int \mbox{\hyperlink{class_charmed_weapon_ac768cfbdb67d270726fc002da188f230}{use}} (\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}})
+\item 
+\mbox{\hyperlink{class_container}{Charms}} \& \mbox{\hyperlink{class_charmed_weapon_a52405681251cdbf63c9cea05986cac5d}{get\+\_\+charms}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{class_charmed_weapon_aadd214cf88344d421f439a6bde2f9412}{getname}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_charmed_weapon_ab9dc60ed379915a584561f40d1356fc6}\label{class_charmed_weapon_ab9dc60ed379915a584561f40d1356fc6}} 
+typedef \mbox{\hyperlink{class_container}{Container}}$<$ \mbox{\hyperlink{_e_n_u_m_s_8h_a3e255efe4af6e9f9c21890db0aa4b709}{CHARM}} $>$ {\bfseries Charms}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_charmed_weapon_a903ca06cb7dc346ed46b18119c929efa}\label{class_charmed_weapon_a903ca06cb7dc346ed46b18119c929efa}} 
+\mbox{\hyperlink{class_container}{Charms}} {\bfseries charms}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that desribes charmed weapon that describes the weapon with the specific characteristics. 
+
+Holds the container-\/class with charms that this weapon is being described. Also contains the tool that is hold inside.
+
+Builds with the name of the weapon. name of charm (the value of charm is optional). \begin{DoxyAuthor}{Author}
+Lina\+AngelinaG 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15.\+12.\+2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_charmed_weapon_a0f30cbd109b9d895e2f25931cfc619e9}\label{class_charmed_weapon_a0f30cbd109b9d895e2f25931cfc619e9}} 
+\index{CharmedWeapon@{CharmedWeapon}!CharmedWeapon@{CharmedWeapon}}
+\index{CharmedWeapon@{CharmedWeapon}!CharmedWeapon@{CharmedWeapon}}
+\doxysubsubsection{\texorpdfstring{CharmedWeapon()}{CharmedWeapon()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Charmed\+Weapon\+::\+Charmed\+Weapon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a4e3ca0f068d443c5df241c6f00628f0d}{WEAPON\+\_\+\+NAME}}}]{Name,  }\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a3e255efe4af6e9f9c21890db0aa4b709}{CHARM}}}]{Charm,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Builds with the name of the weapon, name of charm. \mbox{\Hypertarget{class_charmed_weapon_a5e6ce2bd799c91523053766ba66e6cb3}\label{class_charmed_weapon_a5e6ce2bd799c91523053766ba66e6cb3}} 
+\index{CharmedWeapon@{CharmedWeapon}!CharmedWeapon@{CharmedWeapon}}
+\index{CharmedWeapon@{CharmedWeapon}!CharmedWeapon@{CharmedWeapon}}
+\doxysubsubsection{\texorpdfstring{CharmedWeapon()}{CharmedWeapon()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Charmed\+Weapon\+::\+Charmed\+Weapon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a4e3ca0f068d443c5df241c6f00628f0d}{WEAPON\+\_\+\+NAME}}}]{Name,  }\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a3e255efe4af6e9f9c21890db0aa4b709}{CHARM}}}]{Charm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Builds with the name of the weapon, name of charm(with the value of the charm). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_charmed_weapon_a4343c883f90fb594e85c280c059fc332}\label{class_charmed_weapon_a4343c883f90fb594e85c280c059fc332}} 
+\index{CharmedWeapon@{CharmedWeapon}!becomeCharmed@{becomeCharmed}}
+\index{becomeCharmed@{becomeCharmed}!CharmedWeapon@{CharmedWeapon}}
+\doxysubsubsection{\texorpdfstring{becomeCharmed()}{becomeCharmed()}}
+{\footnotesize\ttfamily void Charmed\+Weapon\+::become\+Charmed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a3e255efe4af6e9f9c21890db0aa4b709}{CHARM}}}]{charm,  }\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Lets to set the charm with an exact value. 
+\begin{DoxyParams}{Parameters}
+{\em The} & type of charm and its value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_charmed_weapon_ae5200dbaa80457a2168fb4125b69aa02}\label{class_charmed_weapon_ae5200dbaa80457a2168fb4125b69aa02}} 
+\index{CharmedWeapon@{CharmedWeapon}!get\_charm@{get\_charm}}
+\index{get\_charm@{get\_charm}!CharmedWeapon@{CharmedWeapon}}
+\doxysubsubsection{\texorpdfstring{get\_charm()}{get\_charm()}}
+{\footnotesize\ttfamily std\+::string Charmed\+Weapon\+::get\+\_\+charm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Lets to know the full list of all charms for the exact weapon. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String with all charms. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_charmed_weapon_a52405681251cdbf63c9cea05986cac5d}\label{class_charmed_weapon_a52405681251cdbf63c9cea05986cac5d}} 
+\index{CharmedWeapon@{CharmedWeapon}!get\_charms@{get\_charms}}
+\index{get\_charms@{get\_charms}!CharmedWeapon@{CharmedWeapon}}
+\doxysubsubsection{\texorpdfstring{get\_charms()}{get\_charms()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_container}{Charms}} \& Charmed\+Weapon\+::get\+\_\+charms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Lets to get the container of the charmed weapon. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_container}{Container}} with charms and its values. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_charmed_weapon_aadd214cf88344d421f439a6bde2f9412}\label{class_charmed_weapon_aadd214cf88344d421f439a6bde2f9412}} 
+\index{CharmedWeapon@{CharmedWeapon}!getname@{getname}}
+\index{getname@{getname}!CharmedWeapon@{CharmedWeapon}}
+\doxysubsubsection{\texorpdfstring{getname()}{getname()}}
+{\footnotesize\ttfamily virtual std\+::string Charmed\+Weapon\+::getname (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Lets to get the full name of the charmed weapon. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String full name. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_weapon_a73f0341c424db9cc29c65748637cfee8}{Weapon}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_artefacted_charmed_weapon_a4cdb3b426742ed25d87a66de3d7a5e57}{Artefacted\+Charmed\+Weapon}}.
+
+\mbox{\Hypertarget{class_charmed_weapon_ac768cfbdb67d270726fc002da188f230}\label{class_charmed_weapon_ac768cfbdb67d270726fc002da188f230}} 
+\index{CharmedWeapon@{CharmedWeapon}!use@{use}}
+\index{use@{use}!CharmedWeapon@{CharmedWeapon}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily int Charmed\+Weapon\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Lets to use the weapon with some bonus for the enemy that is associated with the weapon\textquotesingle{}s charm. 
+\begin{DoxyParams}{Parameters}
+{\em Enemy\textquotesingle{}s} & name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Integer value of damage. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_weapon_a62b8e954f84b04f1809ab15c3b7ade83}{Weapon}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_artefacted_charmed_weapon_a567ac9896867aee11ddf730dd9b3a71f}{Artefacted\+Charmed\+Weapon}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_charmed_weapon_8h}{Charmed\+Weapon.\+h}}\item 
+\mbox{\hyperlink{_charmed_weapon_8cpp}{Charmed\+Weapon.\+cpp}}\end{DoxyCompactItemize}

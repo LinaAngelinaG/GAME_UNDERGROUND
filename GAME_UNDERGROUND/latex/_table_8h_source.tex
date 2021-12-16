@@ -1,0 +1,31 @@
+\hypertarget{_table_8h_source}{}\doxysection{Table.\+h}
+\mbox{\hyperlink{_table_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_e_n_u_m_s_8h}{ENUMS.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{16 \textcolor{keyword}{struct }\mbox{\hyperlink{structinfo}{info}} \{}
+\DoxyCodeLine{17     \mbox{\hyperlink{_e_n_u_m_s_8h_a925a0b3328cac13dbeb433e12e53276e}{CHARACTERISTICS}} longname;}
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} value;}
+\DoxyCodeLine{19 \};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{28 \textcolor{keyword}{class }\mbox{\hyperlink{class_table}{Table}}}
+\DoxyCodeLine{29 \{}
+\DoxyCodeLine{30 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} n=0;}
+\DoxyCodeLine{32     std::map<CHARACTERS, info\&> table;}
+\DoxyCodeLine{33 \textcolor{keyword}{public}:}
+\DoxyCodeLine{34     \mbox{\hyperlink{class_table_a049f2e06391781ae255c6698869c4ad1}{Table}}(); \textcolor{comment}{//будут инициал-\/ны сила, ловкость, выносливость, максимальное здоровье, текущее здоровье}}
+\DoxyCodeLine{35     \mbox{\hyperlink{class_table_a9a559f2e7beb37b511ee9f88873164f8}{\string~Table}}();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{42     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_table_a0a05cde295375dde00746504395d9ddf}{get\_col\_param}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} n; \}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{49     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_table_a1d763f0dbd6b96ec54ef1a9e097e175a}{get\_val\_of\_param}}(\mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}} param)\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} table.at(param).value; \}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_table_a4de8af004b45572aca765352def31a76}{set\_val\_of\_param}}(\mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}} param, \textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{52 \};}
+
+\end{DoxyCode}

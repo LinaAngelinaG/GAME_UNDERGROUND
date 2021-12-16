@@ -1,0 +1,235 @@
+\hypertarget{class_container}{}\doxysection{Container\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_container}\index{Container$<$ T $>$@{Container$<$ T $>$}}
+
+
+Template class that holds the binary tree that describes the map template-\/class.  
+
+
+
+
+{\ttfamily \#include $<$Container.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_container_1_1_const_iterator}{Const\+Iterator}}
+\begin{DoxyCompactList}\small\item\em Class that desribes the const\+\_\+iterator. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_container_1_1_iterator}{Iterator}}
+\begin{DoxyCompactList}\small\item\em Class that desribes the iterator for the container-\/class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_container_a20c490d2b0b842ad4c3b4e1485f19812}{Container}} (T, int)
+\item 
+\mbox{\hyperlink{class_container_ab17ce1f67243b28abcd4c8113a72524c}{Container}} ()
+\item 
+\mbox{\hyperlink{class_container_a5b3440c3177017d2d6a190724e7078ec}{$\sim$\+Container}} ()
+\item 
+void \mbox{\hyperlink{class_container_a0ab9db7597730b53be07d9f6ca071bca}{print}} () const
+\item 
+bool \mbox{\hyperlink{class_container_afdd0493d621394d738be604eff04ded3}{find}} (T) const
+\item 
+void \mbox{\hyperlink{class_container_a9e1b2f14cddb0b9963812cb81dd728d1}{insert}} (T, int)
+\item 
+int \mbox{\hyperlink{class_container_a447076cb4429aa6c75bb453899fa1dea}{at}} (T) const
+\item 
+int \mbox{\hyperlink{class_container_a3c5b569647579eefd142b292cb68e6c6}{get\+Size}} ()
+\item 
+\mbox{\hyperlink{class_container_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_container_a111e048915e4d00c66fb48ab653d0be6}{begin}} ()
+\item 
+\mbox{\hyperlink{class_container_1_1_const_iterator}{Const\+Iterator}} \mbox{\hyperlink{class_container_a738b7b4b30e775d7d1b0776f2f0b5cb1}{cbegin}} () const
+\item 
+\mbox{\hyperlink{class_container_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_container_a41afc1d7f144bb953c60ac3d927099cf}{end}} ()
+\item 
+\mbox{\hyperlink{class_container_1_1_const_iterator}{Const\+Iterator}} \mbox{\hyperlink{class_container_a9c77978cbbfc9501bf9f976311c17633}{cend}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Container$<$ T $>$}
+Template class that holds the binary tree that describes the map template-\/class. 
+
+Friend-\/class for the class node.
+
+Holds the root of the tree, its size and the own iterator-\/class.
+
+Builds with the key and its value of the node or as an empty-\/container without any parameters. \begin{DoxyAuthor}{Author}
+Lina\+AngelinaG 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15.\+12.\+2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_container_a20c490d2b0b842ad4c3b4e1485f19812}\label{class_container_a20c490d2b0b842ad4c3b4e1485f19812}} 
+\index{Container$<$ T $>$@{Container$<$ T $>$}!Container@{Container}}
+\index{Container@{Container}!Container$<$ T $>$@{Container$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Container()}{Container()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::\mbox{\hyperlink{class_container}{Container}} (\begin{DoxyParamCaption}\item[{T}]{key,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+Constractor for the container-\/class. 
+\begin{DoxyParams}{Parameters}
+{\em Builds} & with the key and its value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_container_ab17ce1f67243b28abcd4c8113a72524c}\label{class_container_ab17ce1f67243b28abcd4c8113a72524c}} 
+\index{Container$<$ T $>$@{Container$<$ T $>$}!Container@{Container}}
+\index{Container@{Container}!Container$<$ T $>$@{Container$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Container()}{Container()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::\mbox{\hyperlink{class_container}{Container}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Builds with as an empty-\/container without any parameters. \mbox{\Hypertarget{class_container_a5b3440c3177017d2d6a190724e7078ec}\label{class_container_a5b3440c3177017d2d6a190724e7078ec}} 
+\index{Container$<$ T $>$@{Container$<$ T $>$}!````~Container@{$\sim$Container}}
+\index{````~Container@{$\sim$Container}!Container$<$ T $>$@{Container$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Container()}{~Container()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_container}{Container}}}
+
+Destructor for the container. Delete all the nodes. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_container_a447076cb4429aa6c75bb453899fa1dea}\label{class_container_a447076cb4429aa6c75bb453899fa1dea}} 
+\index{Container$<$ T $>$@{Container$<$ T $>$}!at@{at}}
+\index{at@{at}!Container$<$ T $>$@{Container$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::at (\begin{DoxyParamCaption}\item[{T}]{key\+To\+Find }\end{DoxyParamCaption}) const}
+
+Lets to know the value with the exact key. 
+\begin{DoxyParams}{Parameters}
+{\em The} & key of the typename T. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Integer value of the key. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_container_a111e048915e4d00c66fb48ab653d0be6}\label{class_container_a111e048915e4d00c66fb48ab653d0be6}} 
+\index{Container$<$ T $>$@{Container$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!Container$<$ T $>$@{Container$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_container_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to gain the first element for the iteration. Makes of the nodes\textquotesingle{} passed-\/parameter (except the current) = 0. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_container_1_1_iterator}{Iterator}} with the current node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_container_a738b7b4b30e775d7d1b0776f2f0b5cb1}\label{class_container_a738b7b4b30e775d7d1b0776f2f0b5cb1}} 
+\index{Container$<$ T $>$@{Container$<$ T $>$}!cbegin@{cbegin}}
+\index{cbegin@{cbegin}!Container$<$ T $>$@{Container$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{cbegin()}{cbegin()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_container_1_1_const_iterator}{Const\+Iterator}} \mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::cbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to gain the first element for the iteration. Makes of the nodes\textquotesingle{} passed-\/parameter (except the current) = 0. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Constant iterator with the current node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_container_a9c77978cbbfc9501bf9f976311c17633}\label{class_container_a9c77978cbbfc9501bf9f976311c17633}} 
+\index{Container$<$ T $>$@{Container$<$ T $>$}!cend@{cend}}
+\index{cend@{cend}!Container$<$ T $>$@{Container$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{cend()}{cend()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_container_1_1_const_iterator}{Const\+Iterator}} \mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::cend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always return null pointer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_container_a41afc1d7f144bb953c60ac3d927099cf}\label{class_container_a41afc1d7f144bb953c60ac3d927099cf}} 
+\index{Container$<$ T $>$@{Container$<$ T $>$}!end@{end}}
+\index{end@{end}!Container$<$ T $>$@{Container$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_container_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always return null pointer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_container_afdd0493d621394d738be604eff04ded3}\label{class_container_afdd0493d621394d738be604eff04ded3}} 
+\index{Container$<$ T $>$@{Container$<$ T $>$}!find@{find}}
+\index{find@{find}!Container$<$ T $>$@{Container$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::find (\begin{DoxyParamCaption}\item[{T}]{key\+To\+Find }\end{DoxyParamCaption}) const}
+
+Lets to say\+: does the tree contain the value with the exact key. 
+\begin{DoxyParams}{Parameters}
+{\em The} & key of the typename T. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boollean answer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_container_a3c5b569647579eefd142b292cb68e6c6}\label{class_container_a3c5b569647579eefd142b292cb68e6c6}} 
+\index{Container$<$ T $>$@{Container$<$ T $>$}!getSize@{getSize}}
+\index{getSize@{getSize}!Container$<$ T $>$@{Container$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Lets to know the amount of nodes in the tree. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Integer value of the nodes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_container_a9e1b2f14cddb0b9963812cb81dd728d1}\label{class_container_a9e1b2f14cddb0b9963812cb81dd728d1}} 
+\index{Container$<$ T $>$@{Container$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!Container$<$ T $>$@{Container$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{T}]{key\+To\+Insert,  }\item[{int}]{val }\end{DoxyParamCaption})}
+
+Lets to create the node with the exact key and value and insert it into the tree. 
+\begin{DoxyParams}{Parameters}
+{\em The} & key and its value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_container_a0ab9db7597730b53be07d9f6ca071bca}\label{class_container_a0ab9db7597730b53be07d9f6ca071bca}} 
+\index{Container$<$ T $>$@{Container$<$ T $>$}!print@{print}}
+\index{print@{print}!Container$<$ T $>$@{Container$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::print}
+
+Lets to print all the nodes of the tree. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_container_8h}{Container.\+h}}\item 
+\mbox{\hyperlink{_container_8cpp}{Container.\+cpp}}\end{DoxyCompactItemize}

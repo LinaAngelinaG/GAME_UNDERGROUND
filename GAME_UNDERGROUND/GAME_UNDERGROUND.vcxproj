@@ -141,21 +141,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Artefact.cpp" />
-    <ClCompile Include="ArtefactedCharmedWeapon.cpp" />
-    <ClCompile Include="ArtefactedEquipment.cpp" />
-    <ClCompile Include="ArtefactedWeapon.cpp" />
     <ClCompile Include="Box.cpp" />
     <ClCompile Include="CharmedWeapon.cpp" />
     <ClCompile Include="Container.cpp" />
     <ClCompile Include="Enemy.cpp" />
-    <ClCompile Include="ENUMS.cpp" />
     <ClCompile Include="Equipment.cpp" />
     <ClCompile Include="Hero.cpp" />
     <ClCompile Include="Keys.cpp" />
-    <ClCompile Include="Object.cpp" />
-    <ClCompile Include="Potion.cpp" />
     <ClCompile Include="Table.cpp" />
-    <ClCompile Include="Tools.cpp" />
     <ClCompile Include="Underground.cpp" />
     <ClCompile Include="Weapon.cpp" />
   </ItemGroup>

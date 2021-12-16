@@ -1,40 +1,35 @@
+/**
+\file Container.cpp
+\brief File with some methods of the container-class.
+*/
 #include "Container.h"
 
+/**
+    Constractor for the container-class.
+    \param Builds with the key and its value.
+    */
 template <typename T>
 Container<T>::Container(T key,int value)
 {
     mapOfParameters = new Node<T>(key, value);
     size = 1;
 }
-/*
-template <typename T>
-Container<T>::Iterator Container<T>::begin() {
-    Node<T> cur = root;
-    Node<T> pr = nullptr;
-    while (cur->left != nullptr) {
-        pr = cur;
-        cur = cur.left;
-    }
-    Container<T>::Iterator this.
-    return cur;
-}
 
-template <typename T>
-Container<T>::Iterator Container<T>::end() {
-    Node<T> cur = root;
-
-    while (cur->right != nullptr) {
-        cur = cur.right;
-    }
-    return cur;
-}
-*/
+/**
+    Destructor for the container.
+    Delete all the nodes.
+    */
 template <typename T>
 Container<T>::~Container()
 {
     deleteTree(mapOfParameters);
 }
 
+/**
+    Lets to delete the whole tree.
+    \param The root pointer.
+    \return Nothing.
+    */
 template <typename T>
 void Container<T>::deleteTree(Node<T>* curr){
     if (curr){
@@ -44,12 +39,22 @@ void Container<T>::deleteTree(Node<T>* curr){
     }
 }
 
+/**
+    Lets to print all the nodes of the tree.
+    \param No arguments.
+    \return Nothing.
+    */
 template <typename T>
 void Container<T>::print()const {
     printTree(mapOfParameters);
     std::cout << std::endl;
 }
 
+/**
+    Recursive fuction to help to print() function.
+    \param Pointer to the current node.
+    \return Nothing.
+    */
 template <typename T>
 void Container<T>::printTree(Node<T>* curr)const {
     if (curr){
@@ -59,6 +64,11 @@ void Container<T>::printTree(Node<T>* curr)const {
     }
 }
 
+/**
+    Lets to say: does the tree contain the value with the exact key.
+    \param The key of the typename T.
+    \return Boollean answer.
+    */
 template <typename T>
 bool Container<T>::find(T keyToFind)const {
     Node<T>* curr = mapOfParameters;
@@ -72,6 +82,11 @@ bool Container<T>::find(T keyToFind)const {
     return curr != nullptr;
 }
 
+/**
+    Lets to know the value with the exact key.
+    \param The key of the typename T.
+    \return Integer value of the key.
+    */
 template <typename T>
 int Container<T>::at(T keyToFind) const {
     Node<T>* curr = mapOfParameters;
@@ -85,6 +100,11 @@ int Container<T>::at(T keyToFind) const {
     return (curr!=nullptr && curr->key == keyToFind) ? curr->value : 0;
 }
 
+/**
+    Lets to create the node with the exact key and value and insert it into the tree.
+    \param The key and its value.
+    \return Nothing.
+    */
 template <typename T>
 void Container<T>::insert(T keyToInsert, int val) {
     if (!mapOfParameters) {
@@ -114,6 +134,11 @@ void Container<T>::insert(T keyToInsert, int val) {
         curr->value = val;
 }
 
+/**
+    Lets to iterate to the left node of the tree.
+    \param The pointer of th current node.
+    \return The pointer to the node that we are looking for.
+    */
 template <typename T>
 Node<T>* Container<T>::iter(Node<T>* root) const {
     if (root != nullptr && root->left != nullptr) {
@@ -122,6 +147,11 @@ Node<T>* Container<T>::iter(Node<T>* root) const {
     return root;
 }
 
+/**
+    Lets to make all the passed-values equal to 0.
+    \param Root of the tree.
+    \return Nothing.
+    */
 template <typename T>
 void Container<T>::makeZeros(Node<T>* node) const {
     if (node) {
@@ -131,15 +161,11 @@ void Container<T>::makeZeros(Node<T>* node) const {
     }
 }
 
-/*
-template <typename T>
-Container<T>::Iterator Container<T>::begin() {
-    makeZeros(root);
-    Node<T>* node(iter(root));
-    node->passed = 1;
-    return Iterator(node);
-}*/
-
+/**
+    Overloaded operator ++ for the iterator: the prefix increment
+    \param No arguments.
+    \return The pointer to the next node.
+    */
 template <typename T>
 Node<T>* Container<T>::Iterator::operator++ () {
     if (curr->left != nullptr && curr->left->passed == 0) {
@@ -164,6 +190,11 @@ Node<T>* Container<T>::Iterator::operator++ () {
     }
 }
 
+/**
+    Overloaded operator ++ for the const_iterator: the prefix increment
+    \param No arguments.
+    \return The constant pointer to the next node.
+    */
 template <typename T>
 const Node<T>* Container<T>::ConstIterator::operator++ () {
     if (curr->left != nullptr && curr->left->passed == 0) {
@@ -188,33 +219,35 @@ const Node<T>* Container<T>::ConstIterator::operator++ () {
     }
 }
 
+/**
+    Overloaded operator ++ for the const_iterator: the postfix increment.
+    \param Integer unimportant value.
+    \return The constant pointer to the node that is previous to the next node.
+    */
 template <typename T>
-Node<T>* Container<T>::Iterator::operator++ (int d) {
-    if (curr->left != nullptr && curr->left->passed == 0) {
-        curr = curr->left;
-        Iterator it(curr);
-        
-        return it++;
-    }
-    if (curr->right != nullptr && curr->right->passed == 0) {
-        curr = curr->right;
-        return curr++;
-    }
-    if (curr->passed == 0) {
-        curr->passed = 1;
-        return curr;
-    }
-    if (curr->parent != nullptr) {
-        curr = curr->parent;
-        return curr++;
-    }
-    else {
-        *this = nullptr;
-        return nullptr;
-    }
+const Node<T>* Container<T>::ConstIterator::operator++ (int d) {
+    Node<T>* prev = curr;
+    ++(*this);
+    return prev;
 }
 
+/**
+    Overloaded operator ++ for the iterator: the postfix increment.
+    \param Integer unimportant value.
+    \return The pointer to the node that is previous to the next node.
+    */
+template <typename T>
+Node<T>* Container<T>::Iterator::operator++ (int d) {
+    Node<T>* prev = curr;
+    ++(*this);
+    return prev;
+}
 
+/**
+    The fuction that defines the types for the template class.
+    \param No arguments.
+    \return Nothing.
+    */
 void TemplateMap() {
     Container<CHARACTERS> container1(Power, 1);
     container1.insert(Power, 3);

@@ -1,0 +1,132 @@
+\hypertarget{class_artefact}{}\doxysection{Artefact Class Reference}
+\label{class_artefact}\index{Artefact@{Artefact}}
+
+
+Abstract class that desribes all the artefacts.  
+
+
+
+
+{\ttfamily \#include $<$Artefact.\+h$>$}
+
+Inheritance diagram for Artefact\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.181818cm]{class_artefact}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_artefact_afb2fedfe89654119779b12fabddca2b0}{become\+Up\+To}} (\mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}} character, int value)
+\item 
+const \mbox{\hyperlink{class_container}{Modificate}} \& \mbox{\hyperlink{class_artefact_ab6d4c4ee9f1a158d872d4df416aa4f23}{get\+\_\+modif}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_artefact_ab360fd23f5555aed17608390109428ff}{get\+\_\+feature}} () const
+\item 
+int \mbox{\hyperlink{class_artefact_ad0c82fa44db0ac7e187846aa76d52819}{get\+\_\+feature\+\_\+val}} (\mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}}) const
+\item 
+\mbox{\hyperlink{class_artefact_a198934fa0dc71e3c64e7dd1a93701bf6}{Artefact}} (\mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}} art, int n)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_artefact_acd027e7357772331d2db791f195867cb}\label{class_artefact_acd027e7357772331d2db791f195867cb}} 
+typedef \mbox{\hyperlink{class_container}{Container}}$<$ \mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}} $>$ {\bfseries Modificate}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_artefact_a38f146fa90c5618acd8f9a30b8e75ebc}\label{class_artefact_a38f146fa90c5618acd8f9a30b8e75ebc}} 
+\mbox{\hyperlink{class_container}{Modificate}} {\bfseries modification}
+\item 
+\mbox{\Hypertarget{class_artefact_a8baba8bd5571add0b58e74a84cc6cb7e}\label{class_artefact_a8baba8bd5571add0b58e74a84cc6cb7e}} 
+int {\bfseries value} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class that desribes all the artefacts. 
+
+Contains the map-\/like-\/class Modificate that includes parameters and values in which
+
+these parameters change. Builds with the name of the parameter and its value. \begin{DoxyAuthor}{Author}
+Lina\+AngelinaG 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15.\+12.\+2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_artefact_a198934fa0dc71e3c64e7dd1a93701bf6}\label{class_artefact_a198934fa0dc71e3c64e7dd1a93701bf6}} 
+\index{Artefact@{Artefact}!Artefact@{Artefact}}
+\index{Artefact@{Artefact}!Artefact@{Artefact}}
+\doxysubsubsection{\texorpdfstring{Artefact()}{Artefact()}}
+{\footnotesize\ttfamily Artefact\+::\+Artefact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}}}]{art,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor needs enum CHARACTERS characteristic and its value. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_artefact_afb2fedfe89654119779b12fabddca2b0}\label{class_artefact_afb2fedfe89654119779b12fabddca2b0}} 
+\index{Artefact@{Artefact}!becomeUpTo@{becomeUpTo}}
+\index{becomeUpTo@{becomeUpTo}!Artefact@{Artefact}}
+\doxysubsubsection{\texorpdfstring{becomeUpTo()}{becomeUpTo()}}
+{\footnotesize\ttfamily void Artefact\+::become\+Up\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}}}]{character,  }\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Makes the artefact changing the hero\textquotesingle{}s characteristic in a current value. 
+\begin{DoxyParams}{Parameters}
+{\em character,value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing to return 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_artefact_ab360fd23f5555aed17608390109428ff}\label{class_artefact_ab360fd23f5555aed17608390109428ff}} 
+\index{Artefact@{Artefact}!get\_feature@{get\_feature}}
+\index{get\_feature@{get\_feature}!Artefact@{Artefact}}
+\doxysubsubsection{\texorpdfstring{get\_feature()}{get\_feature()}}
+{\footnotesize\ttfamily std\+::string Artefact\+::get\+\_\+feature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Build a name of an artefact that contains all the names of changing parameters. 
+\begin{DoxyParams}{Parameters}
+{\em no} & arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string (name) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_artefact_ad0c82fa44db0ac7e187846aa76d52819}\label{class_artefact_ad0c82fa44db0ac7e187846aa76d52819}} 
+\index{Artefact@{Artefact}!get\_feature\_val@{get\_feature\_val}}
+\index{get\_feature\_val@{get\_feature\_val}!Artefact@{Artefact}}
+\doxysubsubsection{\texorpdfstring{get\_feature\_val()}{get\_feature\_val()}}
+{\footnotesize\ttfamily int Artefact\+::get\+\_\+feature\+\_\+val (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}}}]{character }\end{DoxyParamCaption}) const}
+
+Shows the value of changing parameter. 
+\begin{DoxyParams}{Parameters}
+{\em The} & name of the parameter (character). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_artefact_ab6d4c4ee9f1a158d872d4df416aa4f23}\label{class_artefact_ab6d4c4ee9f1a158d872d4df416aa4f23}} 
+\index{Artefact@{Artefact}!get\_modif@{get\_modif}}
+\index{get\_modif@{get\_modif}!Artefact@{Artefact}}
+\doxysubsubsection{\texorpdfstring{get\_modif()}{get\_modif()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_container}{Modificate}} \& Artefact\+::get\+\_\+modif (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to get the table of the artefact-\/object. 
+\begin{DoxyParams}{Parameters}
+{\em no} & arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the table of all parameters and their values 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Artefact.\+h\item 
+\mbox{\hyperlink{_artefact_8cpp}{Artefact.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,105 @@
+\hypertarget{class_weapon}{}\doxysection{Weapon Class Reference}
+\label{class_weapon}\index{Weapon@{Weapon}}
+
+
+Subclass(for basic class Tool) to contain weapon.  
+
+
+
+
+{\ttfamily \#include $<$Weapon.\+h$>$}
+
+Inheritance diagram for Weapon\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_weapon}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \mbox{\hyperlink{class_weapon_a62b8e954f84b04f1809ab15c3b7ade83}{use}} (\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}} Name)
+\item 
+\mbox{\hyperlink{class_weapon_acea1fcc441ba0cab133067dd22874a61}{Weapon}} (\mbox{\hyperlink{_e_n_u_m_s_8h_a4e3ca0f068d443c5df241c6f00628f0d}{WEAPON\+\_\+\+NAME}} Name)
+\item 
+virtual std\+::string \mbox{\hyperlink{class_weapon_a73f0341c424db9cc29c65748637cfee8}{getname}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_weapon_a402ba98aaaea4e0d7cd5e475e222a3c0}\label{class_weapon_a402ba98aaaea4e0d7cd5e475e222a3c0}} 
+\mbox{\hyperlink{_e_n_u_m_s_8h_a4e3ca0f068d443c5df241c6f00628f0d}{WEAPON\+\_\+\+NAME}} {\bfseries name}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Subclass(for basic class Tool) to contain weapon. 
+
+Containes only the type of an weapon, each of which has its own value of damage. \textbackslash{}datails Builds with the enum WEAPON\+\_\+\+NAME name. \begin{DoxyAuthor}{Author}
+Lina\+AngelinaG 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15.\+12.\+2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_weapon_acea1fcc441ba0cab133067dd22874a61}\label{class_weapon_acea1fcc441ba0cab133067dd22874a61}} 
+\index{Weapon@{Weapon}!Weapon@{Weapon}}
+\index{Weapon@{Weapon}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{Weapon()}{Weapon()}}
+{\footnotesize\ttfamily Weapon\+::\+Weapon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a4e3ca0f068d443c5df241c6f00628f0d}{WEAPON\+\_\+\+NAME}}}]{Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Builds with the enum WEAPON\+\_\+\+NAME name. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_weapon_a73f0341c424db9cc29c65748637cfee8}\label{class_weapon_a73f0341c424db9cc29c65748637cfee8}} 
+\index{Weapon@{Weapon}!getname@{getname}}
+\index{getname@{getname}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{getname()}{getname()}}
+{\footnotesize\ttfamily std\+::string Weapon\+::getname (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Allows to get the full name of the weapon. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String full name. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_tool_a6d119d3e1d4301f97c32b82949aec3eb}{Tool}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_artefacted_charmed_weapon_a4cdb3b426742ed25d87a66de3d7a5e57}{Artefacted\+Charmed\+Weapon}}, \mbox{\hyperlink{class_artefacted_weapon_aab8be1228ee4c93fc961d339e5b43c7c}{Artefacted\+Weapon}}, and \mbox{\hyperlink{class_charmed_weapon_aadd214cf88344d421f439a6bde2f9412}{Charmed\+Weapon}}.
+
+\mbox{\Hypertarget{class_weapon_a62b8e954f84b04f1809ab15c3b7ade83}\label{class_weapon_a62b8e954f84b04f1809ab15c3b7ade83}} 
+\index{Weapon@{Weapon}!use@{use}}
+\index{use@{use}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily virtual int Weapon\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}}}]{Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Allows to get the value of the damage. 
+\begin{DoxyParams}{Parameters}
+{\em Enum} & ENEMY name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Integer value of damage of the current weapon. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_tool_a27d34885d35accd44ee4a1fd5984a850}{Tool}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_artefacted_charmed_weapon_a567ac9896867aee11ddf730dd9b3a71f}{Artefacted\+Charmed\+Weapon}}, and \mbox{\hyperlink{class_charmed_weapon_ac768cfbdb67d270726fc002da188f230}{Charmed\+Weapon}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_weapon_8h}{Weapon.\+h}}\item 
+\mbox{\hyperlink{_weapon_8cpp}{Weapon.\+cpp}}\end{DoxyCompactItemize}

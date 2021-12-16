@@ -1,0 +1,78 @@
+\hypertarget{_hero_8h_source}{}\doxysection{Hero.\+h}
+\mbox{\hyperlink{_hero_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_table_8h}{Table.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}Tools.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_equipment_8h}{Equipment.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_potion_8h}{Potion.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_weapon_8h}{Weapon.h}}"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{class_hero}{Hero}} \{}
+\DoxyCodeLine{22 \textcolor{keyword}{private}:}
+\DoxyCodeLine{23     \mbox{\hyperlink{structpoint}{point}} coor = \{ 0,0 \};}
+\DoxyCodeLine{24     \textcolor{keywordtype}{int} experience = 0;}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_weapon}{Weapon}}* weapon = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{26     std::map <TYPE, Equipment*> equipment;}
+\DoxyCodeLine{27     std::map <int, Potion\&> potions;          }
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} potion\_val = 0;}
+\DoxyCodeLine{29     \textcolor{keywordtype}{int} max\_potion = 3;}
+\DoxyCodeLine{30     \textcolor{keywordtype}{int} keys = 0;}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \mbox{\hyperlink{class_table}{Table}}* parameters = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keyword}{public}:}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{41     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_hero_addc08101538dd9fe74ac7cd543116b81}{set\_weapon}}(\mbox{\hyperlink{class_weapon}{Weapon}}\& w) \{ weapon = \&w; \}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{48     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_hero_abcedfc0a2384ba5c049a4eed61617dde}{set\_table}}(\mbox{\hyperlink{class_table}{Table}}\& t) \{ parameters = \&t; \} }
+\DoxyCodeLine{49 }
+\DoxyCodeLine{55     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_hero_a0801d4888be6a77e12eff1fd33bb3538}{set\_experince}}(\textcolor{keywordtype}{int} n) \{ experience = n; \}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{62     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_hero_ac1f7f4b0ea5cb51e4b13b1c8b9d02e96}{set\_max\_potion}}(\textcolor{keywordtype}{int} n) \{ max\_potion = n; \}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{69     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_hero_a5a0c61ca3f0177961d9cc1aad73144fc}{set\_keys}}(\textcolor{keywordtype}{int} n) \{ keys = n; \}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{76     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_hero_a754fd1064b1874270bbc19679bf44cce}{set\_coor}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y) \{ coor = \{ x,y \};\} }
+\DoxyCodeLine{77 }
+\DoxyCodeLine{83     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_hero_abbc98b88c470511494dd50c84d2841bb}{set\_equipment}}(\mbox{\hyperlink{class_equipment}{Equipment}}\& equip)\{equipment.insert(\{ equip.\mbox{\hyperlink{class_equipment_ac36b11f2acc370a8e67a9643337bd94c}{get\_type}}(), \&equip \});\}}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_hero_addbaef2b5121e6bfaa39e0abb8a2ba50}{set\_potion}}(\mbox{\hyperlink{class_potion}{Potion}}\&);}
+\DoxyCodeLine{86     }
+\DoxyCodeLine{89     \mbox{\hyperlink{class_hero_a524a297e10babb17835b054719c0c36d}{Hero}}(\mbox{\hyperlink{class_table}{Table}}\& tab) :parameters(\&tab) \{\};}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{93     \mbox{\hyperlink{class_hero_af61b828a0e05b9971cf97ab83bb383b0}{Hero}}(\mbox{\hyperlink{class_weapon}{Weapon}}\& w, \mbox{\hyperlink{class_table}{Table}}\& tab) :weapon(\&w), parameters(\&tab) \{\};}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{97     \mbox{\hyperlink{class_hero_a4ffa7532f9d8f5fec5fa552fc9c9d35f}{Hero}}(\mbox{\hyperlink{class_equipment}{Equipment}}\& eq, \mbox{\hyperlink{class_table}{Table}}\& tab):parameters(\&tab) \{ \mbox{\hyperlink{class_hero_abbc98b88c470511494dd50c84d2841bb}{set\_equipment}}(eq); \}}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{104     \textcolor{keyword}{inline} \textcolor{keyword}{const} \mbox{\hyperlink{class_weapon}{Weapon}}\& \mbox{\hyperlink{class_hero_a23ed1ebe8a78193e3c6817bedb0a68e9}{get\_weapon}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} *weapon; \}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{111     \textcolor{keyword}{inline} \textcolor{keyword}{const} \mbox{\hyperlink{class_table}{Table}}\& \mbox{\hyperlink{class_hero_a6354ce04ecf8241f0701fbdb961ec2f2}{get\_table}}()\textcolor{keyword}{ const}\{ \textcolor{keywordflow}{return} *parameters; \} }
+\DoxyCodeLine{112 }
+\DoxyCodeLine{118     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_hero_a1f109379c1a019574d45f783c46d8b13}{get\_experince}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} experience; \}}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{125     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_hero_a266ab7deed9fae6eb86d99f55b300d1c}{get\_max\_potion}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} max\_potion; \}}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{132     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_hero_abeb5ee07fd6493155ba5f0eefae474d7}{get\_keys}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} keys; \}}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{139     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_hero_a1608d05cd8b645e46a7f398e0e5e62f3}{get\_potion\_val}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} potion\_val; \}}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{146     \textcolor{keyword}{inline} \mbox{\hyperlink{structpoint}{point}}\& \mbox{\hyperlink{class_hero_a5166abcdcb9ebc32ab053ee623c2fdea}{get\_coor}}() \{ \textcolor{keywordflow}{return} coor; \}}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148     \textcolor{keyword}{const} \mbox{\hyperlink{class_potion}{Potion}}* \mbox{\hyperlink{class_hero_ac04f1b42c12bb2e35fda21b5f1625062}{get\_potion}}(\textcolor{keywordtype}{int}) \textcolor{keyword}{const};}
+\DoxyCodeLine{149     }
+\DoxyCodeLine{150     \textcolor{keyword}{const} \mbox{\hyperlink{class_equipment}{Equipment}}* \mbox{\hyperlink{class_hero_a9f31887908dff0d476fdaec30664c57e}{get\_equipment}}(\mbox{\hyperlink{_e_n_u_m_s_8h_a0bc6723d5d4776ab7cdc646728b775f7}{TYPE}}) \textcolor{keyword}{const};}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{157     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_hero_a3c948bc8435ba6ed5358af5d33d4ad94}{generate\_damage}}(\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}} enemy)\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} weapon-\/>\mbox{\hyperlink{class_weapon_a62b8e954f84b04f1809ab15c3b7ade83}{use}}(enemy); \}  \textcolor{comment}{//сгенерировать урон на основании всей экип-\/ки и бонусов}}
+\DoxyCodeLine{158     }
+\DoxyCodeLine{159     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_hero_a71a4ae4766e81dbc225022a7fcb91776}{gain\_damage}}(\textcolor{keywordtype}{int}); \textcolor{comment}{//получить урон с учетом защиты }}
+\DoxyCodeLine{160     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_hero_a8039dde84354b4de1ce4093b12f86b00}{drink\_potion}}(\textcolor{keywordtype}{int}); \textcolor{comment}{//выпить зелье под номером //-\/-\/-\/}}
+\DoxyCodeLine{161     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_hero_a396df9a7fc4e0c96d9a9c8e5a2205638}{upgrate\_param}}(\mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}});}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_hero_a2bc1009e96e754b0c011382869b454b2}{take\_tool}}(\mbox{\hyperlink{class_tool}{Tool}}\&); \textcolor{comment}{//взять предмет}}
+\DoxyCodeLine{164 \};}
+
+\end{DoxyCode}

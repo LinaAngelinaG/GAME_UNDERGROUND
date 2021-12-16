@@ -1,0 +1,55 @@
+\hypertarget{_enemy_8h_source}{}\doxysection{Enemy.\+h}
+\mbox{\hyperlink{_enemy_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_e_n_u_m_s_8h}{ENUMS.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}Tools.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_enemy}{Enemy}}: \textcolor{keyword}{virtual} \textcolor{keyword}{public} \mbox{\hyperlink{class_object}{Object}}\{}
+\DoxyCodeLine{19 \textcolor{keyword}{private}:}
+\DoxyCodeLine{20     \mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}} name;}
+\DoxyCodeLine{21     \textcolor{keywordtype}{int} power;}
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} health; \textcolor{keywordtype}{int} cur\_health;}
+\DoxyCodeLine{23     \textcolor{keywordtype}{int} experience;}
+\DoxyCodeLine{24     \textcolor{keywordtype}{int} outcomes = 0;}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_tool}{Tool}}* tool = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{26 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{30     \mbox{\hyperlink{class_enemy_ad9d9554d29efbd0b178c775742ebfae8}{Enemy}}(\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}} Name) :power(Name -\/9), name(Name), health(Name), cur\_health(Name), experience(Name-\/9) \{\};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{37     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_enemy_a597b4f617dee258627029b56a3ae501a}{harm}}(\textcolor{keywordtype}{int} n) \{ cur\_health -\/= n;\} }
+\DoxyCodeLine{38 }
+\DoxyCodeLine{44     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_enemy_a64f3924ff6279627048486cbfb6e47d6}{attack}}() \{ outcomes++; \textcolor{keywordflow}{return} power; \} \textcolor{comment}{//атаковать}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{51     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_enemy_a6fb51533fd25ba1a5efab9d01fa88856}{set\_power}}(\textcolor{keywordtype}{int} n) \{ power = n; \}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{58     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_enemy_a011668791b4511d95bb5e7976eccc66c}{set\_health}}(\textcolor{keywordtype}{int} n) \{ health = n; \}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{65     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_enemy_a26f17e79f61e771d9a2a712a58c49142}{set\_experince}}(\textcolor{keywordtype}{int} n) \{ experience = n; \}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{72     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_enemy_a93f2f39de5d48c6e3baacf036bf0f3de}{set\_name}}(\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}} Name) \{ name = Name; \}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{79     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_enemy_a836067371f1ef485fbf36d282b6f523b}{set\_tool}}(\mbox{\hyperlink{class_tool}{Tool}}* t) \{ tool = t; \}}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{86     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_enemy_a6a3427121b33f1e299652f7a2464d0e6}{get\_power}}() \{ \textcolor{keywordflow}{return} power; \}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{93     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_enemy_a15944ce120b0746fcd7b01c4f29cdf2f}{get\_health}}() \{ \textcolor{keywordflow}{return} health; \}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{100     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_enemy_ac7f0fe915ce0a424d669c2052a5bf2c3}{get\_cur\_health}}() \{ \textcolor{keywordflow}{return} cur\_health; \}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{107     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_enemy_acf79278b2169f6f94def9262004a2eb4}{get\_experince}}() \{ \textcolor{keywordflow}{return} experience; \}}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{114     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_enemy_a3a8945b627b18b58baa659767b8ba165}{get\_outcomes}}() \{ \textcolor{keywordflow}{return} outcomes; \}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116     std::string \mbox{\hyperlink{class_enemy_a5f7bfb9efc018908a401aeaa5d6e1172}{get\_name}}();}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{123     \textcolor{keyword}{inline} \mbox{\hyperlink{class_tool}{Tool}}\& \mbox{\hyperlink{class_enemy_a1e4457acfcb1d4f192c2f39c2c567192}{get\_tool}}() \{ \textcolor{keywordflow}{return} *tool; \}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{130     \textcolor{keyword}{inline} \mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}} \mbox{\hyperlink{class_enemy_aa76665fb7ceb0665f60650a2c1516a14}{get\_type\_enemy}}() \{ \textcolor{keywordflow}{return} name; \}}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{137     \textcolor{keyword}{inline} \mbox{\hyperlink{_e_n_u_m_s_8h_a2a3cae49e6781726af07e98e7d9f2e30}{objectType}} \mbox{\hyperlink{class_enemy_a0ccaa395195484e55e67b0aadcfa8aaa}{getObjectType}}()\textcolor{keyword}{ override }\{ \textcolor{keywordflow}{return} enemy; \};}
+\DoxyCodeLine{138 \};}
+
+\end{DoxyCode}

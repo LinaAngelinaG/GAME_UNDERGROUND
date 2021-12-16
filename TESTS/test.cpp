@@ -26,10 +26,6 @@ TEST(TestEquipment, Testall) {
 	ASSERT_EQ(eq2.get_type(), Hands);
 	ASSERT_EQ(eq3.get_type(), Finger);
 
-	EXPECT_FALSE(eq1.isArtefact());
-	EXPECT_FALSE(eq2.isArtefact());
-	EXPECT_FALSE(eq3.isArtefact());
-	
 	ASSERT_EQ(eq1.use(Humanlikely), 1);
 	ASSERT_EQ(eq2.use(Humanlikely), 2);
 	ASSERT_EQ(eq3.use(Humanlikely), 3);
@@ -38,9 +34,9 @@ TEST(TestEquipment, Testall) {
 TEST(TestBox, Testall) {
 	Equipment eq(Helmet);
 	Box box(eq);
-	Box box1(2,eq);
-	ASSERT_EQ(box.get_level(), 1);
-	ASSERT_EQ(box1.get_level(), 2);
+	Box box1(TWO,eq);
+	ASSERT_EQ(box.get_level(), 90);
+	ASSERT_EQ(box1.get_level(), 75);
 	ASSERT_EQ(box.get_tool().getname().compare("Helmet"), 0);
 
 	int s = 0;
@@ -49,8 +45,8 @@ TEST(TestBox, Testall) {
 	}
 
 	ASSERT_TRUE(s > 7);
-	box.set_level(3);
-	ASSERT_EQ(box.get_level(), 3);
+	box.set_level(THREE);
+	ASSERT_EQ(box.get_level(), 45);
 }
 
 TEST(TestEnemy, Testall) {
@@ -94,14 +90,12 @@ TEST(TestKeys, Testall) {
 
 	ASSERT_EQ(k1.getname().compare("2 keys"), 0);
 	ASSERT_EQ(k1.get_num_of_keys(), 2);
-	ASSERT_FALSE(k1.isArtefact());
 }
 
 TEST(TestPotion, Testall) {
 	Potion p(Power, 2);
 
 	ASSERT_EQ(p.getname().compare("POWERUP potion"), 0);
-	ASSERT_TRUE(p.isArtefact());
 	ASSERT_EQ(p.get_feature().compare("POWERUP"),0);
 	ASSERT_EQ(p.get_feature_val(Power), 2);
 
@@ -120,10 +114,6 @@ TEST(TestWeapon, Testall) {
 	ASSERT_EQ(eq2.getname().compare("Axe"), 0);
 	ASSERT_EQ(eq3.getname().compare("Baton"), 0);
 
-	EXPECT_FALSE(eq1.isArtefact());
-	EXPECT_FALSE(eq2.isArtefact());
-	EXPECT_FALSE(eq3.isArtefact());
-
 	ASSERT_EQ(eq1.use(Witch), 4);
 	ASSERT_EQ(eq2.use(Witch), 5);
 	ASSERT_EQ(eq3.use(Witch), 6);
@@ -135,7 +125,6 @@ TEST(TestCharmedWeapon, Testall) {
 	w.becomeCharmed(Blessed,2);
 	ASSERT_EQ(w.getname().compare("Blessed Drying Axe"), 0);
 	ASSERT_EQ(w.get_charm().compare("Blessed Drying"), 0);
-	EXPECT_FALSE(w.isArtefact());
 	ASSERT_EQ(w.use(Witch), 5);
 	ASSERT_EQ(w.use(Demon), 7);
 }
@@ -146,7 +135,6 @@ TEST(TestArtefactedCharmedWeapon, Testall) {
 	ASSERT_EQ(w.get_feature_val(Resistance), 2);
 	ASSERT_EQ(w.get_charm().compare("Burning"), 0);
 	ASSERT_EQ(w.getname().compare("RESISUP Burning Baton"),0);
-	ASSERT_TRUE(w.isArtefact());
 	ASSERT_EQ(w.use(Witch), 7);
 	ASSERT_EQ(w.use(Demon), 6);
 
@@ -156,7 +144,6 @@ TEST(TestArtefactedCharmedWeapon, Testall) {
 	ASSERT_EQ(w.getname().compare("POWERUP RESISUP Burning Blessed Baton"), 0);
 	ASSERT_EQ(w.get_feature_val(Power), 3);
 	ASSERT_EQ(w.get_charm().compare("Burning Blessed"), 0);
-	ASSERT_TRUE(w.isArtefact());
 	ASSERT_EQ(w.use(Witch), 7);
 	ASSERT_EQ(w.use(Demon), 8);
 }
@@ -166,14 +153,12 @@ TEST(TestArtefactedWeapon, Testall) {
 	ASSERT_EQ(w.get_feature().compare("RESISUP"), 0);
 	ASSERT_EQ(w.get_feature_val(Resistance), 1);
 	ASSERT_EQ(w.getname().compare("RESISUP Baton"), 0);
-	ASSERT_TRUE(w.isArtefact());
 	ASSERT_EQ(w.use(Demon), 6);
 
 	w.becomeUpTo(Power,3);
 
 	ASSERT_EQ(w.getname().compare("POWERUP RESISUP Baton"), 0);
 	ASSERT_EQ(w.get_feature_val(Power), 3);
-	ASSERT_TRUE(w.isArtefact());
 	ASSERT_EQ(w.use(Witch), 6);
 }
 
@@ -182,28 +167,24 @@ TEST(TestArtefactedEquipment, Testall) {
 	ASSERT_EQ(w.get_feature().compare("RESISUP"), 0);
 	//ASSERT_EQ(w.get_feature_val(), 1);
 	ASSERT_EQ(w.getname().compare("RESISUP Helmet"), 0);
-	ASSERT_TRUE(w.isArtefact());
 	ASSERT_EQ(w.use(Demon), 1);
 
 	w.becomeUpTo(Power, 3);
 
 	ASSERT_EQ(w.getname().compare("POWERUP RESISUP Helmet"), 0);
 	//ASSERT_EQ(w.get_feature_val(), 3);
-	ASSERT_TRUE(w.isArtefact());
 	ASSERT_EQ(w.use(Witch), 1);
 
 	ArtefactedEquipment ww(Ring, Resistance, 1);
 	ASSERT_EQ(ww.get_feature().compare("RESISUP"), 0);
 	ASSERT_EQ(ww.get_feature_val(Resistance), 1);
 	ASSERT_EQ(ww.getname().compare("RESISUP Ring"), 0);
-	ASSERT_TRUE(ww.isArtefact());
 	ASSERT_EQ(ww.use(Demon), 3);
 
 	ww.becomeUpTo(Power, 3);
 
 	ASSERT_EQ(ww.getname().compare("POWERUP RESISUP Ring"), 0);
 	ASSERT_EQ(ww.get_feature_val(Power), 3);
-	ASSERT_TRUE(ww.isArtefact());
 	ASSERT_EQ(ww.use(Witch), 3);
 }
 
@@ -306,4 +287,6 @@ TEST(TestContainer, Testall) {
 			std::cout << "Drying" << std::endl;
 		}
 	}
+
+	//iterator iterate without the for()
 }

@@ -1,0 +1,130 @@
+\hypertarget{class_container_1_1_const_iterator}{}\doxysection{Container\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+::Const\+Iterator Class Reference}
+\label{class_container_1_1_const_iterator}\index{Container$<$ T $>$::ConstIterator@{Container$<$ T $>$::ConstIterator}}
+
+
+Class that desribes the const\+\_\+iterator.  
+
+
+
+
+{\ttfamily \#include $<$Container.\+h$>$}
+
+Inheritance diagram for Container\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+::Const\+Iterator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_container_1_1_const_iterator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_container_1_1_const_iterator_aac1d8499d3f713790f264e246448bf79}{Const\+Iterator}} (\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$first)
+\item 
+\mbox{\hyperlink{class_container_1_1_const_iterator_a8fe4a2058fb876ca5f9cd99b3f95e859}{Const\+Iterator}} ()
+\item 
+const \mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{class_container_1_1_const_iterator_af3b4395969990cb68de131966a2a2e36}{operator++}} ()
+\item 
+const \mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{class_container_1_1_const_iterator_afe3f2ae965ecb88c938d148ec686d02a}{operator++}} (int n)
+\item 
+bool \mbox{\hyperlink{class_container_1_1_const_iterator_a1c9407ab2e08c4d661ae39dc81d2c111}{operator!=}} (const \mbox{\hyperlink{class_container_1_1_const_iterator}{Const\+Iterator}} \&it)
+\item 
+bool \mbox{\hyperlink{class_container_1_1_const_iterator_a4dc5a202871078982ccb50a6b3d4269c}{operator==}} (const \mbox{\hyperlink{class_container_1_1_const_iterator}{Const\+Iterator}} \&it)
+\item 
+const \mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ \& \mbox{\hyperlink{class_container_1_1_const_iterator_a2df8752c1c99c850de483cb1fa440279}{operator$\ast$}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_container_1_1_const_iterator_ae21186e1f961990ce5a2fee12d892bcf}\label{class_container_1_1_const_iterator_ae21186e1f961990ce5a2fee12d892bcf}} 
+\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$ {\bfseries curr}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Container$<$ T $>$\+::\+Const\+Iterator}
+Class that desribes the const\+\_\+iterator. 
+
+The same as the simple iterator except the thing that this one doesn\textquotesingle{}t allow to change the node-\/information. \begin{DoxyAuthor}{Author}
+Lina\+AngelinaG 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15.\+12.\+2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_container_1_1_const_iterator_aac1d8499d3f713790f264e246448bf79}\label{class_container_1_1_const_iterator_aac1d8499d3f713790f264e246448bf79}} 
+\index{Container$<$ T $>$::ConstIterator@{Container$<$ T $>$::ConstIterator}!ConstIterator@{ConstIterator}}
+\index{ConstIterator@{ConstIterator}!Container$<$ T $>$::ConstIterator@{Container$<$ T $>$::ConstIterator}}
+\doxysubsubsection{\texorpdfstring{ConstIterator()}{ConstIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::Const\+Iterator\+::\+Const\+Iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$}]{first }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Builds with the current node. \mbox{\Hypertarget{class_container_1_1_const_iterator_a8fe4a2058fb876ca5f9cd99b3f95e859}\label{class_container_1_1_const_iterator_a8fe4a2058fb876ca5f9cd99b3f95e859}} 
+\index{Container$<$ T $>$::ConstIterator@{Container$<$ T $>$::ConstIterator}!ConstIterator@{ConstIterator}}
+\index{ConstIterator@{ConstIterator}!Container$<$ T $>$::ConstIterator@{Container$<$ T $>$::ConstIterator}}
+\doxysubsubsection{\texorpdfstring{ConstIterator()}{ConstIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::Const\+Iterator\+::\+Const\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Builds without any parameters. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_container_1_1_const_iterator_a1c9407ab2e08c4d661ae39dc81d2c111}\label{class_container_1_1_const_iterator_a1c9407ab2e08c4d661ae39dc81d2c111}} 
+\index{Container$<$ T $>$::ConstIterator@{Container$<$ T $>$::ConstIterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Container$<$ T $>$::ConstIterator@{Container$<$ T $>$::ConstIterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::Const\+Iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_container_1_1_const_iterator}{Const\+Iterator}} \&}]{it }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+The same as for the simple iterator. \mbox{\Hypertarget{class_container_1_1_const_iterator_a2df8752c1c99c850de483cb1fa440279}\label{class_container_1_1_const_iterator_a2df8752c1c99c850de483cb1fa440279}} 
+\index{Container$<$ T $>$::ConstIterator@{Container$<$ T $>$::ConstIterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Container$<$ T $>$::ConstIterator@{Container$<$ T $>$::ConstIterator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const \mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ \& \mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::Const\+Iterator\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+The same as for the simple iterator. \mbox{\Hypertarget{class_container_1_1_const_iterator_af3b4395969990cb68de131966a2a2e36}\label{class_container_1_1_const_iterator_af3b4395969990cb68de131966a2a2e36}} 
+\index{Container$<$ T $>$::ConstIterator@{Container$<$ T $>$::ConstIterator}!operator++@{operator++}}
+\index{operator++@{operator++}!Container$<$ T $>$::ConstIterator@{Container$<$ T $>$::ConstIterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const \mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::Const\+Iterator\+::operator++}
+
+Overloaded operator ++ for the const\+\_\+iterator\+: the prefix increment 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The constant pointer to the next node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_container_1_1_const_iterator_afe3f2ae965ecb88c938d148ec686d02a}\label{class_container_1_1_const_iterator_afe3f2ae965ecb88c938d148ec686d02a}} 
+\index{Container$<$ T $>$::ConstIterator@{Container$<$ T $>$::ConstIterator}!operator++@{operator++}}
+\index{operator++@{operator++}!Container$<$ T $>$::ConstIterator@{Container$<$ T $>$::ConstIterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const \mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::Const\+Iterator\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{d }\end{DoxyParamCaption})}
+
+Overloaded operator ++ for the const\+\_\+iterator\+: the postfix increment. 
+\begin{DoxyParams}{Parameters}
+{\em Integer} & unimportant value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The constant pointer to the node that is previous to the next node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_container_1_1_const_iterator_a4dc5a202871078982ccb50a6b3d4269c}\label{class_container_1_1_const_iterator_a4dc5a202871078982ccb50a6b3d4269c}} 
+\index{Container$<$ T $>$::ConstIterator@{Container$<$ T $>$::ConstIterator}!operator==@{operator==}}
+\index{operator==@{operator==}!Container$<$ T $>$::ConstIterator@{Container$<$ T $>$::ConstIterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::Const\+Iterator\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_container_1_1_const_iterator}{Const\+Iterator}} \&}]{it }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+The same as for the simple iterator. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_container_8h}{Container.\+h}}\item 
+\mbox{\hyperlink{_container_8cpp}{Container.\+cpp}}\end{DoxyCompactItemize}

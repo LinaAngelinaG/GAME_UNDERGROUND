@@ -1,0 +1,96 @@
+\hypertarget{class_potion}{}\doxysection{Potion Class Reference}
+\label{class_potion}\index{Potion@{Potion}}
+
+
+Subclass (for \mbox{\hyperlink{class_artefact}{Artefact}}) that desribes potion.  
+
+
+
+
+{\ttfamily \#include $<$Potion.\+h$>$}
+
+Inheritance diagram for Potion\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_potion}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_potion_a4cb0fbcf1f378f4d71a91a9e04ae737c}{Potion}} (\mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}} art, int val)
+\item 
+std\+::string \mbox{\hyperlink{class_potion_a3946357965157fff99f5e6ba5937a066}{getname}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_potion_a926d66cf5ca1dc713bb3c16eb5f591d2}{use}} (\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}} e)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Subclass (for \mbox{\hyperlink{class_artefact}{Artefact}}) that desribes potion. 
+
+Holds the container-\/class from the artefact.
+
+Builds with the name of the enum CHARACTERS characteristic and its value. \begin{DoxyAuthor}{Author}
+Lina\+AngelinaG 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15.\+12.\+2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_potion_a4cb0fbcf1f378f4d71a91a9e04ae737c}\label{class_potion_a4cb0fbcf1f378f4d71a91a9e04ae737c}} 
+\index{Potion@{Potion}!Potion@{Potion}}
+\index{Potion@{Potion}!Potion@{Potion}}
+\doxysubsubsection{\texorpdfstring{Potion()}{Potion()}}
+{\footnotesize\ttfamily Potion\+::\+Potion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}}}]{art,  }\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Builds with the name of the enum CHARACTERS characteristic and its value. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_potion_a3946357965157fff99f5e6ba5937a066}\label{class_potion_a3946357965157fff99f5e6ba5937a066}} 
+\index{Potion@{Potion}!getname@{getname}}
+\index{getname@{getname}!Potion@{Potion}}
+\doxysubsubsection{\texorpdfstring{getname()}{getname()}}
+{\footnotesize\ttfamily std\+::string Potion\+::getname (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Allows to get the full name of the potion. 
+\begin{DoxyParams}{Parameters}
+{\em No} & parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String full name. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_tool_a6d119d3e1d4301f97c32b82949aec3eb}{Tool}}.
+
+\mbox{\Hypertarget{class_potion_a926d66cf5ca1dc713bb3c16eb5f591d2}\label{class_potion_a926d66cf5ca1dc713bb3c16eb5f591d2}} 
+\index{Potion@{Potion}!use@{use}}
+\index{use@{use}!Potion@{Potion}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily int Potion\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}}}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Need to override virtual fuction from the abstract class \textquotesingle{}\mbox{\hyperlink{class_tool}{Tool}}\textquotesingle{}. 
+\begin{DoxyParams}{Parameters}
+{\em Enum} & ENENY name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns 0. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_tool_a27d34885d35accd44ee4a1fd5984a850}{Tool}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_potion_8h}{Potion.\+h}}\end{DoxyCompactItemize}

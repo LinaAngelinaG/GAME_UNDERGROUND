@@ -1,0 +1,156 @@
+\hypertarget{class_container_1_1_iterator}{}\doxysection{Container\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+::Iterator Class Reference}
+\label{class_container_1_1_iterator}\index{Container$<$ T $>$::Iterator@{Container$<$ T $>$::Iterator}}
+
+
+Class that desribes the iterator for the container-\/class.  
+
+
+
+
+{\ttfamily \#include $<$Container.\+h$>$}
+
+Inheritance diagram for Container\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+::Iterator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_container_1_1_iterator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_container_1_1_iterator_a95fc783d5ce26bb1b48329add489eb60}{Iterator}} (\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$first)
+\item 
+\mbox{\hyperlink{class_container_1_1_iterator_a68629c503cc0a82ba42320c3e405bb70}{Iterator}} ()
+\item 
+\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{class_container_1_1_iterator_a2c35979c32eb74ca850c50a14758725f}{operator++}} ()
+\item 
+\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{class_container_1_1_iterator_af36515c4fd1af7c20f663c1026ae0233}{operator++}} (int n)
+\item 
+bool \mbox{\hyperlink{class_container_1_1_iterator_a73bf37d5d718f0191284b65828e8ef82}{operator!=}} (const \mbox{\hyperlink{class_container_1_1_iterator}{Iterator}} \&it) const
+\item 
+bool \mbox{\hyperlink{class_container_1_1_iterator_a29784dbdcc27d7531b2eb18abd4be04e}{operator==}} (const \mbox{\hyperlink{class_container_1_1_iterator}{Iterator}} \&it) const
+\item 
+\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ \& \mbox{\hyperlink{class_container_1_1_iterator_a1eea4c86867dd116bc08dade4da3d671}{operator$\ast$}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_container_1_1_iterator_a38195d1ede2f49fb45c89ad76d0e842d}\label{class_container_1_1_iterator_a38195d1ede2f49fb45c89ad76d0e842d}} 
+\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$ {\bfseries curr}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Container$<$ T $>$\+::\+Iterator}
+Class that desribes the iterator for the container-\/class. 
+
+Holds the pointer to the current node.
+
+Builds with the current node or without any parameters. \begin{DoxyAuthor}{Author}
+Lina\+AngelinaG 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15.\+12.\+2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_container_1_1_iterator_a95fc783d5ce26bb1b48329add489eb60}\label{class_container_1_1_iterator_a95fc783d5ce26bb1b48329add489eb60}} 
+\index{Container$<$ T $>$::Iterator@{Container$<$ T $>$::Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!Container$<$ T $>$::Iterator@{Container$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::Iterator\+::\+Iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$}]{first }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Builds with the current node. \mbox{\Hypertarget{class_container_1_1_iterator_a68629c503cc0a82ba42320c3e405bb70}\label{class_container_1_1_iterator_a68629c503cc0a82ba42320c3e405bb70}} 
+\index{Container$<$ T $>$::Iterator@{Container$<$ T $>$::Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!Container$<$ T $>$::Iterator@{Container$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::Iterator\+::\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Builds without any parameters. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_container_1_1_iterator_a73bf37d5d718f0191284b65828e8ef82}\label{class_container_1_1_iterator_a73bf37d5d718f0191284b65828e8ef82}} 
+\index{Container$<$ T $>$::Iterator@{Container$<$ T $>$::Iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Container$<$ T $>$::Iterator@{Container$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::Iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_container_1_1_iterator}{Iterator}} \&}]{it }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Overloaded operator != that allows to compare the iterators. 
+\begin{DoxyParams}{Parameters}
+{\em Constant} & iterator for comparing. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bool value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_container_1_1_iterator_a1eea4c86867dd116bc08dade4da3d671}\label{class_container_1_1_iterator_a1eea4c86867dd116bc08dade4da3d671}} 
+\index{Container$<$ T $>$::Iterator@{Container$<$ T $>$::Iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Container$<$ T $>$::Iterator@{Container$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ \& \mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::Iterator\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Overloaded operator $\ast$ that allows to gain the current node. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the current node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_container_1_1_iterator_a2c35979c32eb74ca850c50a14758725f}\label{class_container_1_1_iterator_a2c35979c32eb74ca850c50a14758725f}} 
+\index{Container$<$ T $>$::Iterator@{Container$<$ T $>$::Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!Container$<$ T $>$::Iterator@{Container$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::Iterator\+::operator++}
+
+Overloaded operator ++ for the iterator\+: the prefix increment 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the next node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_container_1_1_iterator_af36515c4fd1af7c20f663c1026ae0233}\label{class_container_1_1_iterator_af36515c4fd1af7c20f663c1026ae0233}} 
+\index{Container$<$ T $>$::Iterator@{Container$<$ T $>$::Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!Container$<$ T $>$::Iterator@{Container$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::Iterator\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{d }\end{DoxyParamCaption})}
+
+Overloaded operator ++ for the iterator\+: the postfix increment. 
+\begin{DoxyParams}{Parameters}
+{\em Integer} & unimportant value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer to the node that is previous to the next node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_container_1_1_iterator_a29784dbdcc27d7531b2eb18abd4be04e}\label{class_container_1_1_iterator_a29784dbdcc27d7531b2eb18abd4be04e}} 
+\index{Container$<$ T $>$::Iterator@{Container$<$ T $>$::Iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!Container$<$ T $>$::Iterator@{Container$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_container}{Container}}$<$ T $>$\+::Iterator\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_container_1_1_iterator}{Iterator}} \&}]{it }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Overloaded operator == that allows to compare the iterators. 
+\begin{DoxyParams}{Parameters}
+{\em Constant} & iterator for comparing. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bool value. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_container_8h}{Container.\+h}}\item 
+\mbox{\hyperlink{_container_8cpp}{Container.\+cpp}}\end{DoxyCompactItemize}

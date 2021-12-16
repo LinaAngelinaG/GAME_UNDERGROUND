@@ -1,0 +1,17 @@
+\hypertarget{_artefacted_equipment_8h_source}{}\doxysection{Artefacted\+Equipment.\+h}
+\mbox{\hyperlink{_artefacted_equipment_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}Tools.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}Artefact.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_equipment_8h}{Equipment.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{class_artefacted_equipment}{ArtefactedEquipment}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_equipment}{Equipment}}, \textcolor{keyword}{public} \mbox{\hyperlink{class_artefact}{Artefact}} \{}
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_artefacted_equipment_a627c1eefc856c19abfb99923ffb5134f}{ArtefactedEquipment}}(\mbox{\hyperlink{_e_n_u_m_s_8h_a6f1b0650d037ea0f652c89b6d7b4fdbd}{EQUIPMENT}} Name1, \mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}} Name2, \textcolor{keywordtype}{int} val) :\mbox{\hyperlink{class_equipment}{Equipment}}(Name1), \mbox{\hyperlink{class_artefact}{Artefact}}(Name2, val) \{\};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{32     \textcolor{keyword}{virtual} std::string \mbox{\hyperlink{class_artefacted_equipment_a90dfa8d2edf8b6eaf507466354da2763}{getname}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_artefact_ab360fd23f5555aed17608390109428ff}{get\_feature}}() + \textcolor{stringliteral}{"{} "{}} + \mbox{\hyperlink{class_equipment_af043980bf600cc64976de87d4f736246}{Equipment::getname}}(); \}}
+\DoxyCodeLine{33 \};}
+
+\end{DoxyCode}

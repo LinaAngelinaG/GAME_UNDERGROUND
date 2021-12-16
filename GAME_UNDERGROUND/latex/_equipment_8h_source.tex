@@ -1,0 +1,24 @@
+\hypertarget{_equipment_8h_source}{}\doxysection{Equipment.\+h}
+\mbox{\hyperlink{_equipment_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}Tools.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_e_n_u_m_s_8h}{ENUMS.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_equipment}{Equipment}} : \textcolor{keyword}{virtual} \textcolor{keyword}{public} \mbox{\hyperlink{class_tool}{Tool}} \{}
+\DoxyCodeLine{19 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{20     \mbox{\hyperlink{_e_n_u_m_s_8h_a6f1b0650d037ea0f652c89b6d7b4fdbd}{EQUIPMENT}} equip;}
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_equipment_acb12fb7a1e56b2661e48cb1b02646757}{Equipment}}(\mbox{\hyperlink{_e_n_u_m_s_8h_a6f1b0650d037ea0f652c89b6d7b4fdbd}{EQUIPMENT}} eq) : equip(eq) \{ Tool::type\_of\_obj = \textcolor{stringliteral}{"{}equipment"{}}; \};}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_equipment}{\string~Equipment}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{32     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_equipment_aa310d0760367a15abfed0b9efb807194}{use}}(\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}} en) \{ \textcolor{keywordflow}{return} equip; \}; \textcolor{comment}{//возвращает величину защиты}}
+\DoxyCodeLine{33     }
+\DoxyCodeLine{34     \textcolor{keyword}{virtual} std::string \mbox{\hyperlink{class_equipment_af043980bf600cc64976de87d4f736246}{getname}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{41     \textcolor{keyword}{inline} \mbox{\hyperlink{_e_n_u_m_s_8h_a0bc6723d5d4776ab7cdc646728b775f7}{TYPE}} \mbox{\hyperlink{class_equipment_ac36b11f2acc370a8e67a9643337bd94c}{get\_type}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{_e_n_u_m_s_8h_a0bc6723d5d4776ab7cdc646728b775f7}{TYPE}}(equip); \}}
+\DoxyCodeLine{42 \};}
+
+\end{DoxyCode}

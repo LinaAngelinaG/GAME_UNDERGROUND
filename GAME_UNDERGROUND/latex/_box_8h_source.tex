@@ -1,0 +1,32 @@
+\hypertarget{_box_8h_source}{}\doxysection{Box.\+h}
+\mbox{\hyperlink{_box_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}Tools.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <random>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_table_8h}{Table.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{class_box}{Box}}: \textcolor{keyword}{virtual} \textcolor{keyword}{public} \mbox{\hyperlink{class_object}{Object}}\{}
+\DoxyCodeLine{20 \textcolor{keyword}{private}:}
+\DoxyCodeLine{21     \mbox{\hyperlink{_e_n_u_m_s_8h_a526fd8626902411d5c8bf3b6ca134a12}{LEVEL}} level;}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_tool}{Tool}}* tool;}
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_box_ab363945f10e4cd207302abb8d9bf8078}{Box}}(\mbox{\hyperlink{class_tool}{Tool}}\& t) :level(\mbox{\hyperlink{_e_n_u_m_s_8h_a526fd8626902411d5c8bf3b6ca134a12a7a725f13af144bdef532d0389ba75e0d}{ONE}}), tool(\&t) \{\};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{30     \mbox{\hyperlink{class_box_a6496fee3b1020ebb33ef2f61241f8ce1}{Box}}(\mbox{\hyperlink{_e_n_u_m_s_8h_a526fd8626902411d5c8bf3b6ca134a12}{LEVEL}} n, \mbox{\hyperlink{class_tool}{Tool}}\& t) :level(n), tool(\&t) \{\};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{37     \textcolor{keyword}{inline} \mbox{\hyperlink{_e_n_u_m_s_8h_a526fd8626902411d5c8bf3b6ca134a12}{LEVEL}} \mbox{\hyperlink{class_box_ad8c22557425ab9161354ee4af6238f3b}{get\_level}}() \{ \textcolor{keywordflow}{return} level; \}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{44     \textcolor{keyword}{inline} \mbox{\hyperlink{class_tool}{Tool}}\& \mbox{\hyperlink{class_box_a310f2fdf292ebbf2ac87dcb1160ede7f}{get\_tool}}() \{ \textcolor{keywordflow}{return} *tool; \}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{51     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_box_ae8d8c40af3a18b55a1b94f9b74c6dd08}{set\_tool}}(\mbox{\hyperlink{class_tool}{Tool}}\& t) \{ tool = \&t; \}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{58     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_box_a98465518663e6261384a0027207b6b8e}{set\_level}}(\mbox{\hyperlink{_e_n_u_m_s_8h_a526fd8626902411d5c8bf3b6ca134a12}{LEVEL}} n) \{ level = n; \}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{65     \textcolor{keyword}{inline} \mbox{\hyperlink{_e_n_u_m_s_8h_a2a3cae49e6781726af07e98e7d9f2e30}{objectType}} \mbox{\hyperlink{class_box_a1532dce3a17a1c6ed8a68a488beee361}{getObjectType}}()\textcolor{keyword}{ override }\{ \textcolor{keywordflow}{return} box; \};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_box_afcf4c3e729115d823ed545096d3e937a}{open}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{68 \};}
+
+\end{DoxyCode}

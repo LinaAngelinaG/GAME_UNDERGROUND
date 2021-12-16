@@ -1,0 +1,112 @@
+\hypertarget{class_table}{}\doxysection{Table Class Reference}
+\label{class_table}\index{Table@{Table}}
+
+
+Class that desribes information about the hero.  
+
+
+
+
+{\ttfamily \#include $<$Table.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_table_a049f2e06391781ae255c6698869c4ad1}{Table}} ()
+\item 
+\mbox{\hyperlink{class_table_a9a559f2e7beb37b511ee9f88873164f8}{$\sim$\+Table}} ()
+\item 
+int \mbox{\hyperlink{class_table_a0a05cde295375dde00746504395d9ddf}{get\+\_\+col\+\_\+param}} () const
+\item 
+int \mbox{\hyperlink{class_table_a1d763f0dbd6b96ec54ef1a9e097e175a}{get\+\_\+val\+\_\+of\+\_\+param}} (\mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}} param) const
+\item 
+void \mbox{\hyperlink{class_table_a4de8af004b45572aca765352def31a76}{set\+\_\+val\+\_\+of\+\_\+param}} (\mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}} param, int value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_table_a7c593304defb1bf553397741e1c36fcd}\label{class_table_a7c593304defb1bf553397741e1c36fcd}} 
+int {\bfseries n} =0
+\item 
+\mbox{\Hypertarget{class_table_a8d174c3ec5f5cf99895ecebcb50395cf}\label{class_table_a8d174c3ec5f5cf99895ecebcb50395cf}} 
+std\+::map$<$ \mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}}, \mbox{\hyperlink{structinfo}{info}} \& $>$ {\bfseries table}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that desribes information about the hero. 
+
+Contains the map of parameters, their values and number.
+
+Builds without any parameters, there is an ability to set all the parameters. \begin{DoxyAuthor}{Author}
+Lina\+AngelinaG 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15.\+12.\+2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_table_a049f2e06391781ae255c6698869c4ad1}\label{class_table_a049f2e06391781ae255c6698869c4ad1}} 
+\index{Table@{Table}!Table@{Table}}
+\index{Table@{Table}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{Table()}{Table()}}
+{\footnotesize\ttfamily Table\+::\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor of the \mbox{\hyperlink{class_table}{Table}}\+: sets some basic values of parameters. \mbox{\Hypertarget{class_table_a9a559f2e7beb37b511ee9f88873164f8}\label{class_table_a9a559f2e7beb37b511ee9f88873164f8}} 
+\index{Table@{Table}!````~Table@{$\sim$Table}}
+\index{````~Table@{$\sim$Table}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{$\sim$Table()}{~Table()}}
+{\footnotesize\ttfamily Table\+::$\sim$\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor of the \mbox{\hyperlink{class_table}{Table}}\+: delete the parameters from the table. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_table_a0a05cde295375dde00746504395d9ddf}\label{class_table_a0a05cde295375dde00746504395d9ddf}} 
+\index{Table@{Table}!get\_col\_param@{get\_col\_param}}
+\index{get\_col\_param@{get\_col\_param}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{get\_col\_param()}{get\_col\_param()}}
+{\footnotesize\ttfamily int Table\+::get\+\_\+col\+\_\+param (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to get the number of parameters. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ineteger number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_table_a1d763f0dbd6b96ec54ef1a9e097e175a}\label{class_table_a1d763f0dbd6b96ec54ef1a9e097e175a}} 
+\index{Table@{Table}!get\_val\_of\_param@{get\_val\_of\_param}}
+\index{get\_val\_of\_param@{get\_val\_of\_param}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{get\_val\_of\_param()}{get\_val\_of\_param()}}
+{\footnotesize\ttfamily int Table\+::get\+\_\+val\+\_\+of\+\_\+param (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}}}]{param }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to get the value of the exact parameter. 
+\begin{DoxyParams}{Parameters}
+{\em Enum} & CHARACTERS parameter name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ineteger value of the parameter. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_table_a4de8af004b45572aca765352def31a76}\label{class_table_a4de8af004b45572aca765352def31a76}} 
+\index{Table@{Table}!set\_val\_of\_param@{set\_val\_of\_param}}
+\index{set\_val\_of\_param@{set\_val\_of\_param}!Table@{Table}}
+\doxysubsubsection{\texorpdfstring{set\_val\_of\_param()}{set\_val\_of\_param()}}
+{\footnotesize\ttfamily void Table\+::set\+\_\+val\+\_\+of\+\_\+param (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}}}]{charact,  }\item[{int}]{val }\end{DoxyParamCaption})}
+
+Lets to set the value for the exact characteristics of the hero. 
+\begin{DoxyParams}{Parameters}
+{\em Enum} & CHARACTERS characteristic and its Integer value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_table_8h}{Table.\+h}}\item 
+\mbox{\hyperlink{_table_8cpp}{Table.\+cpp}}\end{DoxyCompactItemize}

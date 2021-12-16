@@ -1,0 +1,413 @@
+\hypertarget{class_hero}{}\doxysection{Hero Class Reference}
+\label{class_hero}\index{Hero@{Hero}}
+
+
+Class to contain the hero.  
+
+
+
+
+{\ttfamily \#include $<$Hero.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_hero_addc08101538dd9fe74ac7cd543116b81}{set\+\_\+weapon}} (\mbox{\hyperlink{class_weapon}{Weapon}} \&w)
+\item 
+void \mbox{\hyperlink{class_hero_abcedfc0a2384ba5c049a4eed61617dde}{set\+\_\+table}} (\mbox{\hyperlink{class_table}{Table}} \&t)
+\item 
+void \mbox{\hyperlink{class_hero_a0801d4888be6a77e12eff1fd33bb3538}{set\+\_\+experince}} (int n)
+\item 
+void \mbox{\hyperlink{class_hero_ac1f7f4b0ea5cb51e4b13b1c8b9d02e96}{set\+\_\+max\+\_\+potion}} (int n)
+\item 
+void \mbox{\hyperlink{class_hero_a5a0c61ca3f0177961d9cc1aad73144fc}{set\+\_\+keys}} (int n)
+\item 
+void \mbox{\hyperlink{class_hero_a754fd1064b1874270bbc19679bf44cce}{set\+\_\+coor}} (int x, int y)
+\item 
+void \mbox{\hyperlink{class_hero_abbc98b88c470511494dd50c84d2841bb}{set\+\_\+equipment}} (\mbox{\hyperlink{class_equipment}{Equipment}} \&equip)
+\item 
+void \mbox{\hyperlink{class_hero_addbaef2b5121e6bfaa39e0abb8a2ba50}{set\+\_\+potion}} (\mbox{\hyperlink{class_potion}{Potion}} \&)
+\item 
+\mbox{\hyperlink{class_hero_a524a297e10babb17835b054719c0c36d}{Hero}} (\mbox{\hyperlink{class_table}{Table}} \&tab)
+\item 
+\mbox{\hyperlink{class_hero_af61b828a0e05b9971cf97ab83bb383b0}{Hero}} (\mbox{\hyperlink{class_weapon}{Weapon}} \&w, \mbox{\hyperlink{class_table}{Table}} \&tab)
+\item 
+\mbox{\hyperlink{class_hero_a4ffa7532f9d8f5fec5fa552fc9c9d35f}{Hero}} (\mbox{\hyperlink{class_equipment}{Equipment}} \&eq, \mbox{\hyperlink{class_table}{Table}} \&tab)
+\item 
+const \mbox{\hyperlink{class_weapon}{Weapon}} \& \mbox{\hyperlink{class_hero_a23ed1ebe8a78193e3c6817bedb0a68e9}{get\+\_\+weapon}} () const
+\item 
+const \mbox{\hyperlink{class_table}{Table}} \& \mbox{\hyperlink{class_hero_a6354ce04ecf8241f0701fbdb961ec2f2}{get\+\_\+table}} () const
+\item 
+int \mbox{\hyperlink{class_hero_a1f109379c1a019574d45f783c46d8b13}{get\+\_\+experince}} () const
+\item 
+int \mbox{\hyperlink{class_hero_a266ab7deed9fae6eb86d99f55b300d1c}{get\+\_\+max\+\_\+potion}} () const
+\item 
+int \mbox{\hyperlink{class_hero_abeb5ee07fd6493155ba5f0eefae474d7}{get\+\_\+keys}} () const
+\item 
+int \mbox{\hyperlink{class_hero_a1608d05cd8b645e46a7f398e0e5e62f3}{get\+\_\+potion\+\_\+val}} () const
+\item 
+\mbox{\hyperlink{structpoint}{point}} \& \mbox{\hyperlink{class_hero_a5166abcdcb9ebc32ab053ee623c2fdea}{get\+\_\+coor}} ()
+\item 
+const \mbox{\hyperlink{class_potion}{Potion}} $\ast$ \mbox{\hyperlink{class_hero_ac04f1b42c12bb2e35fda21b5f1625062}{get\+\_\+potion}} (int) const
+\item 
+const \mbox{\hyperlink{class_equipment}{Equipment}} $\ast$ \mbox{\hyperlink{class_hero_a9f31887908dff0d476fdaec30664c57e}{get\+\_\+equipment}} (\mbox{\hyperlink{_e_n_u_m_s_8h_a0bc6723d5d4776ab7cdc646728b775f7}{TYPE}}) const
+\item 
+int \mbox{\hyperlink{class_hero_a3c948bc8435ba6ed5358af5d33d4ad94}{generate\+\_\+damage}} (\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}} enemy) const
+\item 
+void \mbox{\hyperlink{class_hero_a71a4ae4766e81dbc225022a7fcb91776}{gain\+\_\+damage}} (int)
+\item 
+void \mbox{\hyperlink{class_hero_a8039dde84354b4de1ce4093b12f86b00}{drink\+\_\+potion}} (int)
+\item 
+void \mbox{\hyperlink{class_hero_a396df9a7fc4e0c96d9a9c8e5a2205638}{upgrate\+\_\+param}} (\mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}})
+\item 
+void \mbox{\hyperlink{class_hero_a2bc1009e96e754b0c011382869b454b2}{take\+\_\+tool}} (\mbox{\hyperlink{class_tool}{Tool}} \&)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to contain the hero. 
+
+Contains the name of the hero, its coordinates, the pointer to the table with the basic parameters, the pointer of the weapon, the number of keys, the potion number, max potion number and 2 map-\/s with equipment and potion. \textbackslash{}datails Builds with the \mbox{\hyperlink{class_table}{Table}} OR with the \mbox{\hyperlink{class_table}{Table}} + weapon OR with the \mbox{\hyperlink{class_table}{Table}} + weapon + equipment. \begin{DoxyAuthor}{Author}
+Lina\+AngelinaG 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15.\+12.\+2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_hero_a524a297e10babb17835b054719c0c36d}\label{class_hero_a524a297e10babb17835b054719c0c36d}} 
+\index{Hero@{Hero}!Hero@{Hero}}
+\index{Hero@{Hero}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{Hero()}{Hero()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Hero\+::\+Hero (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_table}{Table}} \&}]{tab }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Builds with the \mbox{\hyperlink{class_table}{Table}}. \mbox{\Hypertarget{class_hero_af61b828a0e05b9971cf97ab83bb383b0}\label{class_hero_af61b828a0e05b9971cf97ab83bb383b0}} 
+\index{Hero@{Hero}!Hero@{Hero}}
+\index{Hero@{Hero}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{Hero()}{Hero()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Hero\+::\+Hero (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_weapon}{Weapon}} \&}]{w,  }\item[{\mbox{\hyperlink{class_table}{Table}} \&}]{tab }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Builds with the \mbox{\hyperlink{class_table}{Table}} + weapon. \mbox{\Hypertarget{class_hero_a4ffa7532f9d8f5fec5fa552fc9c9d35f}\label{class_hero_a4ffa7532f9d8f5fec5fa552fc9c9d35f}} 
+\index{Hero@{Hero}!Hero@{Hero}}
+\index{Hero@{Hero}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{Hero()}{Hero()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Hero\+::\+Hero (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_equipment}{Equipment}} \&}]{eq,  }\item[{\mbox{\hyperlink{class_table}{Table}} \&}]{tab }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Builds with the \mbox{\hyperlink{class_table}{Table}} + weapon + equipment. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_hero_a8039dde84354b4de1ce4093b12f86b00}\label{class_hero_a8039dde84354b4de1ce4093b12f86b00}} 
+\index{Hero@{Hero}!drink\_potion@{drink\_potion}}
+\index{drink\_potion@{drink\_potion}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{drink\_potion()}{drink\_potion()}}
+{\footnotesize\ttfamily void Hero\+::drink\+\_\+potion (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})}
+
+Allows to drink the existing potion. 
+\begin{DoxyParams}{Parameters}
+{\em Integer} & value of the potion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hero_a71a4ae4766e81dbc225022a7fcb91776}\label{class_hero_a71a4ae4766e81dbc225022a7fcb91776}} 
+\index{Hero@{Hero}!gain\_damage@{gain\_damage}}
+\index{gain\_damage@{gain\_damage}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{gain\_damage()}{gain\_damage()}}
+{\footnotesize\ttfamily void Hero\+::gain\+\_\+damage (\begin{DoxyParamCaption}\item[{int}]{damage }\end{DoxyParamCaption})}
+
+Allows to gain the damage from the enemy. 
+\begin{DoxyParams}{Parameters}
+{\em Integer} & value of the damage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hero_a3c948bc8435ba6ed5358af5d33d4ad94}\label{class_hero_a3c948bc8435ba6ed5358af5d33d4ad94}} 
+\index{Hero@{Hero}!generate\_damage@{generate\_damage}}
+\index{generate\_damage@{generate\_damage}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{generate\_damage()}{generate\_damage()}}
+{\footnotesize\ttfamily int Hero\+::generate\+\_\+damage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}}}]{enemy }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to get the damage to attack. 
+\begin{DoxyParams}{Parameters}
+{\em Enum} & ENEMY name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Integer value of the damage. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hero_a5166abcdcb9ebc32ab053ee623c2fdea}\label{class_hero_a5166abcdcb9ebc32ab053ee623c2fdea}} 
+\index{Hero@{Hero}!get\_coor@{get\_coor}}
+\index{get\_coor@{get\_coor}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{get\_coor()}{get\_coor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpoint}{point}} \& Hero\+::get\+\_\+coor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to get the coordinates. 
+\begin{DoxyParams}{Parameters}
+{\em No} & parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Constant refference to the point. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hero_a9f31887908dff0d476fdaec30664c57e}\label{class_hero_a9f31887908dff0d476fdaec30664c57e}} 
+\index{Hero@{Hero}!get\_equipment@{get\_equipment}}
+\index{get\_equipment@{get\_equipment}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{get\_equipment()}{get\_equipment()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_equipment}{Equipment}} $\ast$ Hero\+::get\+\_\+equipment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a0bc6723d5d4776ab7cdc646728b775f7}{TYPE}}}]{type }\end{DoxyParamCaption}) const}
+
+Allows to get the equipment. 
+\begin{DoxyParams}{Parameters}
+{\em Enum} & TYPE type of the equipment. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_equipment}{Equipment}} pointer object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hero_a1f109379c1a019574d45f783c46d8b13}\label{class_hero_a1f109379c1a019574d45f783c46d8b13}} 
+\index{Hero@{Hero}!get\_experince@{get\_experince}}
+\index{get\_experince@{get\_experince}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{get\_experince()}{get\_experince()}}
+{\footnotesize\ttfamily int Hero\+::get\+\_\+experince (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to get the experience. 
+\begin{DoxyParams}{Parameters}
+{\em No} & parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Integer value of the experience. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hero_abeb5ee07fd6493155ba5f0eefae474d7}\label{class_hero_abeb5ee07fd6493155ba5f0eefae474d7}} 
+\index{Hero@{Hero}!get\_keys@{get\_keys}}
+\index{get\_keys@{get\_keys}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{get\_keys()}{get\_keys()}}
+{\footnotesize\ttfamily int Hero\+::get\+\_\+keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to get the value of keys. 
+\begin{DoxyParams}{Parameters}
+{\em No} & parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Integer value of keys. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hero_a266ab7deed9fae6eb86d99f55b300d1c}\label{class_hero_a266ab7deed9fae6eb86d99f55b300d1c}} 
+\index{Hero@{Hero}!get\_max\_potion@{get\_max\_potion}}
+\index{get\_max\_potion@{get\_max\_potion}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{get\_max\_potion()}{get\_max\_potion()}}
+{\footnotesize\ttfamily int Hero\+::get\+\_\+max\+\_\+potion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to get the max value of the potions. 
+\begin{DoxyParams}{Parameters}
+{\em No} & parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Integer value of the max value of the potions. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hero_ac04f1b42c12bb2e35fda21b5f1625062}\label{class_hero_ac04f1b42c12bb2e35fda21b5f1625062}} 
+\index{Hero@{Hero}!get\_potion@{get\_potion}}
+\index{get\_potion@{get\_potion}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{get\_potion()}{get\_potion()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_potion}{Potion}} $\ast$ Hero\+::get\+\_\+potion (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption}) const}
+
+Allows to get the potion. 
+\begin{DoxyParams}{Parameters}
+{\em Integer} & parameter of the number of the potion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_potion}{Potion}} pointer object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hero_a1608d05cd8b645e46a7f398e0e5e62f3}\label{class_hero_a1608d05cd8b645e46a7f398e0e5e62f3}} 
+\index{Hero@{Hero}!get\_potion\_val@{get\_potion\_val}}
+\index{get\_potion\_val@{get\_potion\_val}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{get\_potion\_val()}{get\_potion\_val()}}
+{\footnotesize\ttfamily int Hero\+::get\+\_\+potion\+\_\+val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to get the value of potions. 
+\begin{DoxyParams}{Parameters}
+{\em No} & parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Integer value of the value of potions. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hero_a6354ce04ecf8241f0701fbdb961ec2f2}\label{class_hero_a6354ce04ecf8241f0701fbdb961ec2f2}} 
+\index{Hero@{Hero}!get\_table@{get\_table}}
+\index{get\_table@{get\_table}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{get\_table()}{get\_table()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_table}{Table}} \& Hero\+::get\+\_\+table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to get the table. 
+\begin{DoxyParams}{Parameters}
+{\em No} & parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Constant refference to the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hero_a23ed1ebe8a78193e3c6817bedb0a68e9}\label{class_hero_a23ed1ebe8a78193e3c6817bedb0a68e9}} 
+\index{Hero@{Hero}!get\_weapon@{get\_weapon}}
+\index{get\_weapon@{get\_weapon}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{get\_weapon()}{get\_weapon()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_weapon}{Weapon}} \& Hero\+::get\+\_\+weapon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to get the weapon. 
+\begin{DoxyParams}{Parameters}
+{\em No} & parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Constant refference to the weapon. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hero_a754fd1064b1874270bbc19679bf44cce}\label{class_hero_a754fd1064b1874270bbc19679bf44cce}} 
+\index{Hero@{Hero}!set\_coor@{set\_coor}}
+\index{set\_coor@{set\_coor}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{set\_coor()}{set\_coor()}}
+{\footnotesize\ttfamily void Hero\+::set\+\_\+coor (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to set the coordinates. 
+\begin{DoxyParams}{Parameters}
+{\em Integer} & value of the coordinates. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hero_abbc98b88c470511494dd50c84d2841bb}\label{class_hero_abbc98b88c470511494dd50c84d2841bb}} 
+\index{Hero@{Hero}!set\_equipment@{set\_equipment}}
+\index{set\_equipment@{set\_equipment}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{set\_equipment()}{set\_equipment()}}
+{\footnotesize\ttfamily void Hero\+::set\+\_\+equipment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_equipment}{Equipment}} \&}]{equip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to set the equipment. 
+\begin{DoxyParams}{Parameters}
+{\em Equipment-\/class} & object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hero_a0801d4888be6a77e12eff1fd33bb3538}\label{class_hero_a0801d4888be6a77e12eff1fd33bb3538}} 
+\index{Hero@{Hero}!set\_experince@{set\_experince}}
+\index{set\_experince@{set\_experince}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{set\_experince()}{set\_experince()}}
+{\footnotesize\ttfamily void Hero\+::set\+\_\+experince (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to set the experience. 
+\begin{DoxyParams}{Parameters}
+{\em Integer} & value of the experience. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hero_a5a0c61ca3f0177961d9cc1aad73144fc}\label{class_hero_a5a0c61ca3f0177961d9cc1aad73144fc}} 
+\index{Hero@{Hero}!set\_keys@{set\_keys}}
+\index{set\_keys@{set\_keys}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{set\_keys()}{set\_keys()}}
+{\footnotesize\ttfamily void Hero\+::set\+\_\+keys (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to set the number of keys. 
+\begin{DoxyParams}{Parameters}
+{\em Integer} & value of the number of keys. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hero_ac1f7f4b0ea5cb51e4b13b1c8b9d02e96}\label{class_hero_ac1f7f4b0ea5cb51e4b13b1c8b9d02e96}} 
+\index{Hero@{Hero}!set\_max\_potion@{set\_max\_potion}}
+\index{set\_max\_potion@{set\_max\_potion}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{set\_max\_potion()}{set\_max\_potion()}}
+{\footnotesize\ttfamily void Hero\+::set\+\_\+max\+\_\+potion (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to set the max number of potions. 
+\begin{DoxyParams}{Parameters}
+{\em Integer} & value of the . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hero_addbaef2b5121e6bfaa39e0abb8a2ba50}\label{class_hero_addbaef2b5121e6bfaa39e0abb8a2ba50}} 
+\index{Hero@{Hero}!set\_potion@{set\_potion}}
+\index{set\_potion@{set\_potion}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{set\_potion()}{set\_potion()}}
+{\footnotesize\ttfamily void Hero\+::set\+\_\+potion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_potion}{Potion}} \&}]{potion }\end{DoxyParamCaption})}
+
+Allows to set the potion. 
+\begin{DoxyParams}{Parameters}
+{\em Potion-\/class} & object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hero_abcedfc0a2384ba5c049a4eed61617dde}\label{class_hero_abcedfc0a2384ba5c049a4eed61617dde}} 
+\index{Hero@{Hero}!set\_table@{set\_table}}
+\index{set\_table@{set\_table}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{set\_table()}{set\_table()}}
+{\footnotesize\ttfamily void Hero\+::set\+\_\+table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_table}{Table}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to set the power. 
+\begin{DoxyParams}{Parameters}
+{\em Table-\/class} & object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hero_addc08101538dd9fe74ac7cd543116b81}\label{class_hero_addc08101538dd9fe74ac7cd543116b81}} 
+\index{Hero@{Hero}!set\_weapon@{set\_weapon}}
+\index{set\_weapon@{set\_weapon}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{set\_weapon()}{set\_weapon()}}
+{\footnotesize\ttfamily void Hero\+::set\+\_\+weapon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_weapon}{Weapon}} \&}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to set the weapon. 
+\begin{DoxyParams}{Parameters}
+{\em Pointer} & to the weapon. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hero_a2bc1009e96e754b0c011382869b454b2}\label{class_hero_a2bc1009e96e754b0c011382869b454b2}} 
+\index{Hero@{Hero}!take\_tool@{take\_tool}}
+\index{take\_tool@{take\_tool}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{take\_tool()}{take\_tool()}}
+{\footnotesize\ttfamily void Hero\+::take\+\_\+tool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tool}{Tool}} \&}]{tool }\end{DoxyParamCaption})}
+
+Allows to take the found tool. 
+\begin{DoxyParams}{Parameters}
+{\em Reference} & to the tool. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_hero_a396df9a7fc4e0c96d9a9c8e5a2205638}\label{class_hero_a396df9a7fc4e0c96d9a9c8e5a2205638}} 
+\index{Hero@{Hero}!upgrate\_param@{upgrate\_param}}
+\index{upgrate\_param@{upgrate\_param}!Hero@{Hero}}
+\doxysubsubsection{\texorpdfstring{upgrate\_param()}{upgrate\_param()}}
+{\footnotesize\ttfamily void Hero\+::upgrate\+\_\+param (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}}}]{charact }\end{DoxyParamCaption})}
+
+Allows to upgrate the basic parameters in the table with the experince points. 
+\begin{DoxyParams}{Parameters}
+{\em Enum} & CHARACTERS characteristic for changing. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_hero_8h}{Hero.\+h}}\item 
+\mbox{\hyperlink{_hero_8cpp}{Hero.\+cpp}}\end{DoxyCompactItemize}

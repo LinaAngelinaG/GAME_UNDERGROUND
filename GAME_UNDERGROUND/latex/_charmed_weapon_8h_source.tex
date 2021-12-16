@@ -1,0 +1,32 @@
+\hypertarget{_charmed_weapon_8h_source}{}\doxysection{Charmed\+Weapon.\+h}
+\mbox{\hyperlink{_charmed_weapon_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Tools.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_weapon_8h}{Weapon.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_e_n_u_m_s_8h}{ENUMS.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_container_8h}{Container.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{class_charmed_weapon}{CharmedWeapon}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_weapon}{Weapon}} \{}
+\DoxyCodeLine{20 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{21     \textcolor{keyword}{typedef} \mbox{\hyperlink{class_container}{Container<CHARM>}} \mbox{\hyperlink{class_container}{Charms}};}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_container}{Charms}} charms;}
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{29     std::string \mbox{\hyperlink{class_charmed_weapon_ae5200dbaa80457a2168fb4125b69aa02}{get\_charm}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{36     \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_charmed_weapon_a4343c883f90fb594e85c280c059fc332}{becomeCharmed}}(\mbox{\hyperlink{_e_n_u_m_s_8h_a3e255efe4af6e9f9c21890db0aa4b709}{CHARM}} charm ,\textcolor{keywordtype}{int} value) \{ charms.\mbox{\hyperlink{class_container_a9e1b2f14cddb0b9963812cb81dd728d1}{insert}}(charm, value); \}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 }
+\DoxyCodeLine{41     \mbox{\hyperlink{class_charmed_weapon_a0f30cbd109b9d895e2f25931cfc619e9}{CharmedWeapon}}(\mbox{\hyperlink{_e_n_u_m_s_8h_a4e3ca0f068d443c5df241c6f00628f0d}{WEAPON\_NAME}} Name, \mbox{\hyperlink{_e_n_u_m_s_8h_a3e255efe4af6e9f9c21890db0aa4b709}{CHARM}} Charm, \textcolor{keywordtype}{int} n) :\mbox{\hyperlink{class_weapon}{Weapon}}(Name) \{ charms.\mbox{\hyperlink{class_container_a9e1b2f14cddb0b9963812cb81dd728d1}{insert}}( Charm, n > 0 ? n : 0 ); \};}
+\DoxyCodeLine{42     }
+\DoxyCodeLine{45     \mbox{\hyperlink{class_charmed_weapon_a5e6ce2bd799c91523053766ba66e6cb3}{CharmedWeapon}}(\mbox{\hyperlink{_e_n_u_m_s_8h_a4e3ca0f068d443c5df241c6f00628f0d}{WEAPON\_NAME}} Name, \mbox{\hyperlink{_e_n_u_m_s_8h_a3e255efe4af6e9f9c21890db0aa4b709}{CHARM}} Charm) :\mbox{\hyperlink{class_weapon}{Weapon}}(Name) \{ charms.\mbox{\hyperlink{class_container_a9e1b2f14cddb0b9963812cb81dd728d1}{insert}}( Charm, Charm ); \};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{52     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_charmed_weapon_ac768cfbdb67d270726fc002da188f230}{use}}(\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}}); \textcolor{comment}{//возвращает величину урона, использует charmes}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{59     \textcolor{keyword}{inline} \mbox{\hyperlink{class_container}{Charms}}\& \mbox{\hyperlink{class_charmed_weapon_a52405681251cdbf63c9cea05986cac5d}{get\_charms}}() \{ \textcolor{keywordflow}{return} charms; \}}
+\DoxyCodeLine{60     }
+\DoxyCodeLine{66     \textcolor{keyword}{inline} \textcolor{keyword}{virtual} std::string \mbox{\hyperlink{class_charmed_weapon_aadd214cf88344d421f439a6bde2f9412}{getname}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_charmed_weapon_ae5200dbaa80457a2168fb4125b69aa02}{get\_charm}}() + \textcolor{stringliteral}{"{} "{}} + \mbox{\hyperlink{class_weapon_a73f0341c424db9cc29c65748637cfee8}{Weapon::getname}}();\}}
+\DoxyCodeLine{67 \};}
+
+\end{DoxyCode}

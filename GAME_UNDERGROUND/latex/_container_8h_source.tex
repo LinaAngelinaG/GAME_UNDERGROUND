@@ -1,0 +1,115 @@
+\hypertarget{_container_8h_source}{}\doxysection{Container.\+h}
+\mbox{\hyperlink{_container_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Tools.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{15 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{16 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_node}{Node}} \{}
+\DoxyCodeLine{17 \textcolor{keyword}{private}:}
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} passed = 0;}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \mbox{\hyperlink{struct_node}{Node}}* left;}
+\DoxyCodeLine{21     \mbox{\hyperlink{struct_node}{Node}}* right;}
+\DoxyCodeLine{22     \mbox{\hyperlink{struct_node}{Node}}* parent = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{23 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     T key;}
+\DoxyCodeLine{25     \textcolor{keywordtype}{int} value;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{30     \mbox{\hyperlink{struct_node_afdd66b9376286182664298008ef3993d}{Node}}(T t,\textcolor{keywordtype}{int} val)\{}
+\DoxyCodeLine{31         left = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{32         right = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{33         key = t;}
+\DoxyCodeLine{34         value = val;}
+\DoxyCodeLine{35     \}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{38     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_container}{Container}};}
+\DoxyCodeLine{39 \};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 }
+\DoxyCodeLine{50 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{51 \textcolor{keyword}{class }\mbox{\hyperlink{class_container}{Container}} \{}
+\DoxyCodeLine{52 \textcolor{keyword}{private}:}
+\DoxyCodeLine{53     \mbox{\hyperlink{struct_node}{Node<T>}} * mapOfParameters;}
+\DoxyCodeLine{54     \textcolor{keywordtype}{int} size;}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} printTree(\mbox{\hyperlink{struct_node}{Node<T>}} *) \textcolor{keyword}{const};}
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} deleteTree(\mbox{\hyperlink{struct_node}{Node<T>}} *);}
+\DoxyCodeLine{58     \mbox{\hyperlink{struct_node}{Node<T>}}* iter(\mbox{\hyperlink{struct_node}{Node<T>}}*) \textcolor{keyword}{const};}
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} makeZeros(\mbox{\hyperlink{struct_node}{Node<T>}}*) \textcolor{keyword}{const};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{keyword}{public}:}
+\DoxyCodeLine{62     \mbox{\hyperlink{class_container_ab17ce1f67243b28abcd4c8113a72524c}{Container}}(T,\textcolor{keywordtype}{int});}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{66     \mbox{\hyperlink{class_container_ab17ce1f67243b28abcd4c8113a72524c}{Container}}() :mapOfParameters(nullptr), size(0) \{\}}
+\DoxyCodeLine{67     \mbox{\hyperlink{class_container_a5b3440c3177017d2d6a190724e7078ec}{\string~Container}}();}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_container_a0ab9db7597730b53be07d9f6ca071bca}{print}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{70     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_container_afdd0493d621394d738be604eff04ded3}{find}}(T) \textcolor{keyword}{const};}
+\DoxyCodeLine{71     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_container_a9e1b2f14cddb0b9963812cb81dd728d1}{insert}}(T, \textcolor{keywordtype}{int});}
+\DoxyCodeLine{72     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_container_a447076cb4429aa6c75bb453899fa1dea}{at}}(T) \textcolor{keyword}{const};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{79     \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_container_a3c5b569647579eefd142b292cb68e6c6}{getSize}}() \{ \textcolor{keywordflow}{return} size; \};}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{88     \textcolor{keyword}{class }\mbox{\hyperlink{class_container_1_1_iterator}{Iterator}} \{}
+\DoxyCodeLine{89     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{90         \mbox{\hyperlink{struct_node}{Node<T>}}* curr;}
+\DoxyCodeLine{91     \textcolor{keyword}{public}:}
+\DoxyCodeLine{94         \mbox{\hyperlink{class_container_1_1_iterator_a95fc783d5ce26bb1b48329add489eb60}{Iterator}}(\mbox{\hyperlink{struct_node}{Node<T>}}* first) : curr(first) \{ \}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{98         \mbox{\hyperlink{class_container_1_1_iterator_a68629c503cc0a82ba42320c3e405bb70}{Iterator}}() : curr(nullptr) \{\}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100         \mbox{\hyperlink{struct_node}{Node<T>}}* \mbox{\hyperlink{class_container_1_1_iterator_a2c35979c32eb74ca850c50a14758725f}{operator++ }}();}
+\DoxyCodeLine{101         \mbox{\hyperlink{struct_node}{Node<T>}}* \mbox{\hyperlink{class_container_1_1_iterator_a2c35979c32eb74ca850c50a14758725f}{operator++ }}(\textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{108         \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_container_1_1_iterator_a73bf37d5d718f0191284b65828e8ef82}{operator !=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_container_1_1_iterator}{Iterator}}\& it)\textcolor{keyword}{const }\{ \textcolor{keywordflow}{return} curr != it.curr; \}}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{115         \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_container_1_1_iterator_a29784dbdcc27d7531b2eb18abd4be04e}{operator ==}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_container_1_1_iterator}{Iterator}}\& it)\textcolor{keyword}{const }\{ \textcolor{keywordflow}{return} curr == it.curr; \}}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{122         \textcolor{keyword}{inline} \mbox{\hyperlink{struct_node}{Node<T>}}\& \mbox{\hyperlink{class_container_1_1_iterator_a1eea4c86867dd116bc08dade4da3d671}{operator *}}() \{ \textcolor{keywordflow}{return} *curr; \}}
+\DoxyCodeLine{123     \};}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{131     \textcolor{keyword}{class }\mbox{\hyperlink{class_container_1_1_const_iterator}{ConstIterator}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_container_1_1_iterator}{Iterator}} \{}
+\DoxyCodeLine{132     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{133         \mbox{\hyperlink{struct_node}{Node<T>}}* curr;}
+\DoxyCodeLine{134     \textcolor{keyword}{public}:}
+\DoxyCodeLine{137         \mbox{\hyperlink{class_container_1_1_const_iterator_aac1d8499d3f713790f264e246448bf79}{ConstIterator}}(\mbox{\hyperlink{struct_node}{Node<T>}}* first) : \mbox{\hyperlink{class_container_1_1_iterator}{Iterator}}(first), curr(first) \{ \}}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{141         \mbox{\hyperlink{class_container_1_1_const_iterator_a8fe4a2058fb876ca5f9cd99b3f95e859}{ConstIterator}}() : \mbox{\hyperlink{class_container_1_1_iterator}{Iterator}}() \{\}}
+\DoxyCodeLine{142         }
+\DoxyCodeLine{143         \textcolor{keyword}{const} \mbox{\hyperlink{struct_node}{Node<T>}}* \mbox{\hyperlink{class_container_1_1_const_iterator_af3b4395969990cb68de131966a2a2e36}{operator++ }}();}
+\DoxyCodeLine{144         \textcolor{keyword}{const} \mbox{\hyperlink{struct_node}{Node<T>}}* \mbox{\hyperlink{class_container_1_1_const_iterator_af3b4395969990cb68de131966a2a2e36}{operator++ }}(\textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{149         \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_container_1_1_const_iterator_a1c9407ab2e08c4d661ae39dc81d2c111}{operator != }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_container_1_1_const_iterator}{ConstIterator}}\& it) \{\textcolor{keywordflow}{return} curr != it.curr; \}}
+\DoxyCodeLine{153         \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_container_1_1_const_iterator_a4dc5a202871078982ccb50a6b3d4269c}{operator ==}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_container_1_1_const_iterator}{ConstIterator}}\& it) \{ \textcolor{keywordflow}{return} curr == it.curr; \}}
+\DoxyCodeLine{157         \textcolor{keyword}{inline} \textcolor{keyword}{const} \mbox{\hyperlink{struct_node}{Node<T>}}\& \mbox{\hyperlink{class_container_1_1_const_iterator_a2df8752c1c99c850de483cb1fa440279}{operator *}}() \{ \textcolor{keywordflow}{return} *curr; \}}
+\DoxyCodeLine{158     \};}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{165     \mbox{\hyperlink{class_container_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_container_a111e048915e4d00c66fb48ab653d0be6}{begin}}() \{}
+\DoxyCodeLine{166         makeZeros(mapOfParameters);}
+\DoxyCodeLine{167         \mbox{\hyperlink{struct_node}{Node<T>}}* node(iter(mapOfParameters));}
+\DoxyCodeLine{168         \textcolor{keywordflow}{if} (node != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{169             node-\/>passed = 1;}
+\DoxyCodeLine{170             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_container_1_1_iterator}{Iterator}}(node);}
+\DoxyCodeLine{171         \}}
+\DoxyCodeLine{172         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{173     \}}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{180     \mbox{\hyperlink{class_container_1_1_const_iterator}{ConstIterator}} \mbox{\hyperlink{class_container_a738b7b4b30e775d7d1b0776f2f0b5cb1}{cbegin}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{181         makeZeros(mapOfParameters);}
+\DoxyCodeLine{182         \mbox{\hyperlink{struct_node}{Node<T>}}* node(iter(mapOfParameters));}
+\DoxyCodeLine{183         \textcolor{keywordflow}{if} (node != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{184             node-\/>passed = 1;}
+\DoxyCodeLine{185             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_container_1_1_const_iterator}{ConstIterator}}(node);}
+\DoxyCodeLine{186         \}}
+\DoxyCodeLine{187         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{188     \}}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{194     \textcolor{keyword}{inline} \mbox{\hyperlink{class_container_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_container_a41afc1d7f144bb953c60ac3d927099cf}{end}}() \{ \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr}; \}}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{200     \textcolor{keyword}{inline} \mbox{\hyperlink{class_container_1_1_const_iterator}{ConstIterator}} \mbox{\hyperlink{class_container_a9c77978cbbfc9501bf9f976311c17633}{cend}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr}; \}}
+\DoxyCodeLine{201 \};}
+
+\end{DoxyCode}

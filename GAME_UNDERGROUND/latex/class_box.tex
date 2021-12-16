@@ -1,0 +1,161 @@
+\hypertarget{class_box}{}\doxysection{Box Class Reference}
+\label{class_box}\index{Box@{Box}}
+
+
+Class that desribes box that holds the tools that hero can use.  
+
+
+
+
+{\ttfamily \#include $<$Box.\+h$>$}
+
+Inheritance diagram for Box\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_box}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_box_ab363945f10e4cd207302abb8d9bf8078}{Box}} (\mbox{\hyperlink{class_tool}{Tool}} \&t)
+\item 
+\mbox{\hyperlink{class_box_a6496fee3b1020ebb33ef2f61241f8ce1}{Box}} (\mbox{\hyperlink{_e_n_u_m_s_8h_a526fd8626902411d5c8bf3b6ca134a12}{LEVEL}} n, \mbox{\hyperlink{class_tool}{Tool}} \&t)
+\item 
+\mbox{\hyperlink{_e_n_u_m_s_8h_a526fd8626902411d5c8bf3b6ca134a12}{LEVEL}} \mbox{\hyperlink{class_box_ad8c22557425ab9161354ee4af6238f3b}{get\+\_\+level}} ()
+\item 
+\mbox{\hyperlink{class_tool}{Tool}} \& \mbox{\hyperlink{class_box_a310f2fdf292ebbf2ac87dcb1160ede7f}{get\+\_\+tool}} ()
+\item 
+void \mbox{\hyperlink{class_box_ae8d8c40af3a18b55a1b94f9b74c6dd08}{set\+\_\+tool}} (\mbox{\hyperlink{class_tool}{Tool}} \&t)
+\item 
+void \mbox{\hyperlink{class_box_a98465518663e6261384a0027207b6b8e}{set\+\_\+level}} (\mbox{\hyperlink{_e_n_u_m_s_8h_a526fd8626902411d5c8bf3b6ca134a12}{LEVEL}} n)
+\item 
+\mbox{\hyperlink{_e_n_u_m_s_8h_a2a3cae49e6781726af07e98e7d9f2e30}{object\+Type}} \mbox{\hyperlink{class_box_a1532dce3a17a1c6ed8a68a488beee361}{get\+Object\+Type}} () override
+\item 
+bool \mbox{\hyperlink{class_box_afcf4c3e729115d823ed545096d3e937a}{open}} (int)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that desribes box that holds the tools that hero can use. 
+
+Contains the level for which the probability of opening the box depends on. Also contains the tool that is hold inside.
+
+Builds with the name of the tool, or with the name of the tool with the level of the box. \begin{DoxyAuthor}{Author}
+Lina\+AngelinaG 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15.\+12.\+2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_box_ab363945f10e4cd207302abb8d9bf8078}\label{class_box_ab363945f10e4cd207302abb8d9bf8078}} 
+\index{Box@{Box}!Box@{Box}}
+\index{Box@{Box}!Box@{Box}}
+\doxysubsubsection{\texorpdfstring{Box()}{Box()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Box\+::\+Box (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tool}{Tool}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Builds with the name of the tool. \mbox{\Hypertarget{class_box_a6496fee3b1020ebb33ef2f61241f8ce1}\label{class_box_a6496fee3b1020ebb33ef2f61241f8ce1}} 
+\index{Box@{Box}!Box@{Box}}
+\index{Box@{Box}!Box@{Box}}
+\doxysubsubsection{\texorpdfstring{Box()}{Box()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Box\+::\+Box (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a526fd8626902411d5c8bf3b6ca134a12}{LEVEL}}}]{n,  }\item[{\mbox{\hyperlink{class_tool}{Tool}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Builds with the name of the tool with the level of the box. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_box_ad8c22557425ab9161354ee4af6238f3b}\label{class_box_ad8c22557425ab9161354ee4af6238f3b}} 
+\index{Box@{Box}!get\_level@{get\_level}}
+\index{get\_level@{get\_level}!Box@{Box}}
+\doxysubsubsection{\texorpdfstring{get\_level()}{get\_level()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_n_u_m_s_8h_a526fd8626902411d5c8bf3b6ca134a12}{LEVEL}} Box\+::get\+\_\+level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Lets to know the level of the box. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Level of the box. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_box_a310f2fdf292ebbf2ac87dcb1160ede7f}\label{class_box_a310f2fdf292ebbf2ac87dcb1160ede7f}} 
+\index{Box@{Box}!get\_tool@{get\_tool}}
+\index{get\_tool@{get\_tool}!Box@{Box}}
+\doxysubsubsection{\texorpdfstring{get\_tool()}{get\_tool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tool}{Tool}} \& Box\+::get\+\_\+tool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Lets to get the tool that it holds in. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current tool\textquotesingle{}s reference. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_box_a1532dce3a17a1c6ed8a68a488beee361}\label{class_box_a1532dce3a17a1c6ed8a68a488beee361}} 
+\index{Box@{Box}!getObjectType@{getObjectType}}
+\index{getObjectType@{getObjectType}!Box@{Box}}
+\doxysubsubsection{\texorpdfstring{getObjectType()}{getObjectType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_n_u_m_s_8h_a2a3cae49e6781726af07e98e7d9f2e30}{object\+Type}} Box\+::get\+Object\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Lets to get the type of exact object. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always return \char`\"{}box\char`\"{} as a type. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_object}{Object}}.
+
+\mbox{\Hypertarget{class_box_afcf4c3e729115d823ed545096d3e937a}\label{class_box_afcf4c3e729115d823ed545096d3e937a}} 
+\index{Box@{Box}!open@{open}}
+\index{open@{open}!Box@{Box}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily bool Box\+::open (\begin{DoxyParamCaption}\item[{int}]{agility }\end{DoxyParamCaption})}
+
+Give a chance to open the box(the probability of this action depends on the level of the box mostly). 
+\begin{DoxyParams}{Parameters}
+{\em Integer} & value of the hero\textquotesingle{}s agility. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of an opening attemp. 
+\end{DoxyReturn}
+method allows open the box with the exact probability that depends on the box level uses agility of hero as a parameter\mbox{\Hypertarget{class_box_a98465518663e6261384a0027207b6b8e}\label{class_box_a98465518663e6261384a0027207b6b8e}} 
+\index{Box@{Box}!set\_level@{set\_level}}
+\index{set\_level@{set\_level}!Box@{Box}}
+\doxysubsubsection{\texorpdfstring{set\_level()}{set\_level()}}
+{\footnotesize\ttfamily void Box\+::set\+\_\+level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a526fd8626902411d5c8bf3b6ca134a12}{LEVEL}}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Lets to set the level of the box. 
+\begin{DoxyParams}{Parameters}
+{\em The} & exact number of level. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing to return. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_box_ae8d8c40af3a18b55a1b94f9b74c6dd08}\label{class_box_ae8d8c40af3a18b55a1b94f9b74c6dd08}} 
+\index{Box@{Box}!set\_tool@{set\_tool}}
+\index{set\_tool@{set\_tool}!Box@{Box}}
+\doxysubsubsection{\texorpdfstring{set\_tool()}{set\_tool()}}
+{\footnotesize\ttfamily void Box\+::set\+\_\+tool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tool}{Tool}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Lets to set the tool that it holds in. 
+\begin{DoxyParams}{Parameters}
+{\em The} & exact tool\textquotesingle{}s reference. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing to return. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_box_8h}{Box.\+h}}\item 
+\mbox{\hyperlink{_box_8cpp}{Box.\+cpp}}\end{DoxyCompactItemize}

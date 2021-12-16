@@ -1,0 +1,103 @@
+\hypertarget{class_artefacted_charmed_weapon}{}\doxysection{Artefacted\+Charmed\+Weapon Class Reference}
+\label{class_artefacted_charmed_weapon}\index{ArtefactedCharmedWeapon@{ArtefactedCharmedWeapon}}
+
+
+Class that desribes all the weapon that upgrates the hero\textquotesingle{}s characteristics and that gives the special bonus against some enemies.  
+
+
+
+
+{\ttfamily \#include $<$Artefacted\+Charmed\+Weapon.\+h$>$}
+
+Inheritance diagram for Artefacted\+Charmed\+Weapon\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_artefacted_charmed_weapon}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_artefacted_charmed_weapon_a0fa33fc1382b18dd05dbe901d4ae8054}{Artefacted\+Charmed\+Weapon}} (\mbox{\hyperlink{_e_n_u_m_s_8h_a4e3ca0f068d443c5df241c6f00628f0d}{WEAPON\+\_\+\+NAME}} Name1, \mbox{\hyperlink{_e_n_u_m_s_8h_a3e255efe4af6e9f9c21890db0aa4b709}{CHARM}} Name2, \mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}} Name3, int val)
+\item 
+\mbox{\hyperlink{class_artefacted_charmed_weapon_af9f8d204637334ae0a8265b419a5db90}{Artefacted\+Charmed\+Weapon}} (\mbox{\hyperlink{_e_n_u_m_s_8h_a4e3ca0f068d443c5df241c6f00628f0d}{WEAPON\+\_\+\+NAME}} Name1, \mbox{\hyperlink{_e_n_u_m_s_8h_a3e255efe4af6e9f9c21890db0aa4b709}{CHARM}} Name2, int val1, \mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}} Name3, int val2)
+\item 
+virtual std\+::string \mbox{\hyperlink{class_artefacted_charmed_weapon_a4cdb3b426742ed25d87a66de3d7a5e57}{getname}} ()
+\item 
+virtual int \mbox{\hyperlink{class_artefacted_charmed_weapon_a567ac9896867aee11ddf730dd9b3a71f}{use}} (\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}} enemy)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class that desribes all the weapon that upgrates the hero\textquotesingle{}s characteristics and that gives the special bonus against some enemies. 
+
+Contains the map-\/like-\/class Modificate that includes parameters and values in which
+
+these parameters change(from the artefact class). And containes the table of charmes and its bonus\textquotesingle{} values.
+
+Builds with the name of the weapon, the charm\textquotesingle{}s name (optional using value of the charm) the name of the parameter and its value. \begin{DoxyAuthor}{Author}
+Lina\+AngelinaG 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15.\+12.\+2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_artefacted_charmed_weapon_a0fa33fc1382b18dd05dbe901d4ae8054}\label{class_artefacted_charmed_weapon_a0fa33fc1382b18dd05dbe901d4ae8054}} 
+\index{ArtefactedCharmedWeapon@{ArtefactedCharmedWeapon}!ArtefactedCharmedWeapon@{ArtefactedCharmedWeapon}}
+\index{ArtefactedCharmedWeapon@{ArtefactedCharmedWeapon}!ArtefactedCharmedWeapon@{ArtefactedCharmedWeapon}}
+\doxysubsubsection{\texorpdfstring{ArtefactedCharmedWeapon()}{ArtefactedCharmedWeapon()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Artefacted\+Charmed\+Weapon\+::\+Artefacted\+Charmed\+Weapon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a4e3ca0f068d443c5df241c6f00628f0d}{WEAPON\+\_\+\+NAME}}}]{Name1,  }\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a3e255efe4af6e9f9c21890db0aa4b709}{CHARM}}}]{Name2,  }\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}}}]{Name3,  }\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Builds with the name of the weapon, the charm\textquotesingle{}s name the name of the parameter and its value. \mbox{\Hypertarget{class_artefacted_charmed_weapon_af9f8d204637334ae0a8265b419a5db90}\label{class_artefacted_charmed_weapon_af9f8d204637334ae0a8265b419a5db90}} 
+\index{ArtefactedCharmedWeapon@{ArtefactedCharmedWeapon}!ArtefactedCharmedWeapon@{ArtefactedCharmedWeapon}}
+\index{ArtefactedCharmedWeapon@{ArtefactedCharmedWeapon}!ArtefactedCharmedWeapon@{ArtefactedCharmedWeapon}}
+\doxysubsubsection{\texorpdfstring{ArtefactedCharmedWeapon()}{ArtefactedCharmedWeapon()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Artefacted\+Charmed\+Weapon\+::\+Artefacted\+Charmed\+Weapon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a4e3ca0f068d443c5df241c6f00628f0d}{WEAPON\+\_\+\+NAME}}}]{Name1,  }\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a3e255efe4af6e9f9c21890db0aa4b709}{CHARM}}}]{Name2,  }\item[{int}]{val1,  }\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_a04cccdc3e0c2897ff6766d89b2e80dd3}{CHARACTERS}}}]{Name3,  }\item[{int}]{val2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Builds with the name of the weapon, the charm\textquotesingle{}s name (using value of the charm) the name of the parameter and its value. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_artefacted_charmed_weapon_a4cdb3b426742ed25d87a66de3d7a5e57}\label{class_artefacted_charmed_weapon_a4cdb3b426742ed25d87a66de3d7a5e57}} 
+\index{ArtefactedCharmedWeapon@{ArtefactedCharmedWeapon}!getname@{getname}}
+\index{getname@{getname}!ArtefactedCharmedWeapon@{ArtefactedCharmedWeapon}}
+\doxysubsubsection{\texorpdfstring{getname()}{getname()}}
+{\footnotesize\ttfamily virtual std\+::string Artefacted\+Charmed\+Weapon\+::getname (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Virtual function (for correct gaining of the name). Lets to get the full name of the artefacted weapon that contains artefact\textquotesingle{}s parameters and charmed weapon\textquotesingle{}s name. 
+\begin{DoxyParams}{Parameters}
+{\em no} & arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String with the full name. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_charmed_weapon_aadd214cf88344d421f439a6bde2f9412}{Charmed\+Weapon}}.
+
+\mbox{\Hypertarget{class_artefacted_charmed_weapon_a567ac9896867aee11ddf730dd9b3a71f}\label{class_artefacted_charmed_weapon_a567ac9896867aee11ddf730dd9b3a71f}} 
+\index{ArtefactedCharmedWeapon@{ArtefactedCharmedWeapon}!use@{use}}
+\index{use@{use}!ArtefactedCharmedWeapon@{ArtefactedCharmedWeapon}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily virtual int Artefacted\+Charmed\+Weapon\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}}}]{enemy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Virtual function (for correct using). Calculates tha value of damage that depends on the type of the weapon and the name of enemy acting with. 
+\begin{DoxyParams}{Parameters}
+{\em The} & name of the enemy that hero is acting with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The integer value of damage. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_charmed_weapon_ac768cfbdb67d270726fc002da188f230}{Charmed\+Weapon}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_artefacted_charmed_weapon_8h}{Artefacted\+Charmed\+Weapon.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,313 @@
+\hypertarget{class_enemy}{}\doxysection{Enemy Class Reference}
+\label{class_enemy}\index{Enemy@{Enemy}}
+
+
+Class that desribes enemies.  
+
+
+
+
+{\ttfamily \#include $<$Enemy.\+h$>$}
+
+Inheritance diagram for Enemy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_enemy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_enemy_ad9d9554d29efbd0b178c775742ebfae8}{Enemy}} (\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}} Name)
+\item 
+void \mbox{\hyperlink{class_enemy_a597b4f617dee258627029b56a3ae501a}{harm}} (int n)
+\item 
+int \mbox{\hyperlink{class_enemy_a64f3924ff6279627048486cbfb6e47d6}{attack}} ()
+\item 
+void \mbox{\hyperlink{class_enemy_a6fb51533fd25ba1a5efab9d01fa88856}{set\+\_\+power}} (int n)
+\item 
+void \mbox{\hyperlink{class_enemy_a011668791b4511d95bb5e7976eccc66c}{set\+\_\+health}} (int n)
+\item 
+void \mbox{\hyperlink{class_enemy_a26f17e79f61e771d9a2a712a58c49142}{set\+\_\+experince}} (int n)
+\item 
+void \mbox{\hyperlink{class_enemy_a93f2f39de5d48c6e3baacf036bf0f3de}{set\+\_\+name}} (\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}} Name)
+\item 
+void \mbox{\hyperlink{class_enemy_a836067371f1ef485fbf36d282b6f523b}{set\+\_\+tool}} (\mbox{\hyperlink{class_tool}{Tool}} $\ast$t)
+\item 
+int \mbox{\hyperlink{class_enemy_a6a3427121b33f1e299652f7a2464d0e6}{get\+\_\+power}} ()
+\item 
+int \mbox{\hyperlink{class_enemy_a15944ce120b0746fcd7b01c4f29cdf2f}{get\+\_\+health}} ()
+\item 
+int \mbox{\hyperlink{class_enemy_ac7f0fe915ce0a424d669c2052a5bf2c3}{get\+\_\+cur\+\_\+health}} ()
+\item 
+int \mbox{\hyperlink{class_enemy_acf79278b2169f6f94def9262004a2eb4}{get\+\_\+experince}} ()
+\item 
+int \mbox{\hyperlink{class_enemy_a3a8945b627b18b58baa659767b8ba165}{get\+\_\+outcomes}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_enemy_a5f7bfb9efc018908a401aeaa5d6e1172}{get\+\_\+name}} ()
+\item 
+\mbox{\hyperlink{class_tool}{Tool}} \& \mbox{\hyperlink{class_enemy_a1e4457acfcb1d4f192c2f39c2c567192}{get\+\_\+tool}} ()
+\item 
+\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}} \mbox{\hyperlink{class_enemy_aa76665fb7ceb0665f60650a2c1516a14}{get\+\_\+type\+\_\+enemy}} ()
+\item 
+\mbox{\hyperlink{_e_n_u_m_s_8h_a2a3cae49e6781726af07e98e7d9f2e30}{object\+Type}} \mbox{\hyperlink{class_enemy_a0ccaa395195484e55e67b0aadcfa8aaa}{get\+Object\+Type}} () override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that desribes enemies. 
+
+Contains the name of the enemy, its power, health, current\+\_\+health, experience, the amount outcomes and the pointer of the tool tha the enemy holds.
+
+Builds with the name of the enemy, other basic parameters are declared for each enemy, but you can change it. \begin{DoxyAuthor}{Author}
+Lina\+AngelinaG 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15.\+12.\+2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_enemy_ad9d9554d29efbd0b178c775742ebfae8}\label{class_enemy_ad9d9554d29efbd0b178c775742ebfae8}} 
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{Enemy()}{Enemy()}}
+{\footnotesize\ttfamily Enemy\+::\+Enemy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}}}]{Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Builds with the name of the enemy, other basic parameters are declared for each enemy, but you can change it. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_enemy_a64f3924ff6279627048486cbfb6e47d6}\label{class_enemy_a64f3924ff6279627048486cbfb6e47d6}} 
+\index{Enemy@{Enemy}!attack@{attack}}
+\index{attack@{attack}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{attack()}{attack()}}
+{\footnotesize\ttfamily int Enemy\+::attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to attack the hero. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Integer value of the damage. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_enemy_ac7f0fe915ce0a424d669c2052a5bf2c3}\label{class_enemy_ac7f0fe915ce0a424d669c2052a5bf2c3}} 
+\index{Enemy@{Enemy}!get\_cur\_health@{get\_cur\_health}}
+\index{get\_cur\_health@{get\_cur\_health}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{get\_cur\_health()}{get\_cur\_health()}}
+{\footnotesize\ttfamily int Enemy\+::get\+\_\+cur\+\_\+health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to get the cur\+\_\+health. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ineteger value of the cur\+\_\+health. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_enemy_acf79278b2169f6f94def9262004a2eb4}\label{class_enemy_acf79278b2169f6f94def9262004a2eb4}} 
+\index{Enemy@{Enemy}!get\_experince@{get\_experince}}
+\index{get\_experince@{get\_experince}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{get\_experince()}{get\_experince()}}
+{\footnotesize\ttfamily int Enemy\+::get\+\_\+experince (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to get the experience. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ineteger value of the experience. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_enemy_a15944ce120b0746fcd7b01c4f29cdf2f}\label{class_enemy_a15944ce120b0746fcd7b01c4f29cdf2f}} 
+\index{Enemy@{Enemy}!get\_health@{get\_health}}
+\index{get\_health@{get\_health}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{get\_health()}{get\_health()}}
+{\footnotesize\ttfamily int Enemy\+::get\+\_\+health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to get the health. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ineteger value of the health. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_enemy_a5f7bfb9efc018908a401aeaa5d6e1172}\label{class_enemy_a5f7bfb9efc018908a401aeaa5d6e1172}} 
+\index{Enemy@{Enemy}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily std\+::string Enemy\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Lets to get the full name of the enemy. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String full name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_enemy_a3a8945b627b18b58baa659767b8ba165}\label{class_enemy_a3a8945b627b18b58baa659767b8ba165}} 
+\index{Enemy@{Enemy}!get\_outcomes@{get\_outcomes}}
+\index{get\_outcomes@{get\_outcomes}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{get\_outcomes()}{get\_outcomes()}}
+{\footnotesize\ttfamily int Enemy\+::get\+\_\+outcomes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to get the amount outcomes. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ineteger amount of the outcomes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_enemy_a6a3427121b33f1e299652f7a2464d0e6}\label{class_enemy_a6a3427121b33f1e299652f7a2464d0e6}} 
+\index{Enemy@{Enemy}!get\_power@{get\_power}}
+\index{get\_power@{get\_power}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{get\_power()}{get\_power()}}
+{\footnotesize\ttfamily int Enemy\+::get\+\_\+power (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to get the power. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ineteger value of the power. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_enemy_a1e4457acfcb1d4f192c2f39c2c567192}\label{class_enemy_a1e4457acfcb1d4f192c2f39c2c567192}} 
+\index{Enemy@{Enemy}!get\_tool@{get\_tool}}
+\index{get\_tool@{get\_tool}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{get\_tool()}{get\_tool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tool}{Tool}} \& Enemy\+::get\+\_\+tool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to get the tool that the enemy holds. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The tool\textquotesingle{}s reference. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_enemy_aa76665fb7ceb0665f60650a2c1516a14}\label{class_enemy_aa76665fb7ceb0665f60650a2c1516a14}} 
+\index{Enemy@{Enemy}!get\_type\_enemy@{get\_type\_enemy}}
+\index{get\_type\_enemy@{get\_type\_enemy}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{get\_type\_enemy()}{get\_type\_enemy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}} Enemy\+::get\+\_\+type\+\_\+enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to get the type of the enemy. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Enum ENEMY value of the name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_enemy_a0ccaa395195484e55e67b0aadcfa8aaa}\label{class_enemy_a0ccaa395195484e55e67b0aadcfa8aaa}} 
+\index{Enemy@{Enemy}!getObjectType@{getObjectType}}
+\index{getObjectType@{getObjectType}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{getObjectType()}{getObjectType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_e_n_u_m_s_8h_a2a3cae49e6781726af07e98e7d9f2e30}{object\+Type}} Enemy\+::get\+Object\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Allows to get the type of the object. 
+\begin{DoxyParams}{Parameters}
+{\em No} & arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always return enum object\+Type with the value \textquotesingle{}enemy\textquotesingle{}. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_object}{Object}}.
+
+\mbox{\Hypertarget{class_enemy_a597b4f617dee258627029b56a3ae501a}\label{class_enemy_a597b4f617dee258627029b56a3ae501a}} 
+\index{Enemy@{Enemy}!harm@{harm}}
+\index{harm@{harm}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{harm()}{harm()}}
+{\footnotesize\ttfamily void Enemy\+::harm (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to gain the damage from the hero. 
+\begin{DoxyParams}{Parameters}
+{\em Integer} & value of the damage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_enemy_a26f17e79f61e771d9a2a712a58c49142}\label{class_enemy_a26f17e79f61e771d9a2a712a58c49142}} 
+\index{Enemy@{Enemy}!set\_experince@{set\_experince}}
+\index{set\_experince@{set\_experince}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{set\_experince()}{set\_experince()}}
+{\footnotesize\ttfamily void Enemy\+::set\+\_\+experince (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to set the experience. 
+\begin{DoxyParams}{Parameters}
+{\em Integer} & value of the experience. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_enemy_a011668791b4511d95bb5e7976eccc66c}\label{class_enemy_a011668791b4511d95bb5e7976eccc66c}} 
+\index{Enemy@{Enemy}!set\_health@{set\_health}}
+\index{set\_health@{set\_health}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{set\_health()}{set\_health()}}
+{\footnotesize\ttfamily void Enemy\+::set\+\_\+health (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to set the health. 
+\begin{DoxyParams}{Parameters}
+{\em Integer} & value of the health. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_enemy_a93f2f39de5d48c6e3baacf036bf0f3de}\label{class_enemy_a93f2f39de5d48c6e3baacf036bf0f3de}} 
+\index{Enemy@{Enemy}!set\_name@{set\_name}}
+\index{set\_name@{set\_name}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{set\_name()}{set\_name()}}
+{\footnotesize\ttfamily void Enemy\+::set\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n_u_m_s_8h_ae15f022588907ae3c53ce4617fd65765}{ENEMY}}}]{Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to set the name. 
+\begin{DoxyParams}{Parameters}
+{\em The} & enum ENEMY name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_enemy_a6fb51533fd25ba1a5efab9d01fa88856}\label{class_enemy_a6fb51533fd25ba1a5efab9d01fa88856}} 
+\index{Enemy@{Enemy}!set\_power@{set\_power}}
+\index{set\_power@{set\_power}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{set\_power()}{set\_power()}}
+{\footnotesize\ttfamily void Enemy\+::set\+\_\+power (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to set the power. 
+\begin{DoxyParams}{Parameters}
+{\em Integer} & value of the power. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_enemy_a836067371f1ef485fbf36d282b6f523b}\label{class_enemy_a836067371f1ef485fbf36d282b6f523b}} 
+\index{Enemy@{Enemy}!set\_tool@{set\_tool}}
+\index{set\_tool@{set\_tool}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{set\_tool()}{set\_tool()}}
+{\footnotesize\ttfamily void Enemy\+::set\+\_\+tool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tool}{Tool}} $\ast$}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allows to set the tool that the enemy holds. 
+\begin{DoxyParams}{Parameters}
+{\em The} & pointer to the tool. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_enemy_8h}{Enemy.\+h}}\item 
+\mbox{\hyperlink{_enemy_8cpp}{Enemy.\+cpp}}\end{DoxyCompactItemize}
