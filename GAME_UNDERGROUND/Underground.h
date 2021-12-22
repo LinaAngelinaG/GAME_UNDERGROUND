@@ -3,6 +3,8 @@
 #include "Box.h"
 #include "Hero.h"
 #include "Enemy.h"
+//#include <SFML/Graphics.hpp>
+//#include "TinyXML/tinyxml.h"
 #pragma once
 
 struct smth {

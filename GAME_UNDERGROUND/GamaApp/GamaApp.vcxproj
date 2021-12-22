@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -21,14 +21,13 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{758db6c1-0f74-4a88-8bc6-cdf089568575}</ProjectGuid>
-    <RootNamespace>GAMEUNDERGROUND</RootNamespace>
+    <ProjectGuid>{b24343ac-19e9-4109-865e-6a275d8e1cc8}</ProjectGuid>
+    <RootNamespace>GamaApp</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>UNDERGROUND_LIB</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -89,11 +88,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\LABS_OOP\SFML\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\LABS_OOP\SFML\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -141,42 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Artefact.cpp" />
-    <ClCompile Include="Box.cpp" />
-    <ClCompile Include="CharmedWeapon.cpp" />
-    <ClCompile Include="Container.cpp" />
-    <ClCompile Include="Enemy.cpp" />
-    <ClCompile Include="Equipment.cpp" />
-    <ClCompile Include="Hero.cpp" />
-    <ClCompile Include="Keys.cpp" />
-    <ClCompile Include="Table.cpp" />
-    <ClCompile Include="tinyxml\tinyxml.cpp" />
-    <ClCompile Include="Underground.cpp" />
-    <ClCompile Include="Weapon.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\SFML\SFML-2.5.1\include\SFML\Graphics.hpp" />
-    <ClInclude Include="Artefact.h" />
-    <ClInclude Include="ArtefactedCharmedWeapon.h" />
-    <ClInclude Include="ArtefactedEquipment.h" />
-    <ClInclude Include="ArtefactedWeapon.h" />
-    <ClInclude Include="Box.h" />
-    <ClInclude Include="CharmedWeapon.h" />
-    <ClInclude Include="Container.h" />
-    <ClInclude Include="Enemy.h" />
-    <ClInclude Include="ENUMS.h" />
-    <ClInclude Include="Equipment.h" />
-    <ClInclude Include="Hero.h" />
-    <ClInclude Include="Keys.h" />
-    <ClInclude Include="Object.h" />
-    <ClInclude Include="Potion.h" />
-    <ClInclude Include="Table.h" />
-    <ClInclude Include="Tools.h" />
-    <ClInclude Include="Underground.h" />
-    <ClInclude Include="Weapon.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <ClCompile Include="GamaApp.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
