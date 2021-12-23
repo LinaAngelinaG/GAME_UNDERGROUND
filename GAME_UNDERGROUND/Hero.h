@@ -105,7 +105,7 @@ public:
 	//Hero(String F, float X, float Y, float W, float H, Table& tab);
 	//void update(float time);
 
-	void interactionWithMap();
+	void interactionWithMap(String*);
 	inline int getDir() { return dir; }
 	inline void setDir(int d) { dir = d; }
 	inline void setSpeed(double sp) { speed = sp; }
@@ -113,28 +113,8 @@ public:
 	inline double getX() { return x; }
 	inline double getY() { return y; }
 
-	Hero(String F, float X, float Y, float W, float H, Table& tab) :parameters(&tab) {
-		dx = 0; dy = 0; speed = 0; dir = 0;
-		File = F;
-		w = W; h = H;
-		image.loadFromFile("images/" + File);
-		image.createMaskFromColor(Color(41, 33, 59));
-		texture.loadFromImage(image);
-		sprite.setTexture(texture);
-		x = X; y = Y;
-		sprite.setTextureRect(IntRect(0, 0, w, h));
-	}
+	Hero(String F, float X, float Y, float W, float H, Table& tab);
 
-	/*
-	Hero(std::string F, float X, float Y, float W, float H, Table& tab);
-	void checkCollisionWithMap(float Dx, float Dy);
-	void update(float time);
-	void control();
-	inline int getLife() { return life; }
-	inline double getplayercoordinateX() { return x; }
-	inline double getplayercoordinateY() { return y; }
-	inline Sprite getSprite() { return sprite; }
-	*/
 	/** Builds with the Table.
 	*/
 	Hero(Table& tab) :parameters(&tab) {};
@@ -210,6 +190,6 @@ public:
 	void gain_damage(int); //получить урон с учетом защиты 
 	void drink_potion(int); //выпить зелье под номером //---
 	void upgrate_param(CHARACTERS);
-	void update(double);
+	void update(double, String *);
 	void take_tool(Tool&); //взять предмет
 };

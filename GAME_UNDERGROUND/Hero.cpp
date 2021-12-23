@@ -7,117 +7,7 @@
 #include "Underground.h"
 #include "View.h"
 
-/*
-Hero::Hero(String F, float X, float Y, float W, float H, Table& tab) :parameters(&tab) {
-	dx = 0; dy = 0; speed = 0; dir = 0;
-	File = F;
-	w = W; h = H;
-	image.loadFromFile("images/" + File);
-	image.createMaskFromColor(Color(41, 33, 59));
-	texture.loadFromImage(image);
-	sprite.setTexture(texture);
-	x = X; y = Y;
-	sprite.setTextureRect(IntRect(0, 0, w, h));
-}
-void Hero::update(float time)
-{
-	switch (dir)
-	{
-	case 0: 
-		dx = speed; 
-		dy = 0; 
-		break;
-	case 1: 
-		dx = -speed; 
-		dy = 0; 
-		break;
-	case 2: 
-		dx = 0; 
-		dy = speed; 
-		break;
-	case 3: 
-		dx = 0; 
-		dy = -speed; 
-		break;
-	}
 
-	x += dx * time;
-	y += dy * time;
-
-	speed = 0;
-	sprite.setPosition(x, y);
-}*/
-
-/*Hero::Hero(std::string F, float X, float Y, float W, float H, Table& tab) :parameters(&tab) {
-	speed = 0; dx = 0; dy = 0;
-	life = true; onGround = false; isMove = false; state = stay;
-	File = F;
-	w = W; h = H;
-	image.loadFromFile("images/" + File);
-	image.createMaskFromColor(Color(41, 33, 59));
-	texture.loadFromImage(image);
-	sprite.setTexture(texture);
-	x = X; y = Y;
-	sprite.setTextureRect(IntRect(0, 134, w, h));
-	sprite.setOrigin(w / 2, h / 2);
-}
-
-void Hero::control() {
-	if (Keyboard::isKeyPressed(Keyboard::Left)) {
-		state = left;
-		speed = 0.1;
-	}
-	if (Keyboard::isKeyPressed(Keyboard::Right)) {
-		state = right;
-		speed = 0.1;
-	}
-
-	if ((Keyboard::isKeyPressed(Keyboard::Up)) && (onGround)) {
-		dy = -0.4; onGround = false;//то состояние равно прыжок,прыгнули и сообщили, что мы не на земле
-
-	}
-
-	if (Keyboard::isKeyPressed(Keyboard::Down)) {
-		state = down;
-		speed = 0.1;
-	}
-}
-void Hero::update(float time)
-{
-	control();//функция управления персонажем
-	switch (state)//тут делаются различные действия в зависимости от состояния
-	{
-	case right: dx = speed; break;//состояние идти вправо
-	case left: dx = -speed; break;//состояние идти влево
-	case up: break;//будет состояние поднятия наверх (например по лестнице)
-	case down: dx = 0; break;//будет состояние во время спуска персонажа (например по лестнице)
-	case stay: break;//и здесь тоже		
-	}
-	x += dx * time;
-	checkCollisionWithMap(dx, 0);//обрабатываем столкновение по Х
-	y += dy * time;
-	checkCollisionWithMap(0, dy);//обрабатываем столкновение по Y
-	sprite.setPosition(x + w / 2, y + h / 2); //задаем позицию спрайта в место его центра
-	if (parameters->get_val_of_param(Cur_health) <= 0) { life = false; }
-	if (!isMove) { speed = 0; }
-	dy = dy + 0.0015 * time;//делаем притяжение к земле
-	if (life) { setPlayerCoordinateForView(x, y); }
-}
-
-void Hero::checkCollisionWithMap(float Dx, float Dy)//ф ция проверки столкновений с картой
-{
-	for (int i = y / 32; i < (y + h) / 32; i++)//проходимся по элементам карты
-		for (int j = x / 32; j < (x + w) / 32; j++)
-		{
-			if (TileMap[i][j] == '0')//если элемент наш тайлик земли? то
-			{
-				if (Dy > 0) { y = i * 32 - h;  dy = 0; onGround = true; }//по Y вниз=>идем в пол(стоим на месте) или падаем. В этот момент надо вытолкнуть персонажа и поставить его на землю, при этом говорим что мы на земле тем самым снова можем прыгать
-				if (Dy < 0) { y = i * 32 + 32;  dy = 0; }//столкновение с верхними краями карты(может и не пригодиться)
-				if (Dx > 0) { x = j * 32 - w; }//с правым краем карты
-				if (Dx < 0) { x = j * 32 + 32; }// с левым краем карты
-			}
-		}
-}*/
 
 /**
 	Allows to set the potion.
@@ -131,9 +21,22 @@ void Hero::set_potion(Potion& potion) {
 	}
 }
 
-void Hero::interactionWithMap(){//ф-ция взаимодействия с картой
-	for (int i = y / 45; i < (y + h) / 45; i++)//проходимся по тайликам, контактирующим с игроком, то есть по всем квадратикам размера 32*32, которые мы окрашивали в 9 уроке. про условия читайте ниже.
-		for (int j = x / 45; j < (x + w) / 45; j++)//икс делим на 32, тем самым получаем левый квадратик, с которым персонаж соприкасается. (он ведь больше размера 32*32, поэтому может одновременно стоять на нескольких квадратах). А j<(x + w) / 32 - условие ограничения координат по иксу. то есть координата самого правого квадрата, который соприкасается с персонажем. таким образом идем в цикле слева направо по иксу, проходя по от левого квадрата (соприкасающегося с героем), до правого квадрата (соприкасающегося с героем)
+Hero::Hero(String F, float X, float Y, float W, float H, Table& tab) :parameters(&tab) {
+	dx = 0; dy = 0; speed = 0; dir = 0;
+	File = F;
+	w = W; h = H;
+	image.loadFromFile("images/" + File);
+	image.createMaskFromColor(Color(41, 33, 59));
+	texture.loadFromImage(image);
+	sprite.setTexture(texture);
+	x = X; y = Y;
+	sprite.setTextureRect(IntRect(0, 0, w, h));
+}
+
+void Hero::interactionWithMap(String* TileMap){//ф-ция взаимодействия с картой
+	for (int i = y / 45; i < (y + h) / 45; i++) {//проходимся по тайликам, контактирующим с игроком, то есть по всем квадратикам 
+		
+		for (int j = x / 45; j < (x + w) / 45; j++)//икс делим на 45, тем самым получаем левый квадратик, с которым персонаж соприкасается.
 		{
 			if (TileMap[i][j] == '0')//если наш квадратик соответствует символу 0 (стена), то проверяем "направление скорости" персонажа:
 			{
@@ -155,14 +58,19 @@ void Hero::interactionWithMap(){//ф-ция взаимодействия с картой
 				}
 			}
 
-			if (TileMap[i][j] == 's') { //если символ равен 's' (камень)
-				x = 300; y = 300;//какое то действие... например телепортация героя
-				TileMap[i][j] = ' ';//убираем камень, типа взяли бонус. можем и не убирать, кстати.
+			if (TileMap[i][j] == 's') { //если символ равен 's'
+				TileMap[i][j] = ' ';//убираем,- взяли бонус
+				++potion_val;
+			}
+			if (TileMap[i][j] == 'k') { //если символ равен 's'
+				TileMap[i][j] = ' ';//убираем,- взяли бонус
+				++keys;
 			}
 		}
+	}
 }
 
-void Hero::update(double time)
+void Hero::update(double time, String* tm)
 {
 	switch (dir)
 	{
@@ -189,7 +97,7 @@ void Hero::update(double time)
 
 	speed = 0;
 	sprite.setPosition(x, y);
-	interactionWithMap();//вызываем функцию, отвечающую за взаимодействие с картой
+	interactionWithMap(tm);//вызываем функцию, отвечающую за взаимодействие с картой
 }
 
 /**
@@ -312,11 +220,4 @@ void Hero::take_tool(Tool& tool) {
 	else if (name == "weapon") {
 		set_weapon(*dynamic_cast<Weapon*>(&tool));
 	}
-}
-
-void init() {
-	Table t;
-	Hero h(t);
-	h.interactionWithMap();
-	h.update(0.1);
 }
