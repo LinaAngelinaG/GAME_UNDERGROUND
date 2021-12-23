@@ -21,6 +21,11 @@
   <ItemGroup>
     <ClCompile Include="GamaApp.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GAME_UNDERGROUND\GAME_UNDERGROUND.vcxproj">
+      <Project>{758db6c1-0f74-4a88-8bc6-cdf089568575}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -91,7 +96,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\LABS_OOP\SFML\SFML-2.5.1\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\LABS_OOP\GAME_UNDERGROUND\GAME_UNDERGROUND;D:\LABS_OOP\SFML\SFML-2.5.1\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

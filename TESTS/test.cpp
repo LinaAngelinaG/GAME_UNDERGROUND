@@ -194,6 +194,8 @@ TEST(TestHero, Testall) {
 	Weapon weapon(Axe);
 	Equipment equip(Helmet);
 	Hero hero2(weapon,t);
+	Hero h("str", 1, 2, 3, 4, t);
+	h.update(0.2);
 
 	ASSERT_EQ(hero1.get_keys(),0);
 	ASSERT_EQ(hero1.get_experince(), 0);

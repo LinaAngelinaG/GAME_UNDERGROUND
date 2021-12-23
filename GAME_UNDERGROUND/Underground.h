@@ -1,10 +1,44 @@
-#pragma once
 #include "Tools.h"
 #include "Box.h"
 #include "Hero.h"
 #include "Enemy.h"
-//#include <SFML/Graphics.hpp>
-//#include "TinyXML/tinyxml.h"
+#include <SFML/Graphics.hpp>
+const int HEIGHT_MAP = 30;
+const int WIDTH_MAP = 40;
+
+static String TileMap[HEIGHT_MAP] = {
+
+	"0000000000000000000000000000000000000000",
+	"0        0                             0",
+	"00000    0                             0",
+	"0                                      0",
+	"000000000000000                        0",
+	"0      0                               0",
+	"0                                      0",
+	"0                                      0",
+	"0                                      0",
+	"0                                      0",
+	"0                                      0",
+	"0                                      0",
+	"0                                      0",
+	"0                                      0",
+	"0                                      0",
+	"0                                      0",
+	"0                                      0",
+	"0                                      0",
+	"0                                      0",
+	"0                                      0",
+	"0                                      0",
+	"0                                      0",
+	"0                                      0",
+	"0                                      0",
+	"0                                      0",
+	"0              s    0000               0",
+	"0           000000000000               0",
+	"0           000000000000               0",
+	"0   f    h  000000000000               0",
+	"0000000000000000000000000000000000000000",
+};
 #pragma once
 
 struct smth {
@@ -25,7 +59,6 @@ private:
 	int level;
 	int length;
 	int width;
-
 	std::map <point, Cell&> field;
 
 	//point & coor_hero;
@@ -37,7 +70,7 @@ private:
 	int checkStairsAndCorrect(); // проверить, что лестница вверх совпадает с лестницей вниз
 public:	
 	Underground(Hero*);
-
+	inline String* getMap() { return TileMap; }
 	//inline void setField(std::map<point, Cell&>* c) { field = *c; }
 	//inline void set_coor_hero(point& p) { coor_hero = p; }
 	//inline point& get_coor_hero() { return coor_hero; }
@@ -53,4 +86,5 @@ public:
 
 	void uploadUnderground(std::string filename);
 	void saveUnderground(std::string filename);
+	
 };

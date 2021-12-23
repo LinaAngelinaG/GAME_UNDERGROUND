@@ -2,12 +2,16 @@
 \file Hero.h
 \brief Header-file with a description of the hero.
 */
+#pragma once
 #include <iostream>
+#include <SFML/Graphics.hpp>
 #include "Table.h"
 #include "Tools.h"
 #include "Equipment.h"
 #include "Potion.h"
 #include "Weapon.h"
+
+using namespace sf;
 
 #pragma once
 
@@ -29,8 +33,22 @@ private:
 	int max_potion = 3;
 	int keys = 0;
 
-	Table* parameters = nullptr;
+	float x, y, w, h, dx, dy, speed;
+	int dir;
+	String File;
+	Image image;
+	Texture texture;
+	Sprite sprite;
 
+	/*float w, h, dx, dy, x, y, speed;
+	bool life, isMove, onGround;//добавили переменные состояния нахождения на земле
+	enum { left, right, up, down, jump, stay } state;//добавляем тип перечисления - состояние объекта
+	std::string File;
+	Image image;
+	Texture texture;
+	Sprite sprite;*/
+
+	Table* parameters = nullptr;
 public:
 
 	/**
@@ -83,7 +101,40 @@ public:
 	inline void set_equipment(Equipment& equip){equipment.insert({ equip.get_type(), &equip });}
 
 	void set_potion(Potion&);
-	
+
+	//Hero(String F, float X, float Y, float W, float H, Table& tab);
+	//void update(float time);
+
+	void interactionWithMap();
+	inline int getDir() { return dir; }
+	inline void setDir(int d) { dir = d; }
+	inline void setSpeed(double sp) { speed = sp; }
+	inline Sprite* getSprite() { return &sprite; }
+	inline double getX() { return x; }
+	inline double getY() { return y; }
+
+	Hero(String F, float X, float Y, float W, float H, Table& tab) :parameters(&tab) {
+		dx = 0; dy = 0; speed = 0; dir = 0;
+		File = F;
+		w = W; h = H;
+		image.loadFromFile("images/" + File);
+		image.createMaskFromColor(Color(41, 33, 59));
+		texture.loadFromImage(image);
+		sprite.setTexture(texture);
+		x = X; y = Y;
+		sprite.setTextureRect(IntRect(0, 0, w, h));
+	}
+
+	/*
+	Hero(std::string F, float X, float Y, float W, float H, Table& tab);
+	void checkCollisionWithMap(float Dx, float Dy);
+	void update(float time);
+	void control();
+	inline int getLife() { return life; }
+	inline double getplayercoordinateX() { return x; }
+	inline double getplayercoordinateY() { return y; }
+	inline Sprite getSprite() { return sprite; }
+	*/
 	/** Builds with the Table.
 	*/
 	Hero(Table& tab) :parameters(&tab) {};
@@ -159,6 +210,6 @@ public:
 	void gain_damage(int); //получить урон с учетом защиты 
 	void drink_potion(int); //выпить зелье под номером //---
 	void upgrate_param(CHARACTERS);
-
+	void update(double);
 	void take_tool(Tool&); //взять предмет
 };

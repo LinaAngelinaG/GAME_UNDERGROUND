@@ -48,7 +48,7 @@
     <ClCompile Include="Container.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="tinyxml\tinyxml.cpp">
+    <ClCompile Include="View.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -108,6 +108,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="..\..\SFML\SFML-2.5.1\include\SFML\Graphics.hpp">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="View.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
