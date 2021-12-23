@@ -105,7 +105,7 @@ public:
 	//Hero(String F, float X, float Y, float W, float H, Table& tab);
 	//void update(float time);
 
-	void interactionWithMap(String*);
+	void interactionWithMap(String*, std::map<point, Object*>);
 	inline int getDir() { return dir; }
 	inline void setDir(int d) { dir = d; }
 	inline void setSpeed(double sp) { speed = sp; }
@@ -185,11 +185,11 @@ public:
 	\param Enum ENEMY name.
 	\return Integer value of the damage.
 	*/
-	inline int generate_damage(ENEMY enemy) const { return weapon->use(enemy); }  //сгенерировать урон на основании всей экип-ки и бонусов
+	inline int generate_damage(ENEMY enemy) const { if (weapon) return weapon->use(enemy); else return 0; }  //сгенерировать урон на основании всей экип-ки и бонусов
 	
 	void gain_damage(int); //получить урон с учетом защиты 
 	void drink_potion(int); //выпить зелье под номером //---
 	void upgrate_param(CHARACTERS);
-	void update(double, String *);
+	void update(double, String *, std::map<point, Object*>);
 	void take_tool(Tool&); //взять предмет
 };

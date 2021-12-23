@@ -13,10 +13,10 @@ Table::Table() {
 	info* power = new info{ POWER, 1 };
 	table.insert({ Power, *power });
 
-	info* health = new info { HEALTH, 10 };
+	info* health = new info { HEALTH, 2000 };
 	table.insert({ Health, *health });
 
-	info* cur_health = new info { CURRENT_HEALTH, 10 };
+	info* cur_health = new info { CURRENT_HEALTH, 2000 };
 	table.insert({ Cur_health, *cur_health });
 
 	info* agility = new info{ AGILITY, 1 };

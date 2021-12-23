@@ -15,7 +15,7 @@ enum LEVEL {
 
 ///name of the enemy: contains health, power and experience are equal and = health-9
 enum ENEMY {  
-	Humanlikely = 10, ///< Enemy that is like a simple human, have 10 points of health, 1 point of experience and 1 point of the power
+	Humanlikely = 1000, ///< Enemy that is like a simple human, have 10 points of health, 1 point of experience and 1 point of the power
 	Witch, ///< Enemy that have 11 points of health, 2 point of experience and 2 point of the power
 	Slug, ///< Enemy that 12 points of health, 3 point of experience and 3 point of the power
 	Demon ///< Enemy that have 13 points of health, 4 point of experience and 4 point of the power
@@ -82,6 +82,31 @@ enum FIELD {
 struct point {
 	int x; ///< x-coordinate
 	int y; ///< y-coordinate
+
+	bool operator > (const point& another) const {
+		if (x > another.x) {
+			return true;
+		}
+		if (x== another.x && y > another.y) {
+			return true;
+		}
+		return false;
+	}
+	bool operator < (const point& another) const {
+		if (x < another.x) {
+			return true;
+		}
+		if (x == another.x && y < another.y) {
+			return true;
+		}
+		return false;
+	}
+	bool operator ==(const point& another) const {
+		if (x == another.x && y == another.y) {
+			return true;
+		}
+		return false;
+	}
 };
 
 /// Type of the object that can stand on the field

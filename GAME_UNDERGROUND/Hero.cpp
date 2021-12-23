@@ -4,10 +4,7 @@
 */
 #pragma once
 #include "Hero.h"
-#include "Underground.h"
 #include "View.h"
-
-
 
 /**
 	Allows to set the potion.
@@ -33,7 +30,7 @@ Hero::Hero(String F, float X, float Y, float W, float H, Table& tab) :parameters
 	sprite.setTextureRect(IntRect(0, 0, w, h));
 }
 
-void Hero::interactionWithMap(String* TileMap){//ф-ция взаимодействия с картой
+void Hero::interactionWithMap(String* TileMap, std::map<point, Object*> under){//ф-ция взаимодействия с картой
 	for (int i = y / 45; i < (y + h) / 45; i++) {//проходимся по тайликам, контактирующим с игроком, то есть по всем квадратикам 
 		
 		for (int j = x / 45; j < (x + w) / 45; j++)//икс делим на 45, тем самым получаем левый квадратик, с которым персонаж соприкасается.
@@ -62,15 +59,58 @@ void Hero::interactionWithMap(String* TileMap){//ф-ция взаимодействия с картой
 				TileMap[i][j] = ' ';//убираем,- взяли бонус
 				++potion_val;
 			}
-			if (TileMap[i][j] == 'k') { //если символ равен 's'
+			if (TileMap[i][j] == 'k') { //если символ равен 'k'
 				TileMap[i][j] = ' ';//убираем,- взяли бонус
+				keys+=5;
+			}
+			if (TileMap[i][j] == 'w') { //new weapon
+				if (!weapon) {
+					TileMap[i][j] = ' ';
+					try {
+						weapon = dynamic_cast<Weapon*>(under.at({ i, j }));
+					}
+					catch (std::exception e) {
+					}
+				}
+				else{
+					try {
+						Weapon* w = dynamic_cast<Weapon*>(under.at({ i, j }));
+						under.insert({ { i,j }, weapon });
+						weapon = w;
+					}
+					catch (std::exception e) {
+					}
+				}
 				++keys;
+			}
+			if (TileMap[i][j] == 'e') { //если enemy
+				try {
+					Enemy* e = dynamic_cast<Enemy*>(under.at({ i, j }));
+					std::cout << "DAMAGE IS   " << std::endl;
+					std::cout << " CUR HEALTH" << parameters->get_val_of_param(Cur_health) << std::endl;
+					gain_damage(e->attack());
+					//under.insert({ { i,j }, e });
+					int dam = generate_damage(e->get_type_enemy());
+					e->harm(dam);
+					std::cout << "DAMAGE IS   " << dam <<" CUR HEALTH" << e->get_cur_health() << std::endl;
+					std::cout <<" CUR HEALTH" << parameters->get_val_of_param(Cur_health) << std::endl;
+
+					if (e->get_cur_health() < 0) {
+						TileMap[i][j] = ' ';
+					}
+					//18:45 В215
+				}
+				catch (std::exception e) {
+					std::cout << "Exception"<<std::endl;
+				}
+				
+				
 			}
 		}
 	}
 }
 
-void Hero::update(double time, String* tm)
+void Hero::update(double time, String* tm, std::map<point, Object*> under)
 {
 	switch (dir)
 	{
@@ -97,7 +137,7 @@ void Hero::update(double time, String* tm)
 
 	speed = 0;
 	sprite.setPosition(x, y);
-	interactionWithMap(tm);//вызываем функцию, отвечающую за взаимодействие с картой
+	interactionWithMap(tm, under);//вызываем функцию, отвечающую за взаимодействие с картой
 }
 
 /**

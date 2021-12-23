@@ -4,6 +4,7 @@
 #include "ArtefactedEquipment.h"
 #include "ArtefactedWeapon.h"
 #include "Box.h"
+#include "Underground.h"
 #include "CharmedWeapon.h"
 #include "Enemy.h"
 #include "Hero.h"
@@ -195,7 +196,6 @@ TEST(TestHero, Testall) {
 	Equipment equip(Helmet);
 	Hero hero2(weapon,t);
 	Hero h("str", 1, 2, 3, 4, t);
-	h.update(0.2);
 
 	ASSERT_EQ(hero1.get_keys(),0);
 	ASSERT_EQ(hero1.get_experince(), 0);
@@ -258,7 +258,29 @@ TEST(TestHero, Testall) {
 }
 
 TEST(TestUnderground, Testall) {
-	
+	Table t;
+	Hero p(t);
+	Underground u(&p);
+	Weapon weapon(Sword);
+
+	Enemy e(Slug);
+	u.getObjects()->insert({ {4,21},&e });
+	u.getObjects()->insert({ {2,19},&weapon });
+
+	try {
+		Enemy* e1 = dynamic_cast<Enemy*>(u.getObjects()->at({ 4, 21}));
+		std::cout << "DAMAGE IS   " << std::endl;
+		//under.insert({ { i,j }, e });
+		int dam = p.generate_damage(e1->get_type_enemy());
+		e1->harm(dam);
+		std::cout << "DAMAGE IS   " << dam << " CUR HEALTH" << e1->get_cur_health() << std::endl;
+		std::cout << " CUR HEALTH" << p.get_table().get_val_of_param(Cur_health) << std::endl;
+
+		//18:45 Â215
+	}
+	catch (std::exception e) {
+		std::cout << "Exception" << std::endl;
+	}
 }
 
 TEST(TestContainer, Testall) {
