@@ -35,24 +35,16 @@ int main() {
 	Enemy e(Slug);
 	Enemy e1(Witch);
 	Enemy e2(Demon);
+	Box box(weapon2);
+	Box box1(THREE, weapon2);
+
 	u.getObjects()->insert({ {2,19},&weapon1 });
 	u.getObjects()->insert({ {3,6},&e });
+	u.getObjects()->insert({ {1,13},&box });
+	u.getObjects()->insert({ {3,11},&box1 });
 	u.getObjects()->insert({ {3, 17},&e1 });
 	u.getObjects()->insert({ {5, 18},&e2 });
 	
-	//u.getObjects()->insert({ {4,21},&e });
-
-	/*try {
-		Enemy* e11 = dynamic_cast<Enemy*>(u.getObjects()->at({ 4, 21 }));
-		std::cout << "DAMAGE IS   " << std::endl;
-		int dam = p.generate_damage(e11->get_type_enemy());
-		e11->harm(dam);
-		std::cout << "DAMAGE IS   " << dam << " CUR HEALTH" << e11->get_cur_health() << std::endl;
-		std::cout << " CUR HEALTH" << p.get_table().get_val_of_param(Cur_health) << std::endl;
-	}
-	catch (std::exception e) {
-		std::cout << "Exception" << std::endl;
-	}*/
 
 	float CurrentFrame = 0;
 	Clock clock;
@@ -70,7 +62,7 @@ int main() {
 			if (event.type == sf::Event::Closed)
 				window.close();
 		}
-
+		
 		///////////////////////////////////////////Управление персонажем с анимацией////////////////////////////////////////////////////////////////////////
 		if ((Keyboard::isKeyPressed(Keyboard::Left))) {
 			p.setDir(1);
@@ -142,32 +134,6 @@ int main() {
 
 		window.display();
 	}
-	
-	/*Table t;
-	Hero p(t);
-	Underground u(&p);
-	Weapon weapon(Sword);
-	p.set_weapon(weapon);
-
-	Enemy e(Slug);
-	u.getObjects()->insert({ {4,21},&e });
-	u.getObjects()->insert({ {2,19},&weapon });
-
-	try {
-		Enemy* e1 = dynamic_cast<Enemy*>(u.getObjects()->at({ 4, 21 }));
-		std::cout << "DAMAGE IS   " << std::endl;
-		//under.insert({ { i,j }, e });
-		int dam = p.generate_damage(e1->get_type_enemy());
-		e1->harm(dam);
-		std::cout << "DAMAGE IS   " << dam << " CUR HEALTH" << e1->get_cur_health() << std::endl;
-		std::cout << " CUR HEALTH" << p.get_table().get_val_of_param(Cur_health) << std::endl;
-
-		//18:45 В215
-	}
-	catch (std::exception e) {
-		std::cout << "Exception" << std::endl;
-	}
-	*/
 
 	return 0;
 }

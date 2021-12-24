@@ -41,7 +41,7 @@ public:
 	\param No arguments.
 	\return The current tool's reference.
 	*/
-	inline Tool& get_tool() { return *tool; }
+	inline Tool* get_tool() { return tool; }
 
 	/**
 	Lets to set the tool that it holds in.

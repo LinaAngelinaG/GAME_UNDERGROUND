@@ -5,6 +5,7 @@
 #pragma once
 #include "Hero.h"
 #include "View.h"
+#include "Box.h"
 
 /**
 	Allows to set the potion.
@@ -65,23 +66,24 @@ void Hero::interactionWithMap(String* TileMap, std::map<point, Object*> under){/
 			}
 			if (TileMap[i][j] == 'w') { //new weapon
 				if (!weapon) {
-					TileMap[i][j] = ' ';
 					try {
 						weapon = dynamic_cast<Weapon*>(under.at({ i, j }));
+						TileMap[i][j] = ' ';
 					}
 					catch (std::exception e) {
 					}
 				}
 				else{
 					try {
+						Object* obj = under.at({ i, j });
 						Weapon* w = dynamic_cast<Weapon*>(under.at({ i, j }));
+						
 						under.insert({ { i,j }, weapon });
 						weapon = w;
 					}
 					catch (std::exception e) {
 					}
 				}
-				++keys;
 			}
 			if (TileMap[i][j] == 'e') { //если enemy
 				try {
@@ -98,13 +100,45 @@ void Hero::interactionWithMap(String* TileMap, std::map<point, Object*> under){/
 					if (e->get_cur_health() < 0) {
 						TileMap[i][j] = ' ';
 					}
-					//18:45 В215
 				}
 				catch (std::exception e) {
 					std::cout << "Exception"<<std::endl;
 				}
-				
-				
+			}
+			if (TileMap[i][j] == 'b') { //Box
+				try {
+					Box* b = dynamic_cast<Box*>(under.at({ i, j }));
+					std::cout << "KEYS IS   " << keys << std::endl;
+					if (keys > 0) {
+						int prob_false = 99 - rand() % 20;
+						int random = rand() % 100;
+						if (random > prob_false) {
+							--keys;
+						}
+						if (b->open(1)) {
+							Tool* tool = b->get_tool();
+							std::string name = tool->get_type_of_obj();
+							std::cout << "KEYS IS   " << keys << std::endl;
+							TileMap[i][j] = ' ';
+							if (name == "potion") {
+								TileMap[i][j+1] = 'p';
+							}
+							else if (name == "weapon") {
+								TileMap[i][j+1] = 'w';
+							}
+							Weapon* w = dynamic_cast<Weapon*>(tool);
+							under.erase({ i,j });
+							std::cout << "NAME   " << w->getname() << std::endl;
+							under.insert({ { i,j +1}, b->get_tool() });
+							w = dynamic_cast<Weapon*>(under.at({ i,j+1 }));
+							if (w == nullptr)
+								std::cout << "Strange null" << std::endl;
+						}
+					}
+				}
+				catch (std::exception e) {
+					std::cout << "Exception" << std::endl;
+				}
 			}
 		}
 	}

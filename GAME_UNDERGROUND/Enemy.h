@@ -27,7 +27,7 @@ public:
 
 	/** Builds with the name of the enemy, other basic parameters are declared for each enemy, but you can change it.
 	*/
-	Enemy(ENEMY Name) :power(Name -9), name(Name), health(Name), cur_health(Name), experience(Name-9) {};
+	Enemy(ENEMY Name) :power(Name -999), name(Name), health(Name), cur_health(Name), experience(Name-999) {};
 
 	/**
 	Allows to gain the damage from the hero.
